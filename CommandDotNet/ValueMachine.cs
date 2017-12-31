@@ -15,7 +15,7 @@ namespace CommandDotNet
             Type argType = arguementInfo.Type;
 
             //when value is present
-            if (arguementInfo.ValueInfo.HasValue && !string.IsNullOrWhiteSpace(arguementInfo.ValueInfo.Value))
+            if (arguementInfo.HasValue && !string.IsNullOrWhiteSpace(arguementInfo.Value))
             {
                 if (argType == typeof(char) || argType == typeof(char?))
                 {
@@ -24,7 +24,7 @@ namespace CommandDotNet
 
                 if (typeof(List<char>).IsAssignableFrom(argType))
                 {
-                    return arguementInfo.ValueInfo.Values.Select(value => GetChar(arguementInfo)).ToList();
+                    return arguementInfo.Values.Select(value => GetChar(arguementInfo)).ToList();
                 }
 
                 if (argType == typeof(int) || argType == typeof(int?))
@@ -34,7 +34,7 @@ namespace CommandDotNet
 
                 if (typeof(List<int>).IsAssignableFrom(argType))
                 {
-                    return arguementInfo.ValueInfo.Values.Select(value => GetInt(arguementInfo)).ToList();
+                    return arguementInfo.Values.Select(value => GetInt(arguementInfo)).ToList();
                 }
 
                 if (argType == typeof(long) || argType == typeof(long?))
@@ -44,7 +44,7 @@ namespace CommandDotNet
 
                 if (typeof(List<long>).IsAssignableFrom(argType))
                 {
-                    return arguementInfo.ValueInfo.Values.Select(value => GetLong(arguementInfo)).ToList();
+                    return arguementInfo.Values.Select(value => GetLong(arguementInfo)).ToList();
                 }
 
                 if (argType == typeof(double) || argType == typeof(double?))
@@ -54,7 +54,7 @@ namespace CommandDotNet
 
                 if (typeof(List<double>).IsAssignableFrom(argType))
                 {
-                    return arguementInfo.ValueInfo.Values.Select(value => GetDouble(arguementInfo)).ToList();
+                    return arguementInfo.Values.Select(value => GetDouble(arguementInfo)).ToList();
                 }
 
                 if (argType == typeof(bool) || argType == typeof(bool?))
@@ -64,17 +64,17 @@ namespace CommandDotNet
 
                 if (typeof(List<bool>).IsAssignableFrom(argType))
                 {
-                    return arguementInfo.ValueInfo.Values.Select(value => GetBoolean(arguementInfo)).ToList();
+                    return arguementInfo.Values.Select(value => GetBoolean(arguementInfo)).ToList();
                 }
 
                 if (argType == typeof(string))
                 {
-                    return arguementInfo.ValueInfo.Value;
+                    return arguementInfo.Value;
                 }
 
                 if (typeof(List<string>).IsAssignableFrom(argType))
                 {
-                    return arguementInfo.ValueInfo.Values;
+                    return arguementInfo.Values;
                 }
 
                 throw new ValueParsingException(
@@ -93,7 +93,7 @@ namespace CommandDotNet
 
         private static object GetChar(ArgumentInfo data)
         {
-            bool isChar = char.TryParse(data.ValueInfo.Value, out char charValue);
+            bool isChar = char.TryParse(data.Value, out char charValue);
             if (isChar) return charValue;
             return ThrowParsingException<char>(data);
         }
@@ -102,10 +102,10 @@ namespace CommandDotNet
         {            
             if (data is CommandOptionInfo optionInfo && optionInfo.BooleanMode == BooleanMode.Implicit)
             {
-                return optionInfo.ValueInfo.HasValue;
+                return optionInfo.HasValue;
             }
             
-            bool isBool = bool.TryParse(data.ValueInfo.Value, out bool boolValue);
+            bool isBool = bool.TryParse(data.Value, out bool boolValue);
             if (isBool) return boolValue;
             
             return ThrowParsingException<bool>(data);
@@ -113,7 +113,7 @@ namespace CommandDotNet
 
         private static double GetDouble(ArgumentInfo data)
         {
-            bool isDouble = double.TryParse(data.ValueInfo.Value, NumberStyles.AllowDecimalPoint, new NumberFormatInfo(),
+            bool isDouble = double.TryParse(data.Value, NumberStyles.AllowDecimalPoint, new NumberFormatInfo(),
                 out double doubleValue);
             if (isDouble) return doubleValue;
             return ThrowParsingException<double>(data);
@@ -121,7 +121,7 @@ namespace CommandDotNet
 
         private static long GetLong(ArgumentInfo data)
         {
-            bool isLong = long.TryParse(data.ValueInfo.Value, NumberStyles.Integer, new NumberFormatInfo(),
+            bool isLong = long.TryParse(data.Value, NumberStyles.Integer, new NumberFormatInfo(),
                 out long longValue);
             if (isLong) return longValue;
             return ThrowParsingException<long>(data);
@@ -129,7 +129,7 @@ namespace CommandDotNet
 
         private static int GetInt(ArgumentInfo data)
         {
-            bool isInt = int.TryParse(data.ValueInfo.Value, NumberStyles.Integer, new NumberFormatInfo(),
+            bool isInt = int.TryParse(data.Value, NumberStyles.Integer, new NumberFormatInfo(),
                 out int integerValue);
             if (isInt) return integerValue;
             return ThrowParsingException<int>(data);
@@ -137,7 +137,7 @@ namespace CommandDotNet
 
         private static T ThrowParsingException<T>(ArgumentInfo data)
         {
-            throw new ValueParsingException($"'{data.ValueInfo.Value}' is not a valid {data.TypeDisplayName}");
+            throw new ValueParsingException($"'{data.Value}' is not a valid {data.TypeDisplayName}");
         }
 
         private static object GetDefault(Type type)

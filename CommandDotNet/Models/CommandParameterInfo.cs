@@ -18,7 +18,7 @@ namespace CommandDotNet.Models
             TypeDisplayName = GetTypeDisplayName();
             AnnotatedDescription = GetAnnotatedDescription();
             Details = GetDetails();
-            EffectiveDescription = GetEffectiveDescription();
+            Description = GetEffectiveDescription();
         }
         
         public string Name { get; internal set; }
@@ -59,7 +59,7 @@ namespace CommandDotNet.Models
 
         public override string ToString()
         {
-            return $"{Name} | '{ValueInfo?.Value ?? "null"}' | {Details}";
+            return $"{Name} | '{Value ?? "null"}' | {Details}";
         }
     }
 }

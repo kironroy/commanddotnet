@@ -8,6 +8,8 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CommandDotNet.Exceptions;
+using CommandDotNet.Models;
 
 namespace CommandDotNet.MicrosoftCommandLineUtils
 {
@@ -21,24 +23,24 @@ namespace CommandDotNet.MicrosoftCommandLineUtils
         public CommandLineApplication(bool throwOnUnexpectedArg = true)
         {
             _throwOnUnexpectedArg = throwOnUnexpectedArg;
-            Options = new List<CommandOption>();
-            Arguments = new List<CommandArgument>();
+            Options = new List<CommandOptionInfo>();
+            Arguments = new List<CommandParameterInfo>();
             Commands = new List<CommandLineApplication>();
             RemainingArguments = new List<string>();
             Invoke = () => 0;
         }
 
         public CommandLineApplication Parent { get; set; }
-        public string Name { get; set; }
-        public string FullName { get; set; }
-        public string Syntax { get; set; }
-        public string Description { get; set; }
-        public bool ShowInHelpText { get; set; } = true;
-        public string ExtendedHelpText { get; set; }
-        public readonly List<CommandOption> Options;
-        public CommandOption OptionHelp { get; private set; }
-        public CommandOption OptionVersion { get; private set; }
-        public readonly List<CommandArgument> Arguments;
+        public string Name { get; set; } // covered
+        public string FullName { get; set; } // ?
+        public string Syntax { get; set; } // unsed
+        public string Description { get; set; } // convered
+        public bool ShowInHelpText { get; set; } = true; // covered
+        public string ExtendedHelpText { get; set; } // covered
+        public readonly List<CommandOptionInfo> Options;
+        public CommandOptionInfo OptionHelp { get; private set; }
+        public CommandOptionInfo OptionVersion { get; private set; }
+        public readonly List<CommandParameterInfo> Arguments;
         public readonly List<string> RemainingArguments;
         public bool IsShowingInformation { get; protected set; }  // Is showing help or version?
         public Func<int> Invoke { get; set; }
@@ -49,7 +51,7 @@ namespace CommandDotNet.MicrosoftCommandLineUtils
         public TextWriter Out { get; set; } = Console.Out;
         public TextWriter Error { get; set; } = Console.Error;
 
-        public IEnumerable<CommandOption> GetOptions()
+        public IEnumerable<CommandOptionInfo> GetOptions()
         {
             var expr = Options.AsEnumerable();
             var rootNode = this;
@@ -71,45 +73,15 @@ namespace CommandDotNet.MicrosoftCommandLineUtils
             return command;
         }
 
-        public CommandOption Option(string template, string description, CommandOptionType optionType)
-            => Option(template, description, optionType, _ => { }, inherited: false);
-
-        public CommandOption Option(string template, string description, CommandOptionType optionType, bool inherited)
-            => Option(template, description, optionType, _ => { }, inherited);
-
-        public CommandOption Option(string template, string description, CommandOptionType optionType, Action<CommandOption> configuration)
-            => Option(template, description, optionType, configuration, inherited: false);
-
-        public CommandOption Option(string template, string description, CommandOptionType optionType, Action<CommandOption> configuration, bool inherited)
+        public CommandOptionInfo Option(CommandOptionInfo optionInfo)
         {
-            var option = new CommandOption(template, optionType)
-            {
-                Description = description,
-                Inherited = inherited
-            };
-            Options.Add(option);
-            configuration(option);
-            return option;
+            Options.Add(optionInfo);
+            return optionInfo;
         }
 
-        public CommandArgument Argument(string name, string description, bool multipleValues = false)
+        public CommandParameterInfo Argument(CommandParameterInfo argument)
         {
-            return Argument(name, description, _ => { }, multipleValues);
-        }
-
-        public CommandArgument Argument(string name, string description, Action<CommandArgument> configuration, bool multipleValues = false)
-        {
-            var lastArg = Arguments.LastOrDefault();
-            if (lastArg != null && lastArg.MultipleValues)
-            {
-                var message = string.Format("The last argument '{0}' accepts multiple values. No more argument can be added.",
-                    lastArg.Name);
-                throw new InvalidOperationException(message);
-            }
-
-            var argument = new CommandArgument { Name = name, Description = description, MultipleValues = multipleValues };
             Arguments.Add(argument);
-            configuration(argument);
             return argument;
         }
 
@@ -122,11 +94,12 @@ namespace CommandDotNet.MicrosoftCommandLineUtils
         {
             Invoke = () => invoke().Result;
         }
+        
         public int Execute(params string[] args)
         {
             CommandLineApplication command = this;
-            CommandOption option = null;
-            IEnumerator<CommandArgument> arguments = null;
+            CommandOptionInfo option = null;
+            IEnumerator<CommandParameterInfo> arguments = null;
 
             for (var index = 0; index < args.Length; index++)
             {
@@ -184,7 +157,7 @@ namespace CommandDotNet.MicrosoftCommandLineUtils
                             }
                             option = null;
                         }
-                        else if (option.OptionType == CommandOptionType.NoValue)
+                        else if (option.CommandOptionType == CommandOptionType.NoValue)
                         {
                             // No value is needed for this option
                             option.TryParse(null);
@@ -229,7 +202,7 @@ namespace CommandDotNet.MicrosoftCommandLineUtils
                             }
                             option = null;
                         }
-                        else if (option.OptionType == CommandOptionType.NoValue)
+                        else if (option.CommandOptionType == CommandOptionType.NoValue)
                         {
                             // No value is needed for this option
                             option.TryParse(null);
@@ -277,7 +250,7 @@ namespace CommandDotNet.MicrosoftCommandLineUtils
                     if (arguments.MoveNext())
                     {
                         processed = true;
-                        arguments.Current.Values.Add(arg);
+                        arguments.Current.AddValue(arg);
                     }
                 }
                 if (!processed)
@@ -297,42 +270,42 @@ namespace CommandDotNet.MicrosoftCommandLineUtils
         }
 
         // Helper method that adds a help option
-        public CommandOption HelpOption(string template)
+        public CommandOptionInfo HelpOption()
         {
             // Help option is special because we stop parsing once we see it
             // So we store it separately for further use
-            OptionHelp = Option(template, "Show help information", CommandOptionType.NoValue);
+            OptionHelp = Option(CommandOptionInfo.HelpOption());
 
             return OptionHelp;
         }
 
-        public CommandOption VersionOption(string template,
-            string shortFormVersion,
-            string longFormVersion = null)
-        {
-            if (longFormVersion == null)
-            {
-                return VersionOption(template, () => shortFormVersion);
-            }
-            else
-            {
-                return VersionOption(template, () => shortFormVersion, () => longFormVersion);
-            }
-        }
+//        public CommandOptionInfo VersionOption(string template,
+//            string shortFormVersion,
+//            string longFormVersion = null)
+//        {
+//            if (longFormVersion == null)
+//            {
+//                return VersionOption(template, () => shortFormVersion);
+//            }
+//            else
+//            {
+//                return VersionOption(template, () => shortFormVersion, () => longFormVersion);
+//            }
+//        }
 
-        // Helper method that adds a version option
-        public CommandOption VersionOption(string template,
-            Func<string> shortFormVersionGetter,
-            Func<string> longFormVersionGetter = null)
-        {
-            // Version option is special because we stop parsing once we see it
-            // So we store it separately for further use
-            OptionVersion = Option(template, "Show version information", CommandOptionType.NoValue);
-            ShortVersionGetter = shortFormVersionGetter;
-            LongVersionGetter = longFormVersionGetter ?? shortFormVersionGetter;
-
-            return OptionVersion;
-        }
+//        // Helper method that adds a version option
+//        public CommandOptionInfo VersionOption(string template,
+//            Func<string> shortFormVersionGetter,
+//            Func<string> longFormVersionGetter = null)
+//        {
+//            // Version option is special because we stop parsing once we see it
+//            // So we store it separately for further use
+//            OptionVersion = Option(template, "Show version information", CommandOptionType.NoValue);
+//            ShortVersionGetter = shortFormVersionGetter;
+//            LongVersionGetter = longFormVersionGetter ?? shortFormVersionGetter;
+//
+//            return OptionVersion;
+//        }
 
         // Show short hint that reminds users to use help option
         public void ShowHint()
@@ -504,16 +477,16 @@ namespace CommandDotNet.MicrosoftCommandLineUtils
             }
         }
 
-        private class CommandArgumentEnumerator : IEnumerator<CommandArgument>
+        private class CommandArgumentEnumerator : IEnumerator<CommandParameterInfo>
         {
-            private readonly IEnumerator<CommandArgument> _enumerator;
+            private readonly IEnumerator<CommandParameterInfo> _enumerator;
 
-            public CommandArgumentEnumerator(IEnumerator<CommandArgument> enumerator)
+            public CommandArgumentEnumerator(IEnumerator<CommandParameterInfo> enumerator)
             {
                 _enumerator = enumerator;
             }
 
-            public CommandArgument Current
+            public CommandParameterInfo Current
             {
                 get
                 {

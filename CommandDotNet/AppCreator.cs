@@ -38,7 +38,7 @@ namespace CommandDotNet
                 app = parentApplication.Command(subAppName, application => { });
             }
 
-            app.HelpOption(Constants.HelpTemplate);
+            app.HelpOption();
 
             app.Description = consoleApplicationAttribute?.Description;
 

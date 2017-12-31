@@ -18,7 +18,7 @@ namespace CommandDotNet.Models
             _settings = settings;
 
             _metadataAttribute = _methodInfo.GetCustomAttribute<ApplicationMetadataAttribute>(false);
-            
+
             Arguments = GetArguments();
         }
 
@@ -57,7 +57,7 @@ namespace CommandDotNet.Models
 
         public string Name => _metadataAttribute?.Name ?? _methodInfo.Name;
 
-        public string MethodName => _methodInfo.Name; 
+        public string MethodName => _methodInfo.Name;
 
         public string Description => _metadataAttribute?.Description;
 
@@ -66,5 +66,7 @@ namespace CommandDotNet.Models
         public string Syntax => _metadataAttribute?.Syntax;
 
         public IEnumerable<ArgumentInfo> Arguments { get; }
+
+        public bool ShowInHelpText => _metadataAttribute == null || _metadataAttribute.ShowInHelpText;
     }
 }

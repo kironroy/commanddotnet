@@ -7,7 +7,7 @@ namespace CommandDotNet.Example
     {
         static int Main(string[] args)
         {
-            AppRunner<DirUtilities> appRunner = new AppRunner<DirUtilities>();
+            AppRunner<Git> appRunner = new AppRunner<Git>();
             return appRunner.Run(args);
         }
     }

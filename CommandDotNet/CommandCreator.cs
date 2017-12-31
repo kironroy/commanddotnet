@@ -65,7 +65,7 @@ namespace CommandDotNet
 
                     command.Syntax = commandInfo.Syntax;
                     
-                    command.HelpOption(Constants.HelpTemplate);
+                    command.HelpOption();
                       
                     foreach (ArgumentInfo argument in commandInfo.Arguments)
                     {
@@ -74,17 +74,12 @@ namespace CommandDotNet
 
                     foreach (var option in argumentValues.OfType<CommandOptionInfo>())
                     {
-                        option.SetValue(command.Option(option.Template,
-                            option.EffectiveDescription,
-                            option.CommandOptionType));
+                        command.Option(option);
                     }
                     
                     foreach (var parameter in argumentValues.OfType<CommandParameterInfo>())
                     {
-                        parameter.SetValue(command.Argument(
-                            parameter.Name, 
-                            parameter.EffectiveDescription, 
-                            parameter.IsMultipleType));
+                        command.Argument(parameter);
                     }
                     
                 }, throwOnUnexpectedArg: _settings.ThrowOnUnexpectedArgument);
@@ -122,14 +117,10 @@ namespace CommandDotNet
                 switch (argumentInfo)
                 {
                     case CommandParameterInfo parameterInfo:
-                        parameterInfo.SetValue(_app.Argument(parameterInfo.Name,
-                            parameterInfo.EffectiveDescription, parameterInfo.IsMultipleType));
+                        _app.Argument(parameterInfo);
                         break;
                     case CommandOptionInfo optionInfo:
-                        optionInfo.SetValue(_app.Option(
-                            optionInfo.Template,
-                            optionInfo.EffectiveDescription,
-                            optionInfo.CommandOptionType));
+                        _app.Option(optionInfo);
                         break;
                 }
             }

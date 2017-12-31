@@ -124,7 +124,7 @@ namespace CommandDotNet.Tests
             commandParameterInfo.Details.Should().Be(parameterDetails, nameof(parameterDetails));
             commandParameterInfo.AnnotatedDescription.Should().Be(annotatedDescription, nameof(annotatedDescription));
 
-            commandParameterInfo.EffectiveDescription.Should().Be(effectiveDescription, nameof(effectiveDescription));
+            commandParameterInfo.Description.Should().Be(effectiveDescription, nameof(effectiveDescription));
             commandParameterInfo.Template.Should().Be(template, nameof(template));
             commandParameterInfo.Type.Should().Be(type, nameof(type));
         }

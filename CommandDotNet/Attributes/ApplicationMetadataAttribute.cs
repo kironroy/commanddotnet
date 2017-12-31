@@ -12,5 +12,7 @@ namespace CommandDotNet.Attributes
         public string ExtendedHelpText { get; set; }
         
         public string Syntax { get; set; }
+
+        public bool ShowInHelpText { get; set; } = true;
     }
 }

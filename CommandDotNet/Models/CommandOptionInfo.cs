@@ -10,7 +10,7 @@ using CommandDotNet.MicrosoftCommandLineUtils;
 namespace CommandDotNet.Models
 {
     public class CommandOptionInfo : ArgumentInfo
-    {
+    {   
         public CommandOptionInfo(AppSettings settings) : base(settings)
         {
         }
@@ -24,7 +24,18 @@ namespace CommandDotNet.Models
             TypeDisplayName = GetTypeDisplayName();
             AnnotatedDescription = GetAnnotatedDescription();
             Details = GetDetails();
-            EffectiveDescription = GetEffectiveDescription();
+            Description = GetEffectiveDescription();
+            
+            //intennal -------------
+            Inherited = false;
+            SetInternals();
+            //----------------------
+        }
+
+        private CommandOptionInfo(string description, CommandOptionType optionType)
+        {
+            Description = description;
+            CommandOptionType = optionType;
         }
         
         public CommandOptionType CommandOptionType { get; set; }
@@ -32,6 +43,101 @@ namespace CommandDotNet.Models
         public string Template { get; set; }
         
         public BooleanMode BooleanMode { get; set; }
+        
+        //intennal -------------
+        internal bool Inherited { get; }
+        
+        internal string LongName { get; set; }
+        
+        internal string SymbolName { get; set; }
+        
+        internal string ShortName { get; set; }
+        
+        internal string ValueName { get; set; }
+        // -------------
+
+
+        internal static CommandOptionInfo HelpOption()
+        {
+            return new CommandOptionInfo(
+                Constants.HelpDescription, 
+                CommandOptionType.NoValue)
+            {
+                LongName = "help",
+                ShortName = "h"
+            };
+        }
+        
+        private void SetInternals()
+        {
+            foreach (var part in Template.Split(new[] { ' ', '|' }, StringSplitOptions.RemoveEmptyEntries))
+            {
+                if (part.StartsWith("--"))
+                {
+                    LongName = part.Substring(2);
+                }
+                else if (part.StartsWith("-"))
+                {
+                    var optName = part.Substring(1);
+
+                    // If there is only one char and it is not an English letter, it is a symbol option (e.g. "-?")
+                    if (optName.Length == 1 && !IsEnglishLetter(optName[0]))
+                    {
+                        SymbolName = optName;
+                    }
+                    else
+                    {
+                        ShortName = optName;
+                    }
+                }
+                else if (part.StartsWith("<") && part.EndsWith(">"))
+                {
+                    ValueName = part.Substring(1, part.Length - 2);
+                }
+                else
+                {
+                    throw new ArgumentException($"Invalid template pattern '{Template}'", nameof(Template));
+                }
+            }
+
+            if (string.IsNullOrEmpty(LongName) && string.IsNullOrEmpty(ShortName) && string.IsNullOrEmpty(SymbolName))
+            {
+                throw new ArgumentException($"Invalid template pattern '{Template}'", nameof(Template));
+            }
+        }
+        
+        private bool IsEnglishLetter(char c)
+        {
+            return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z');
+        }
+        
+        public bool TryParse(string value)
+        {
+            switch (CommandOptionType)
+            {
+                case CommandOptionType.MultipleValue:
+                    Values.Add(value);
+                    break;
+                case CommandOptionType.SingleValue:
+                    if (Values.Any())
+                    {
+                        return false;
+                    }
+                    Values.Add(value);
+                    break;
+                case CommandOptionType.NoValue:
+                    if (value != null)
+                    {
+                        return false;
+                    }
+                    // Add a value to indicate that this option was specified
+                    Values.Add("on");
+                    break;
+                default:
+                    break;
+            }
+            return true;
+        }
         
         private BooleanMode GetBooleanMode()
         {
@@ -132,7 +238,7 @@ namespace CommandDotNet.Models
         
         public override string ToString()
         {
-            return $"{ParameterInfo.Name} | '{ValueInfo?.Value ?? "null"}' | {Details} | {Template}";
+            return $"{ParameterInfo.Name} | '{Value ?? "null"}' | {Details} | {Template}";
         }
     }
 }

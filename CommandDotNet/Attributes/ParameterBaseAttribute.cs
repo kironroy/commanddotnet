@@ -6,5 +6,7 @@ namespace CommandDotNet.Attributes
     public class ParameterBaseAttribute : Attribute
     {
         public string Description { get; set; }
+        
+        public bool ShowInHelpText { get; set; } = true;
     }
 }
