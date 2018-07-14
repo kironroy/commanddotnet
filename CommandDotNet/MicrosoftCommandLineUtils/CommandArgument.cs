@@ -16,18 +16,21 @@ namespace CommandDotNet.MicrosoftCommandLineUtils
         public string Name { get; set; }
         public bool ShowInHelpText { get; set; } = true;
         public string Description { get; set; }
-        public List<string> Values { get; internal set; }
+        public List<string> Values { get; set; }
+
         public bool MultipleValues { get; set; }
         public string TypeDisplayName { get; set; }
         public object DefaultValue { get; set; }
         public List<string> AllowedValues { get; set; }
         
-        public string Value
+        public string Value()
         {
-            get
-            {
-                return Values.FirstOrDefault();
-            }
+            return Values.FirstOrDefault();
+        }
+
+        public bool HasValue()
+        {
+            return Values != null && Values.Any();
         }
     }
 }
