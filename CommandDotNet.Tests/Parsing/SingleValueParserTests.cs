@@ -28,7 +28,7 @@ namespace CommandDotNet.Tests.Parsing
             //set value
             CommandOption option = new CommandOption("--test", CommandOptionType.SingleValue);
             commandOptionInfo.SetValue(option);
-            commandOptionInfo.ValueInfo.Values = new List<string>(){value};
+            commandOptionInfo.ValueInfo.Set(value);
                 
             object parsedValue = valueParser.Parse(commandOptionInfo);
 

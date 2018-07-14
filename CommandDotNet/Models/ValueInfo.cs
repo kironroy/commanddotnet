@@ -1,31 +1,34 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using CommandDotNet.MicrosoftCommandLineUtils;
 
 namespace CommandDotNet.Models
 {
     internal class ValueInfo
     {
-        private readonly IParameter _parameter;
-
-        public ValueInfo(IParameter parameter)
+        public ValueInfo(List<string> values)
         {
-            _parameter = parameter;
+            Values = values;
         }
+        
+        internal bool HasValue => Values != null && Values.Any();
 
-        internal bool HasValue => _parameter.HasValue();
+        internal List<string> Values { get; private set; }
 
-        internal List<string> Values
+        internal void Set(List<string> values)
         {
-            get => _parameter.Values;
-            set => _parameter.Values = value;
+            Values = values;
         }
-
-        internal string Value => _parameter.Value(); 
+        
+        internal void Set(string value)
+        {
+            Values = new List<string>(){value};
+        }
+        
+        internal string Value => HasValue ? Values.First() : null;
 
         public override string ToString()
         {
-            return string.Join(", ", _parameter.Values);
+            return string.Join(", ", Values ?? new List<string>());
         }
     }
 }

@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Runtime.CompilerServices;
 using CommandDotNet.Exceptions;
 using CommandDotNet.Extensions;
 using CommandDotNet.MicrosoftCommandLineUtils;
@@ -66,7 +65,7 @@ namespace CommandDotNet.Models
         
         internal void SetValue(IParameter parameter)
         {
-            ValueInfo = new ValueInfo(parameter);
+            ValueInfo = new ValueInfo(parameter.Values);
         }
 
         private List<string> GetAllowedValues()

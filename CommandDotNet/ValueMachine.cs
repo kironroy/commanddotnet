@@ -51,7 +51,7 @@ namespace CommandDotNet
                     if (parameterInfo.IsMultipleType)
                     {
                         Console.Write($"{parameterInfo.Name} ({parameterInfo.TypeDisplayName}) [separate values by space]: ");
-                        inputs = Console.ReadLine().Split(' ').ToList();
+                        inputs = Console.ReadLine()?.Split(' ').ToList();
                     }
                     else
                     {
@@ -59,7 +59,7 @@ namespace CommandDotNet
                         inputs.Add(Console.ReadLine());
                     }
 
-                    parameterInfo.ValueInfo.Values = inputs;
+                    parameterInfo.ValueInfo.Set(inputs);
                 }
             }
         }
