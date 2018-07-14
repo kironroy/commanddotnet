@@ -16,9 +16,17 @@ namespace CommandDotNet.Example
             [SubCommand]
             public class Origin
             {
+                private readonly string _name;
+
+                public Origin(string name)
+                {
+                    _name = name;
+                }
+                
                 public void Show()
                 {
-                    Console.WriteLine("remote origin: master");
+                    Console.WriteLine("remote origin: " +
+                                      (string.IsNullOrEmpty(_name) ? "master" : _name));
                 }
             }
         }
@@ -29,10 +37,22 @@ namespace CommandDotNet.Example
         [SubCommand]
         public class Stash
         {
+            private readonly string _name;
+
+            public Stash([Option(ShortName = "n",LongName = "name")]string name)
+            {
+                _name = name;
+            }
+            
             [DefaultMethod]
             public void DoStash()
             {
-                Console.WriteLine($"changes stashed");
+                if(string.IsNullOrEmpty(_name))
+                    Console.WriteLine($"changes stashed");
+                else
+                {
+                    Console.WriteLine($"changes stashed with name '{_name}'");
+                }
             }
         
             [ApplicationMetadata(Name = "pop", Description = "Applies last stashed changes")]

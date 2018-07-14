@@ -36,23 +36,26 @@ namespace CommandDotNet
                 string assemblyName = $"{Assembly.GetEntryAssembly().GetName().Name}.dll";
                 string defaultRootCommand = $"dotnet {assemblyName}";
                 string rootCommandName = consoleApplicationAttribute?.Name ?? defaultRootCommand;
-                app = new CommandLineApplication(_appSettings) { Name = rootCommandName };
-                app.FullName = consoleApplicationAttribute?.Name ?? assemblyName;
+                
+                app = new CommandLineApplication(_appSettings)
+                {
+                    Name = rootCommandName,
+                    FullName = consoleApplicationAttribute?.Name ?? assemblyName,
+                    Description = consoleApplicationAttribute?.Description,
+                    ExtendedHelpText = consoleApplicationAttribute?.ExtendedHelpText,
+                    Syntax = consoleApplicationAttribute?.Syntax
+                };
+                
+                app.HelpOption(Constants.HelpTemplate);
+                
                 AddVersion(app);
             }
             else
             {
-                string appName = consoleApplicationAttribute?.Name ?? type.Name.ChangeCase(_appSettings.Case); 
-                app = parentApplication.Command(appName, application => { }, _appSettings.HelpTextStyle, _appSettings.ThrowOnUnexpectedArgument);
+                var commandInfo = new CommandInfo(type, _appSettings);
+                
+                app = parentApplication.Command(commandInfo);
             }
-
-            app.HelpOption(Constants.HelpTemplate);
-
-            app.Description = consoleApplicationAttribute?.Description;
-
-            app.ExtendedHelpText = consoleApplicationAttribute?.ExtendedHelpText;
-
-            app.Syntax = consoleApplicationAttribute?.Syntax;
 
             CommandCreator commandCreator = new CommandCreator(type, app, dependencyResolver, _appSettings);
             
@@ -87,8 +90,10 @@ namespace CommandDotNet
                 .Where(x=> x.HasAttribute<SubCommandAttribute>())
                 .Where(x=> !x.IsCompilerGenerated())
                 .Where(x=> !typeof(IAsyncStateMachine).IsAssignableFrom(x));
+
+            var submoduleTypes = propertySubmodules.Union(inlineClassSubmodules);
             
-            foreach (Type submoduleType in propertySubmodules.Union(inlineClassSubmodules))
+            foreach (Type submoduleType in submoduleTypes)
             {
                 AppCreator appCreator = new AppCreator(_appSettings);
                 appCreator.CreateApplication(submoduleType, dependencyResolver, parentApplication);

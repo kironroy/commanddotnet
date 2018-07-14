@@ -56,58 +56,35 @@ namespace CommandDotNet
             {
                 List<ArgumentInfo> argumentValues = new List<ArgumentInfo>();
 
-                CommandLineApplication commandOption = _app.Command(commandInfo.Name, command =>
+                CommandLineApplication command = _app.Command(commandInfo);
+
+                foreach (ArgumentInfo argument in commandInfo.Arguments)
                 {
-                    command.Description = commandInfo.Description;
-
-                    command.ExtendedHelpText = commandInfo.ExtendedHelpText;
-
-                    command.Syntax = commandInfo.Syntax;
-                    
-                    command.HelpOption(Constants.HelpTemplate);
-                      
-                    foreach (ArgumentInfo argument in commandInfo.Arguments)
+                    argumentValues.Add(argument);
+                    switch (argument)
                     {
-                        argumentValues.Add(argument);
-                        switch (argument)
-                        {
-                            case CommandOptionInfo option:
-                                SetValueForOption(option, command);
-                                break;
-                            case CommandParameterInfo parameter:
-                                SetValueForParameter(parameter, command);
-                                break;
-                        }
+                        case CommandOptionInfo option:
+                            SetValueForOption(option, command);
+                            break;
+                        case CommandParameterInfo parameter:
+                            SetValueForParameter(parameter, command);
+                            break;
                     }
-                }, _settings.HelpTextStyle ,_settings.ThrowOnUnexpectedArgument);
+                }
 
-                commandOption.OnExecute(async () => await _commandRunner.RunCommand(commandInfo, argumentValues));
+                command.OnExecute(async () => await _commandRunner.RunCommand(commandInfo, argumentValues));
             }
         }
 
         private static void SetValueForParameter(CommandParameterInfo parameter, CommandLineApplication command)
         {
-            parameter.SetValue(command.Argument(
-                parameter.Name,
-                parameter.AnnotatedDescription,
-                _=>{},
-                parameter.TypeDisplayName,
-                parameter.DefaultValue,
-                parameter.IsMultipleType,
-                parameter.AllowedValues));
+            CommandArgument argument = command.Argument(parameter);
+            parameter.SetValue(argument);
         }
 
         private static void SetValueForOption(CommandOptionInfo option, CommandLineApplication command)
         {
-            option.SetValue(command.Option(option.Template,
-                option.AnnotatedDescription,
-                option.CommandOptionType,
-                _=>{},
-                option.Inherited,
-                option.TypeDisplayName,
-                option.DefaultValue,
-                option.IsMultipleType,
-                option.AllowedValues));
+            option.SetValue(command.Option(option));
         }
 
         private IEnumerable<ArgumentInfo> GetOptionValuesForConstructor()
@@ -115,9 +92,9 @@ namespace CommandDotNet
             IEnumerable<ParameterInfo> parameterInfos = _type
                 .GetConstructors()
                 .FirstOrDefault()
-                .GetParameters();
+                ?.GetParameters();
 
-            if(parameterInfos.Any(p => p.HasAttribute<ArgumentAttribute>()))
+            if(parameterInfos != null && parameterInfos.Any(p => p.HasAttribute<ArgumentAttribute>()))
                 throw new AppRunnerException("Constructor arguments can not have [Argument] attribute. Please use [Option] attribute");
 
             ArgumentInfoCreator argumentInfoCreator = new ArgumentInfoCreator(_settings);
@@ -132,16 +109,7 @@ namespace CommandDotNet
             foreach (ArgumentInfo argumentInfo in argumentInfos)
             {
                 var optionInfo = (CommandOptionInfo) argumentInfo;
-                optionInfo.SetValue(_app.Option(
-                    optionInfo.Template,
-                    optionInfo.AnnotatedDescription,
-                    optionInfo.CommandOptionType,
-                    _=>{},
-                    optionInfo.Inherited,
-                    optionInfo.TypeDisplayName,
-                    optionInfo.DefaultValue,
-                    optionInfo.IsMultipleType,
-                    optionInfo.AllowedValues));
+                optionInfo.SetValue(_app.Option(optionInfo));
             }
             
             return argumentInfos;

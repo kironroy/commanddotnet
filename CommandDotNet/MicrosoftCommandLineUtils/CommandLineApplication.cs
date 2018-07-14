@@ -50,6 +50,9 @@ namespace CommandDotNet.MicrosoftCommandLineUtils
         public List<ICommand> Commands { get; }
         public TextWriter Out { get; set; } = Console.Out;
         public TextWriter Error { get; set; } = Console.Error;
+        
+        public List<ArgumentInfo> CustomArguments { get; set; } = new List<ArgumentInfo>();
+        public List<CommandInfo> CustomCommands { get; set; } = new List<CommandInfo>();
 
         public string GetFullCommandName()
         {
@@ -75,17 +78,53 @@ namespace CommandDotNet.MicrosoftCommandLineUtils
             return expr;
         }
 
-        public CommandLineApplication Command(string name, Action<CommandLineApplication> configuration,
-            HelpTextStyle helpTextStyle,
-            bool throwOnUnexpectedArg)
+        public CommandLineApplication Command(CommandInfo command)
         {
-            var command = new CommandLineApplication(_appSettings) { Name = name, Parent = this };
+            CustomCommands.Add(command);
+            
+            return Command(command.Name,
+                command.Description,
+                command.ExtendedHelpText,
+                command.Syntax);
+        }
+
+        
+        private CommandLineApplication Command(string name, 
+            string description,
+            string extendedHelpText,
+            string syntax)
+        {
+            var command = new CommandLineApplication(_appSettings)
+            {
+                Name = name, 
+                Parent = this,
+                Description = description,
+                ExtendedHelpText = extendedHelpText,
+                Syntax = syntax
+            };
+            
             Commands.Add(command);
-            configuration(command);
+            
+            command.HelpOption(Constants.HelpTemplate);
+            
             return command;
         }
 
-        internal CommandOption Option(string template, string description, CommandOptionType optionType, 
+        internal CommandOption Option(CommandOptionInfo option)
+        {
+            CustomArguments.Add(option);
+            return Option(option.Template,
+                option.AnnotatedDescription,
+                option.CommandOptionType,
+                _ => { },
+                option.Inherited,
+                option.TypeDisplayName,
+                option.DefaultValue,
+                option.IsMultipleType,
+                option.AllowedValues);
+        }
+        
+        private CommandOption Option(string template, string description, CommandOptionType optionType, 
             Action<CommandOption> configuration, bool inherited,
             string typeDisplayName, object defaultValue, bool multiple, List<string> allowedValues
             )
@@ -106,7 +145,21 @@ namespace CommandDotNet.MicrosoftCommandLineUtils
             return option;
         }
 
-        public CommandArgument Argument(
+        public CommandArgument Argument(CommandParameterInfo parameter)
+        {
+            CustomArguments.Add(parameter);
+            
+            return Argument(parameter.Name,
+                parameter.AnnotatedDescription,
+                _ => { },
+                parameter.TypeDisplayName,
+                parameter.DefaultValue,
+                parameter.IsMultipleType,
+                parameter.AllowedValues);
+            
+        }
+        
+        private CommandArgument Argument(
             string name, string description, 
             Action<CommandArgument> configuration,
             string typeDisplayName, object defaultValue, bool multiple,
