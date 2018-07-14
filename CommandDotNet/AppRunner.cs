@@ -9,6 +9,7 @@ using CommandDotNet.MicrosoftCommandLineUtils;
 using CommandDotNet.Models;
 
 [assembly: InternalsVisibleTo("CommandDotNet.Tests")]
+[assembly: InternalsVisibleTo("CommandDotNet.AutoCompleteScriptGenerator")]
 
 namespace CommandDotNet
 {
@@ -20,11 +21,11 @@ namespace CommandDotNet
     {
         internal IDependencyResolver DependencyResolver;
         
-        private readonly AppSettings _settings;
+        internal readonly AppSettings Settings;
 
         public AppRunner(AppSettings settings = null)
         {
-            _settings = settings ?? new AppSettings();
+            Settings = settings ?? new AppSettings();
         }
 
         /// <summary>
@@ -37,7 +38,7 @@ namespace CommandDotNet
         {
             try
             {
-                AppCreator appCreator = new AppCreator(_settings);
+                AppCreator appCreator = new AppCreator(Settings);
 
                 CommandLineApplication app = appCreator.CreateApplication(typeof(T), DependencyResolver);
 
@@ -141,7 +142,7 @@ namespace CommandDotNet
 
         public AppRunner<T> WithCustomHelpProvider(IHelpProvider customHelpProvider)
         {
-            _settings.CustomHelpProvider = customHelpProvider;
+            Settings.CustomHelpProvider = customHelpProvider;
             return this;
         }
     }

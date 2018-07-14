@@ -12,8 +12,8 @@ namespace CommandDotNet.Models
         FromMethod,
         FromSubmoduleClass
     }
-    
-    internal class CommandInfo
+
+    public class CommandInfo
     {
         private readonly AppSettings _settings;
         private readonly ArgumentInfoCreator _argumentInfoCreator;

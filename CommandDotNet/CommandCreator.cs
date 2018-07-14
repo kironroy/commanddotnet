@@ -23,7 +23,7 @@ namespace CommandDotNet
             _app = app;
             _settings = settings;
             
-            //get values for construtor params
+            //get values for constructor params
             IEnumerable<ArgumentInfo> constructorValues = GetOptionValuesForConstructor();
             
             _commandRunner = new CommandRunner(app, type, constructorValues, dependencyResolver, settings);

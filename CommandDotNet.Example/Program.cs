@@ -1,4 +1,7 @@
-﻿using CommandDotNet.Models;
+﻿using System;
+using CommandDotNet.AutoCompletion;
+using CommandDotNet.Models;
+using Newtonsoft.Json;
 
 namespace CommandDotNet.Example
 {
@@ -11,7 +14,8 @@ namespace CommandDotNet.Example
                 Case = Case.KebabCase,
                 HelpTextStyle = HelpTextStyle.Detailed
             });
-            return appRunner.Run(args);
+            
+            return appRunner.GenerateAutoCompleteScript(args);
         }
     }
 }
