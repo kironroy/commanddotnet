@@ -116,7 +116,6 @@ namespace CommandDotNet.MicrosoftCommandLineUtils
             return Option(option.Template,
                 option.AnnotatedDescription,
                 option.CommandOptionType,
-                _ => { },
                 option.Inherited,
                 option.TypeDisplayName,
                 option.DefaultValue,
@@ -124,8 +123,7 @@ namespace CommandDotNet.MicrosoftCommandLineUtils
                 option.AllowedValues);
         }
         
-        private CommandOption Option(string template, string description, CommandOptionType optionType, 
-            Action<CommandOption> configuration, bool inherited,
+        private CommandOption Option(string template, string description, CommandOptionType optionType, bool inherited,
             string typeDisplayName, object defaultValue, bool multiple, List<string> allowedValues
             )
         {
@@ -141,7 +139,6 @@ namespace CommandDotNet.MicrosoftCommandLineUtils
             bool optionAdded = Options.Add(option);
             if(!optionAdded)
                 throw new AppRunnerException($"Option with template `{option.Template}` already added");
-            configuration(option);
             return option;
         }
 
@@ -151,7 +148,6 @@ namespace CommandDotNet.MicrosoftCommandLineUtils
             
             return Argument(parameter.Name,
                 parameter.AnnotatedDescription,
-                _ => { },
                 parameter.TypeDisplayName,
                 parameter.DefaultValue,
                 parameter.IsMultipleType,
@@ -160,8 +156,7 @@ namespace CommandDotNet.MicrosoftCommandLineUtils
         }
         
         private CommandArgument Argument(
-            string name, string description, 
-            Action<CommandArgument> configuration,
+            string name, string description,
             string typeDisplayName, object defaultValue, bool multiple,
             List<string> allowedValues)
         {
@@ -185,7 +180,6 @@ namespace CommandDotNet.MicrosoftCommandLineUtils
             bool argumentAdded = Arguments.Add(argument);
             if(!argumentAdded)
                 throw new AppRunnerException($"Argument with name '{argument.Name}' already added");
-            configuration(argument);
             return argument;
         }
 
@@ -377,7 +371,7 @@ namespace CommandDotNet.MicrosoftCommandLineUtils
         {
             // Help option is special because we stop parsing once we see it
             // So we store it separately for further use
-            OptionHelp = Option(template, "Show help information", CommandOptionType.NoValue, _=>{}, false, Constants.TypeDisplayNames.Flag, DBNull.Value, false, null);
+            OptionHelp = Option(template, "Show help information", CommandOptionType.NoValue, false, Constants.TypeDisplayNames.Flag, DBNull.Value, false, null);
 
             return OptionHelp;
         }
@@ -403,7 +397,7 @@ namespace CommandDotNet.MicrosoftCommandLineUtils
         {
             // Version option is special because we stop parsing once we see it
             // So we store it separately for further use
-            OptionVersion = Option(template, "Show version information", CommandOptionType.NoValue, _=>{}, false, Constants.TypeDisplayNames.Flag, DBNull.Value, false, null);
+            OptionVersion = Option(template, "Show version information", CommandOptionType.NoValue, false, Constants.TypeDisplayNames.Flag, DBNull.Value, false, null);
             ShortVersionGetter = shortFormVersionGetter;
             LongVersionGetter = longFormVersionGetter ?? shortFormVersionGetter;
 
