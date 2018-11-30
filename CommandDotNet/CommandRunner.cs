@@ -9,7 +9,7 @@ using CommandDotNet.Models;
 
 namespace CommandDotNet
 {
-    internal class CommandRunner
+    public class CommandRunner
     {
         private readonly CommandLineApplication _app;
         private readonly Type _type;
@@ -18,6 +18,7 @@ namespace CommandDotNet
         private readonly ModelValidator _modelValidator;
         private readonly ArgumentMerger _argumentMerger;
         private readonly AppInstanceCreator _appInstanceCreator;
+        private readonly AppSettings _settings;
 
         public CommandRunner(
             CommandLineApplication app,
@@ -26,6 +27,7 @@ namespace CommandDotNet
             IDependencyResolver dependencyResolver,
             AppSettings appSettings)
         {
+            _settings = appSettings;
             _app = app;
             _type = type;
             _constrcutorParamValues = constrcutorParamValues;
@@ -34,7 +36,7 @@ namespace CommandDotNet
             _argumentMerger = new ArgumentMerger(appSettings);
             _appInstanceCreator = new AppInstanceCreator(appSettings);
         }
-
+        
         public async Task<int> RunCommand(
             CommandInfo commandInfo,
             List<ArgumentInfo> parameterValues)
@@ -56,6 +58,13 @@ namespace CommandDotNet
                 _modelValidator.ValidateModel(param);
             }
                 
+            //invoke the event handler if any
+            BeforeCommandExecute(new OnBeforeCommandExecuteEventArgs
+            {
+                ParameterValues = parameterValues,
+                CommandInfo = commandInfo
+            });
+            
             //invoke method
             object returnedObject = theMethod.Invoke(instance, mergedParameters);
 
@@ -79,6 +88,11 @@ namespace CommandDotNet
                 
             //return the actual return code
             return returnCode;
+        }
+
+        private void BeforeCommandExecute(OnBeforeCommandExecuteEventArgs e)
+        {
+            _settings.OnBeforeCommandExecute?.Invoke(this, e);
         }
     }
 }

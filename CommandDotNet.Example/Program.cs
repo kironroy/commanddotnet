@@ -1,4 +1,4 @@
-﻿using CommandDotNet.Models;
+﻿using System;
 
 namespace CommandDotNet.Example
 {
@@ -6,11 +6,16 @@ namespace CommandDotNet.Example
     {
         static int Main(string[] args)
         {
-            AppRunner<MyApplication> appRunner = new AppRunner<MyApplication>(new AppSettings()
+            AppRunner<MyApplication> appRunner = new AppRunner<MyApplication>();
+
+            appRunner.OnBeforeCommandExecute += (sender, eventArgs) =>
             {
-                Case = Case.KebabCase,
-                HelpTextStyle = HelpTextStyle.Detailed
-            });
+                var a = eventArgs.CommandInfo;
+                var b = eventArgs.ParameterValues;
+                
+                Console.WriteLine("OnBeforeCommandExecute-----");
+            };
+            
             return appRunner.Run(args);
         }
     }

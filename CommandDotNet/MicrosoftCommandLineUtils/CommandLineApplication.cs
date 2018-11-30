@@ -15,7 +15,7 @@ using CommandDotNet.Models;
 
 namespace CommandDotNet.MicrosoftCommandLineUtils
 {
-    internal class CommandLineApplication : ICommand
+    public class CommandLineApplication : ICommand
     {
         private readonly AppSettings _appSettings;
         // Indicates whether the parser should throw an exception when it runs into an unexpected argument.

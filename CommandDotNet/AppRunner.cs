@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -144,5 +145,17 @@ namespace CommandDotNet
             _settings.CustomHelpProvider = customHelpProvider;
             return this;
         }
+
+        public event EventHandler<OnBeforeCommandExecuteEventArgs> OnBeforeCommandExecute
+        {
+            add { _settings.OnBeforeCommandExecute += value; }
+            remove { _settings.OnBeforeCommandExecute -= value; }
+        }
+    }
+
+    public class OnBeforeCommandExecuteEventArgs : EventArgs
+    {
+        public CommandInfo CommandInfo { get; set; }
+        public List<ArgumentInfo> ParameterValues { get; set; }
     }
 }

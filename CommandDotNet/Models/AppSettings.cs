@@ -1,4 +1,5 @@
-﻿using CommandDotNet.Exceptions;
+﻿using System;
+using CommandDotNet.Exceptions;
 using CommandDotNet.HelpGeneration;
 
 namespace CommandDotNet.Models
@@ -27,5 +28,7 @@ namespace CommandDotNet.Models
         public HelpTextStyle HelpTextStyle { get; set; } = HelpTextStyle.Detailed;
         
         internal IHelpProvider CustomHelpProvider { get; set; }
+
+        internal EventHandler<OnBeforeCommandExecuteEventArgs> OnBeforeCommandExecute;
     }
 }
