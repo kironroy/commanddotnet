@@ -3,7 +3,7 @@ before_install:
   - pip install --user awscli #install aws cli
   - mkdir -p ~/artefacts/$TRAVIS_BUILD_NUMBER #create directory for storing artefacts
   # sync s3 before every stage
-  - aws s3 sync s3://travis-artefacts-bilal/$TRAVIS_BUILD_NUMBER ~/$TRAVIS_BUILD_NUMBER/artefacts
+  - aws s3 sync s3://travis-artefacts-bilal/$TRAVIS_BUILD_NUMBER ~/artefacts/$TRAVIS_BUILD_NUMBER
 
 jobs:
   include:
