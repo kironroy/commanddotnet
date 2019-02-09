@@ -9,9 +9,9 @@ jobs:
     script: 
       - echo one | tee > ~/artefacts/artefact.txt
       - cat ~/artefacts/artefact.txt
-#  - stage: use shared files
-#    script:
-#    - echo "s"
+  - stage: use shared files
+    script:
+      - cat ~/artefacts/artefact.txt
 addons:
   artifacts:
     paths:
