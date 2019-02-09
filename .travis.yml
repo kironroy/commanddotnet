@@ -15,7 +15,7 @@ jobs:
     after_success: aws s3 sync ~/artefacts/$TRAVIS_BUILD_NUMBER s3://travis-artefacts-bilal/$TRAVIS_BUILD_NUMBER
   - stage: use shared files
     script:
-      - cat ~/artefacts/$TRAVIS_BUILD_NUMBER/artefact.txt
+      - cat ~/artefacts/$TRAVIS_BUILD_NUMBER/data.txt
 
 env:
   global:
