@@ -4,13 +4,15 @@ before_install:
 jobs:
   include:
   - stage: setup files
-    script: echo one | tee > ~/artefacts/artefact.txt
-  - stage: use shared files
-    script:
-    - cat ~/commanddotnet/74/*
+    script: 
+      - echo one | tee > ~/artefacts/artefact.txt
+      - cat ~/artefacts/artefact.txt
+#  - stage: use shared files
+#    script:
+#    - echo "s"
 addons:
   artifacts:
-    working_dir: ~/artefacts/
+    working_dir: ~/artefacts
     s3_region: ap-west-2
 env:
   global:
