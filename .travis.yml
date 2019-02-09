@@ -14,9 +14,8 @@ jobs:
 #    - echo "s"
 addons:
   artifacts:
-    working_dir: ~/artefacts
     paths:
-        - artefact.txt
+        - $HOME/artefact.txt
     s3_region: us-east-1
 env:
   global:
