@@ -1,6 +1,9 @@
 language: csharp
 mono: none
 
+git:
+  depth: false
+
 stages:
     # - name: test
     # - name: deploy
