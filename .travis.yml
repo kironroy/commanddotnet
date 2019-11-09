@@ -9,7 +9,7 @@ stages:
     # - name: deploy
     #   if: tag IS present
     - name: publish documentation
-      # if: tag IS present
+      if: type = push AND branch = master
 
 #--------- TEST JOBS --------------
 jobs:
