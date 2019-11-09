@@ -9,5 +9,5 @@ mkdocs build
 echo "documentation generated"
 
 echo "publishing to github"
-
+mkdocs gh-deploy
 echo "published"
