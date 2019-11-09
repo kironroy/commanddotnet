@@ -1,7 +1,7 @@
-#!/bin/bash -e
+#!/bin/bash -ex
 
 echo "installing tools"
-pip install mkdocs mkdocs-material pygments pymdown-extensions recommonmark
+pip install --user mkdocs mkdocs-material pygments pymdown-extensions recommonmark
 echo "installed"
 
 echo "generating new documentation"
