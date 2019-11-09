@@ -10,8 +10,7 @@ mkdocs build
 echo "documentation generated"
 
 echo "publishing to github"
-git fetch --all
-git worktree add site gh-pages
+git worktree add --track -b site gh-pages
 cd site
 git add --all
 git commit -m "documentation update"
