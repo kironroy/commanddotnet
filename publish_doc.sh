@@ -12,7 +12,7 @@ echo "generating new documentation"
 mkdocs build
 echo "documentation generated"
 
-//push setup
+# push setup
 git config --global user.email "travis@travis-ci.com"
 git config --global user.name "Travis CI"
 git config --global push.default current
