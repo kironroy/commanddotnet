@@ -41,6 +41,8 @@ jobs:
         #--------- DOCUMENTATION PUBLISHING JOB ---------- 
         - stage: publish documentation
           name: update documentation on github pages
+          language: python
+          python: 3.6
           script: ./publish_doc.sh
           on: linux
           env:
