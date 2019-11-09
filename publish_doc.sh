@@ -21,7 +21,7 @@ echo "publishing to github"
 cd site
 git add --all
 git commit -m "documentation update"
-git push https://${GITHUB_TOKEN}@github.com/bilal-fazlani/commanddotnet.git origin gh-pages
+git push https://${GITHUB_TOKEN}@github.com/bilal-fazlani/commanddotnet.git
 # git push origin gh-pages
 cd ..
 git worktree remove site
