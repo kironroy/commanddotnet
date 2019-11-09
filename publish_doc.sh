@@ -20,7 +20,7 @@ git config --global push.default current
 echo "publishing to github"
 cd site
 git add --all
-git commit -m "documentation update"
+git commit -m "${TRAVIS_COMMIT_MESSAGE}"
 git push https://${GITHUB_TOKEN}@github.com/bilal-fazlani/commanddotnet.git
 # git push origin gh-pages
 cd ..
