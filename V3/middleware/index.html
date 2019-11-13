@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
     
     
       
@@ -42,9 +42,9 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.0284f74d.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.01803549.css">
       
       
         
@@ -208,7 +208,7 @@
         
       
       
-      <main class="md-main" role="main">
+      <main class="md-main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
             
@@ -559,11 +559,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
     
     <label class="md-nav__link" for="nav-6">
-      v3
+      v3 RC
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-6">
-        v3
+        v3 RC
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -576,6 +576,30 @@
   <li class="md-nav__item">
     <a href="../v3-changes/" title="v3 Changes" class="md-nav__link">
       v3 Changes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../argument-terminology/" title="Argument Terminology" class="md-nav__link">
+      Argument Terminology
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../option-or-operand/" title="Option vs Operand" class="md-nav__link">
+      Option vs Operand
     </a>
   </li>
 
@@ -613,21 +637,21 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why-we-use-the-middleware-pattern" class="md-nav__link">
+  <a href="#why-we-use-the-middleware-pattern" title="Why we use the middleware pattern" class="md-nav__link">
     Why we use the middleware pattern
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#middleware-stages" class="md-nav__link">
+  <a href="#middleware-stages" title="Middleware Stages" class="md-nav__link">
     Middleware Stages
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#invocation-pipeline" class="md-nav__link">
+  <a href="#invocation-pipeline" title="Invocation Pipeline" class="md-nav__link">
     Invocation Pipeline
   </a>
   
@@ -638,7 +662,7 @@
       
       
         <li class="md-nav__item">
-          <a href="#__comments" class="md-nav__link md-nav__link--active">
+          <a href="#__comments" title="Comments" class="md-nav__link md-nav__link--active">
             Comments
           </a>
         </li>
@@ -680,6 +704,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../passwords/" title="Passwords" class="md-nav__link">
+      Passwords
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../parameter-resolvers/" title="Parameter Resolvers" class="md-nav__link">
       Parameter Resolvers
     </a>
@@ -694,6 +730,18 @@
   <li class="md-nav__item">
     <a href="../piped-arguments/" title="Piped Arguments" class="md-nav__link">
       Piped Arguments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../prompting/" title="Prompting" class="md-nav__link">
+      Prompting
     </a>
   </li>
 
@@ -736,21 +784,21 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why-we-use-the-middleware-pattern" class="md-nav__link">
+  <a href="#why-we-use-the-middleware-pattern" title="Why we use the middleware pattern" class="md-nav__link">
     Why we use the middleware pattern
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#middleware-stages" class="md-nav__link">
+  <a href="#middleware-stages" title="Middleware Stages" class="md-nav__link">
     Middleware Stages
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#invocation-pipeline" class="md-nav__link">
+  <a href="#invocation-pipeline" title="Invocation Pipeline" class="md-nav__link">
     Invocation Pipeline
   </a>
   
@@ -761,7 +809,7 @@
       
       
         <li class="md-nav__item">
-          <a href="#__comments" class="md-nav__link md-nav__link--active">
+          <a href="#__comments" title="Comments" class="md-nav__link md-nav__link--active">
             Comments
           </a>
         </li>
@@ -789,16 +837,15 @@ Middleware are components that register a delegate as a step in the pipeline.  T
 <h3 id="why-we-use-the-middleware-pattern">Why we use the middleware pattern<a class="headerlink" href="#why-we-use-the-middleware-pattern" title="Permanent link">#</a></h3>
 <ul>
 <li>Ease of adding new features without touching existing code. Observing <a href="https://en.wikipedia.org/wiki/Single_responsibility_principle">Single Resposibility</a> &amp;  <a href="https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle">Open-Closed</a> principals.</li>
-<li>Ease of extending the framework using external packages. Supports community enhancements while reducing the bloat of this code base.</li>
+<li>Ease of extending the framework using external packages. Supports community enhancements while reducing the bloat of the framework code base.</li>
 <li>Feature tests can exclude middleware that's not relevant to the tests.</li>
-<li>Alignment with <a href="https://github.com/dotnet/command-line-api">System.CommandLine</a> architecture, making it easier to integrate if it moves beyond the experimental phase.</li>
 </ul>
 <p><img alt="Middleware" src="../../diagrams/MiddlewarePipeline.png" style="float: right;" /></p>
 <h3 id="middleware-stages">Middleware Stages<a class="headerlink" href="#middleware-stages" title="Permanent link">#</a></h3>
-<p>The core functionality of the framework has been implemented using middleware. Optional features have also been implemented using middleware. 
-One of the classic challenges of using the middleware pattern is understanding the order middleware components should be registered. To address this challenge, the pipeline has been split into ten distinct changes, as seen in the diagram below, five core stages (in green) and five extensibility stages (in yellow). The five core stages contain the core functionality of the framework. After each core stage is complete, the framework guarantees specific parts of the <code class="codehilite"><span class="n">CommandContext</span></code> are populated.</p>
-<p>The other 5 stages are where other middleware will typically be registered, based on the <code class="codehilite"><span class="n">CommandContext</span></code> properties the middleware requires to operate.  For example, <code class="codehilite"><span class="n">PromptForMissingOperands</span></code> is registered in the <code class="codehilite"><span class="n">PostParseInputPreBindValues</span></code> stage because it depends on the <code class="codehilite"><span class="n">ParseResults</span><span class="p">.</span><span class="n">ArgumentValues</span></code> property being populated in the <code class="codehilite"><span class="n">ParseInput</span></code> stage. <code class="codehilite"><span class="n">FluentValidation</span></code> is registerd in the <code class="codehilite"><span class="n">PostBindValuesPreInvoke</span></code> stage because it relies on the <code class="codehilite"><span class="n">IInvocation</span><span class="p">.</span><span class="n">ParameterValues</span></code> being populated in the <code class="codehilite"><span class="n">BindValues</span></code> stage.  Read more in the intellisense of <code class="codehilite"><span class="n">MiddlewareStages</span></code> and the properties of the <code class="codehilite"><span class="n">CommandContext</span></code> classes.</p>
-<p>Note: <code class="codehilite"><span class="n">DisplayVersion</span></code> is the only optional middleware in a core stage. Any middleware can be register core stage if needed. In the case of <code class="codehilite"><span class="n">DisplayVersion</span></code>, the middleware must run before <code class="codehilite"><span class="n">DisplayHelp</span></code> otherwise help would trigger for the root command because it's not executable. <code class="codehilite"><span class="n">DisplayVersion</span></code> is able to identify the version option was specified and short circuit the pipeline after printing version information.</p>
+<p>The core functionality of the framework and optional features have been implemented using middleware. 
+One of the classic challenges of using the middleware pattern is understanding the order middleware components should be registered. To address this challenge, the pipeline has been split into eight distinct changes, as seen in the diagram below, four core stages (in green) and four extensibility stages (in yellow). The four core stages contain the core functionality of the framework. After each core stage is complete, the framework guarantees specific parts of the <code class="codehilite"><span class="n">CommandContext</span></code> are populated.</p>
+<p>The other four stages are where other middleware will typically be registered, based on <code class="codehilite"><span class="n">CommandContext</span></code> properties the middleware requires to operate. For example, <code class="codehilite"><span class="n">PromptForMissingOperands</span></code> is registered in the <code class="codehilite"><span class="n">PostParseInputPreBindValues</span></code> stage because it depends on the <code class="codehilite"><span class="n">ParseResults</span><span class="p">.</span><span class="n">ArgumentValues</span></code> property being populated in the <code class="codehilite"><span class="n">ParseInput</span></code> stage. <code class="codehilite"><span class="n">FluentValidation</span></code> is registerd in the <code class="codehilite"><span class="n">PostBindValuesPreInvoke</span></code> stage because it relies on the <code class="codehilite"><span class="n">IInvocation</span><span class="p">.</span><span class="n">ParameterValues</span></code> being populated in the <code class="codehilite"><span class="n">BindValues</span></code> stage.  Read more in the intellisense of <code class="codehilite"><span class="n">MiddlewareStages</span></code> and the properties of the <code class="codehilite"><span class="n">CommandContext</span></code> classes.</p>
+<p>Note: <code class="codehilite"><span class="n">DisplayVersion</span></code> is the only optional middleware in a core stage. Any middleware can be registered in a core stage if needed. In the case of <code class="codehilite"><span class="n">DisplayVersion</span></code>, the middleware must run before <code class="codehilite"><span class="n">DisplayHelp</span></code> otherwise help would trigger for the root command when it is not executable.</p>
 <h3 id="invocation-pipeline">Invocation Pipeline<a class="headerlink" href="#invocation-pipeline" title="Permanent link">#</a></h3>
 <p>The invocation pipeline is assembled during the <code class="codehilite"><span class="n">ParseInput</span></code> stage, captured in <code class="codehilite"><span class="n">CommandContext</span><span class="p">.</span><span class="n">InvocationPipeline</span></code> property and run during the <code class="codehilite"><span class="n">InvokeInvocationPipeline</span></code> stage. The pipeline consists of <a href="../interceptors/">interceptor methods</a> and the target command method.</p>
                 
@@ -837,7 +884,7 @@ One of the classic challenges of using the middleware pattern is understanding t
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../v3-changes/" title="v3 Changes" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../option-or-operand/" title="Option vs Operand" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -846,7 +893,7 @@ One of the classic challenges of using the middleware pattern is understanding t
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                v3 Changes
+                Option vs Operand
               </span>
             </div>
           </a>
@@ -897,7 +944,7 @@ One of the classic challenges of using the middleware pattern is understanding t
       
     </div>
     
-      <script src="../../assets/javascripts/application.ac79c3b0.js"></script>
+      <script src="../../assets/javascripts/application.245445c6.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       

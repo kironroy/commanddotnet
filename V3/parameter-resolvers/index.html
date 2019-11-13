@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
     
     
       
@@ -42,9 +42,9 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.0284f74d.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.01803549.css">
       
       
         
@@ -208,7 +208,7 @@
         
       
       
-      <main class="md-main" role="main">
+      <main class="md-main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
             
@@ -559,11 +559,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
     
     <label class="md-nav__link" for="nav-6">
-      v3
+      v3 RC
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-6">
-        v3
+        v3 RC
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -576,6 +576,30 @@
   <li class="md-nav__item">
     <a href="../v3-changes/" title="v3 Changes" class="md-nav__link">
       v3 Changes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../argument-terminology/" title="Argument Terminology" class="md-nav__link">
+      Argument Terminology
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../option-or-operand/" title="Option vs Operand" class="md-nav__link">
+      Option vs Operand
     </a>
   </li>
 
@@ -620,6 +644,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../passwords/" title="Passwords" class="md-nav__link">
+      Passwords
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -645,6 +681,18 @@
   <li class="md-nav__item">
     <a href="../piped-arguments/" title="Piped Arguments" class="md-nav__link">
       Piped Arguments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../prompting/" title="Prompting" class="md-nav__link">
+      Prompting
     </a>
   </li>
 
@@ -697,27 +745,26 @@
                 
                 
                 <h1 id="parameter-resolvers">Parameter Resolvers<a class="headerlink" href="#parameter-resolvers" title="Permanent link">#</a></h1>
-<p>Parameters defined in command and interceptor methods must a type as defined in <a href="../../parameter-types/">parameter-types</a>.
-There are times where your command method needs to write to the <code class="codehilite"><span class="n">IConsole</span></code> or perform a loop while checking the <code class="codehilite"><span class="n">CancellationToken</span></code>.
-To get these, you define an interceptor method with a <code class="codehilite"><span class="n">CommandContext</span></code> parameter and copy the properties to fields for use in other methods. </p>
-<p>This quickly gets cumbersome.</p>
-<p>The answer... parameter resolvers, functions that, given a <code class="codehilite"><span class="n">CommandContext</span></code>, return an instance of a type that can be passed to a command or interceptor method.
-There are three default resolvers for <code class="codehilite"><span class="n">CommandContext</span></code>, <code class="codehilite"><span class="n">IConsole</span></code> &amp; <code class="codehilite"><span class="n">CancellationToken</span></code>
-More can be registered like this </p>
-<div class="codehilite"><pre><span></span><span class="n">appRunner</span><span class="p">.</span><span class="n">Configure</span><span class="p">(</span><span class="n">b</span> <span class="p">=&gt;</span> <span class="n">b</span><span class="p">.</span><span class="n">UseParameterResolver</span><span class="p">(</span><span class="n">ctx</span> <span class="p">=&gt;</span> <span class="n">ctx</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">Get</span><span class="p">&lt;</span><span class="n">SomeClass</span><span class="p">&gt;()));</span>
+<p>Parameters defined in command and interceptor methods must be a valid paramter type as defined in <a href="../../parameter-types/">parameter-types</a>.</p>
+<p>There are times where your command method needs access to a service in the <code class="codehilite"><span class="n">CommandContext</span></code>, 
+say to write to the <code class="codehilite"><span class="n">IConsole</span></code> or perform a loop while checking the <code class="codehilite"><span class="n">CancellationToken</span></code>.</p>
+<p>One way to get these is to define an interceptor method with a <code class="codehilite"><span class="n">CommandContext</span></code> parameter and copy the properties to fields for use in other methods. 
+This quickly gets repetitive and cumbersome.</p>
+<p>Parameter resolvers are functions that, given a <code class="codehilite"><span class="n">CommandContext</span></code>, return an instance of a type that can be
+passed to a command or interceptor method.  The types returned are valid types to use in command and interceptor methods and command class constructors. </p>
+<p>There are three default resolvers for: <code class="codehilite"><span class="n">CommandContext</span></code>, <code class="codehilite"><span class="n">IConsole</span></code> &amp; <code class="codehilite"><span class="n">CancellationToken</span></code>.</p>
+<p>Example of registering a new parameter resolver for <code class="codehilite"><span class="n">SomeService</span></code></p>
+<div class="codehilite"><pre><span></span><span class="n">appRunner</span><span class="p">.</span><span class="n">Configure</span><span class="p">(</span><span class="n">b</span> <span class="p">=&gt;</span> <span class="n">b</span><span class="p">.</span><span class="n">UseParameterResolver</span><span class="p">(</span><span class="n">ctx</span> <span class="p">=&gt;</span> <span class="n">ctx</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">Get</span><span class="p">&lt;</span><span class="n">SomeService</span><span class="p">&gt;()));</span>
 </pre></div>
 
-<p>These types are now available as parameters for command methods, interceptor methods and command class constructors.</p>
 <div class="codehilite"><pre><span></span><span class="k">public</span> <span class="k">class</span> <span class="nc">Calculator</span>
 <span class="p">{</span>
-    <span class="k">private</span> <span class="n">iCalculator</span> <span class="n">_calculator</span><span class="p">;</span>
+    <span class="k">private</span> <span class="n">ICalculator</span> <span class="n">_calculator</span><span class="p">;</span>
 
-    <span class="k">public</span> <span class="n">Task</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">Interceptor</span><span class="p">(</span>
-        <span class="n">InterceptorExecutionDelegate</span> <span class="n">next</span><span class="p">,</span> 
-<span class="na">        [Option(Inherited = true)]</span> <span class="kt">int</span> <span class="n">radix</span><span class="p">,</span>
-        <span class="n">SomeClass</span> <span class="n">someClass</span><span class="p">)</span>
+    <span class="k">public</span> <span class="nf">Calculator</span><span class="p">(</span><span class="n">ICalculator</span> <span class="n">calculator</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">_calculator</span> <span class="p">=</span> <span class="n">calculator</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="n">Task</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">Interceptor</span><span class="p">(</span><span class="n">InterceptorExecutionDelegate</span> <span class="n">next</span><span class="p">,</span> <span class="n">SomeService</span> <span class="n">someService</span><span class="p">)</span>
     <span class="p">{</span>
-        <span class="n">_calculator</span> <span class="p">=</span> <span class="n">Factory</span><span class="p">.</span><span class="n">GetCalculatorFor</span><span class="p">(</span><span class="n">radix</span><span class="p">);</span>
         <span class="k">return</span> <span class="nf">next</span><span class="p">();</span>
     <span class="p">}</span>
 
@@ -734,6 +781,16 @@ More can be registered like this </p>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
+
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It will be tempting to use this as a form of dependency injection, but it is a service locator pattern.
+The DI container will not understand the relationships between your dependencies, limiting the containers usefulness in some cases.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Use this feature for middleware and infrasturctural components that can be used without DI.</p>
+</div>
                 
                   
                 
@@ -770,7 +827,7 @@ More can be registered like this </p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../interceptors/" title="Interceptor methods" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../passwords/" title="Passwords" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -779,7 +836,7 @@ More can be registered like this </p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Interceptor methods
+                Passwords
               </span>
             </div>
           </a>
@@ -830,7 +887,7 @@ More can be registered like this </p>
       
     </div>
     
-      <script src="../../assets/javascripts/application.ac79c3b0.js"></script>
+      <script src="../../assets/javascripts/application.245445c6.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
