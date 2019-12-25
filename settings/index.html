@@ -10,6 +10,8 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
+        <meta name="description" content="Model your command line application interface in a class">
+      
       
         <link rel="canonical" href="https://bilal-fazlani.github.io/commanddotnet/settings/">
       
@@ -33,8 +35,8 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+      <link rel="shortcut icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -42,7 +44,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.1b62728e.css">
       
         <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -53,21 +55,17 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../assets/javascripts/modernizr.268332fc.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../assets/fonts/material-icons.css">
     
-    
-      <link rel="stylesheet" href="../commanddotnet/superfences.css">
-    
-      <link rel="stylesheet" href="../superfences.css">
     
     
       
@@ -127,7 +125,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href="https://bilal-fazlani.github.io/commanddotnet" title="CommandDotNet" class="md-header-nav__button md-logo">
           
-            <img src="../img/logo.png" width="24" height="24">
+            <img src="../img/small-logo.svg" width="24" height="24">
           
         </a>
       </div>
@@ -208,6 +206,44 @@
         
       
       
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href=".." class="md-tabs__link md-tabs__link--active">
+          Current Version
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../V3/v3-changes/" class="md-tabs__link">
+          Version 3 (Preview)
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
       <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
@@ -219,7 +255,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="https://bilal-fazlani.github.io/commanddotnet" title="CommandDotNet" class="md-nav__button md-logo">
       
-        <img src="../img/logo.png" width="48" height="48">
+        <img src="../img/small-logo.svg" width="48" height="48">
       
     </a>
     CommandDotNet
@@ -251,6 +287,27 @@
       
       
 
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Current Version
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Current Version
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
 
   <li class="md-nav__item">
     <a href=".." title="Introduction" class="md-nav__link">
@@ -258,10 +315,10 @@
     </a>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item">
@@ -270,21 +327,21 @@
     </a>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3" type="checkbox" id="nav-1-3">
     
-    <label class="md-nav__link" for="nav-3">
+    <label class="md-nav__link" for="nav-1-3">
       Defining Commands
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-3">
         Defining Commands
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -426,23 +483,23 @@
     </nav>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
   
 
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4" type="checkbox" id="nav-1-4" checked>
     
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-1-4">
       Extras
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-4">
         Extras
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -589,21 +646,21 @@
     </nav>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5">
     
-    <label class="md-nav__link" for="nav-5">
+    <label class="md-nav__link" for="nav-1-5">
       Extensibility
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-5">
         Extensibility
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -649,6 +706,11 @@
     </nav>
   </li>
 
+        
+      </ul>
+    </nav>
+  </li>
+
     
       
       
@@ -657,14 +719,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
-    <label class="md-nav__link" for="nav-6">
-      v3 RC
+    <label class="md-nav__link" for="nav-2">
+      Version 3 (Preview)
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
-        v3 RC
+      <label class="md-nav__title" for="nav-2">
+        Version 3 (Preview)
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -675,8 +737,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../V3/v3-changes/" title="v3 Changes" class="md-nav__link">
-      v3 Changes
+    <a href="../V3/v3-changes/" title="Changes" class="md-nav__link">
+      Changes
     </a>
   </li>
 
@@ -955,7 +1017,7 @@
                 
                   <h1>Settings</h1>
                 
-                <p>When you create a new instance of <code class="codehilite"><span class="n">AppRunner</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span></code> you can pass an instance new <code class="codehilite"><span class="n">AppSettings</span></code> object.
+                <p>When you create a new instance of <code class="codehilite"><span class="err">AppRunner&lt;T&gt;</span></code> you can pass an instance new <code class="codehilite"><span class="err">AppSettings</span></code> object.
 Here are the settings you can change:</p>
 <h3 id="show-argument-details">Show argument details<a class="headerlink" href="#show-argument-details" title="Permanent link">#</a></h3>
 <p>Shows type information of arguments in help text. Enabled by default.</p>
@@ -978,7 +1040,18 @@ Here are the settings you can change:</p>
 <h3 id="enable-version-option">Enable version option<a class="headerlink" href="#enable-version-option" title="Permanent link">#</a></h3>
 <p>True by default. It adds an additional option to the root command. It shows version of the application.</p>
 <h3 id="case">Case<a class="headerlink" href="#case" title="Permanent link">#</a></h3>
-<div class="codehilite"><pre><span></span><span class="k">public</span> <span class="k">class</span> <span class="nc">SomeClass</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">public</span> <span class="k">class</span> <span class="nc">SomeClass</span>
 <span class="p">{</span>
     <span class="k">public</span> <span class="nf">SomeClass</span><span class="p">(</span><span class="kt">string</span> <span class="n">Url</span><span class="p">)</span>
     <span class="p">{</span>
@@ -991,9 +1064,19 @@ Here are the settings you can change:</p>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <p>by default this would result into something like this:</p>
-<div class="codehilite"><pre><span></span>Usage: dotnet example.dll <span class="o">[</span>options<span class="o">]</span> <span class="o">[</span>command<span class="o">]</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Usage: dotnet example.dll <span class="o">[</span>options<span class="o">]</span> <span class="o">[</span>command<span class="o">]</span>
 
 Options:
   -h <span class="p">|</span> -? <span class="p">|</span> --help  Show <span class="nb">help</span> information
@@ -1004,6 +1087,7 @@ Commands:
 
 Use <span class="s2">&quot;dotnet example.dll [command] --help&quot;</span> <span class="k">for</span> more information about a command.
 </pre></div>
+</td></tr></table>
 
 <p>Command line conventions are different from C# conventions and the usual pascal casing of method names or camel casing of parameter names may not be suitable for command line arguments.</p>
 <p>You can continue to develop you classes and method in normal C# conventions and tell library to transform them into the desired casing.</p>
@@ -1016,7 +1100,17 @@ Use <span class="s2">&quot;dotnet example.dll [command] --help&quot;</span> <spa
 <li>PascalCase</li>
 </ol>
 <p>If you now use a different setting,</p>
-<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Program</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Program</span>
 <span class="p">{</span>
     <span class="k">static</span> <span class="kt">int</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
     <span class="p">{</span>
@@ -1028,9 +1122,19 @@ Use <span class="s2">&quot;dotnet example.dll [command] --help&quot;</span> <spa
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <p>The result would something like this:</p>
-<div class="codehilite"><pre><span></span>Usage: dotnet example.dll <span class="o">[</span>options<span class="o">]</span> <span class="o">[</span>command<span class="o">]</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Usage: dotnet example.dll <span class="o">[</span>options<span class="o">]</span> <span class="o">[</span>command<span class="o">]</span>
 
 Options:
   -h <span class="p">|</span> -? <span class="p">|</span> --help  Show <span class="nb">help</span> information
@@ -1041,6 +1145,7 @@ Commands:
 
 Use <span class="s2">&quot;dotnet example.dll [command] --help&quot;</span> <span class="k">for</span> more information about a command.
 </pre></div>
+</td></tr></table>
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1050,61 +1155,84 @@ Use <span class="s2">&quot;dotnet example.dll [command] --help&quot;</span> <spa
 <p>In this library, there are two ways to parse boolean <a href="#options">Options</a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Boolean mod is applicable only for <code class="codehilite"><span class="k">Options</span></code> and not for <code class="codehilite"><span class="n">Arguments</span></code> </p>
+<p>Boolean mod is applicable only for <code class="codehilite"><span class="err">Options</span></code> and not for <code class="codehilite"><span class="err">Arguments</span></code> </p>
 </div>
 <h4 id="1-implicit">1.  <strong>Implicit</strong><a class="headerlink" href="#1-implicit" title="Permanent link">#</a></h4>
 <p>This is the default mode.
-In this mode, you don't pass the value <code class="codehilite"><span class="k">true</span></code> or <code class="codehilite"><span class="k">false</span></code> in the command line. These parameters are treated as flags. They are considered <code class="codehilite"><span class="k">true</span></code> if they are present and <code class="codehilite"><span class="k">false</span></code> when they are not.</p>
+In this mode, you don't pass the value <code class="codehilite"><span class="err">true</span></code> or <code class="codehilite"><span class="err">false</span></code> in the command line. These parameters are treated as flags. They are considered <code class="codehilite"><span class="err">true</span></code> if they are present and <code class="codehilite"><span class="err">false</span></code> when they are not.</p>
 <p>For example: 
-<div class="codehilite"><pre><span></span>dotnet example.dll --printValues
-</pre></div></p>
-<p>In this case, value of parameter <code class="codehilite"><span class="n">printValues</span></code> will be true</p>
-<p>and in the following example,</p>
-<div class="codehilite"><pre><span></span>dotnet example.dll
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>dotnet example.dll --printValues
 </pre></div>
+</td></tr></table></p>
+<p>In this case, value of parameter <code class="codehilite"><span class="err">printValues</span></code> will be true</p>
+<p>and in the following example,</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>dotnet example.dll
+</pre></div>
+</td></tr></table>
 
-<p>value of parameter <code class="codehilite"><span class="n">printValues</span></code> will be false.</p>
+<p>value of parameter <code class="codehilite"><span class="err">printValues</span></code> will be false.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>When using implicit boolean mode, it will result in an error, if the user tries to explicitly enter a value for parameter. In this instance, <code class="codehilite"><span class="n">dotnet</span> <span class="n">example</span><span class="p">.</span><span class="n">dll</span> <span class="c1">--printValues true</span></code> will result into an error.</p>
+<p>When using implicit boolean mode, it will result in an error, if the user tries to explicitly enter a value for parameter. In this instance, <code class="codehilite"><span class="err">dotnet example.dll --printValues true</span></code> will result into an error.</p>
 </div>
-<p>When you check the help of a command, you if you see <code class="codehilite"><span class="n">Flag</span></code> for a parameter, it means value is implit and does not require an explicit one.</p>
+<p>When you check the help of a command, you if you see <code class="codehilite"><span class="err">Flag</span></code> for a parameter, it means value is implit and does not require an explicit one.</p>
 <h5 id="flag-clubbing">Flag clubbing<a class="headerlink" href="#flag-clubbing" title="Permanent link">#</a></h5>
 <p>Clubbing of one letter <a href="#options">options</a> is supported. For example,</p>
 <p>If a command has multiple <a href="#boolean-mode">boolean flags</a> <a href="#options">options</a> like:</p>
-<div class="codehilite"><pre><span></span><span class="k">public</span> <span class="k">void</span> <span class="nf">Print</span><span class="p">([</span><span class="n">Option</span><span class="p">(</span><span class="n">ShortName</span><span class="p">=</span><span class="s">&quot;c&quot;</span><span class="p">)]</span><span class="kt">bool</span> <span class="n">qwerty</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">e</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">x</span><span class="p">){</span> <span class="p">}</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">public</span> <span class="k">void</span> <span class="nf">Print</span><span class="p">([</span><span class="n">Option</span><span class="p">(</span><span class="n">ShortName</span><span class="p">=</span><span class="s">&quot;c&quot;</span><span class="p">)]</span><span class="kt">bool</span> <span class="n">qwerty</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">e</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">x</span><span class="p">){</span> <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <p>These can be passed either as</p>
-<div class="codehilite"><pre><span></span>dotnet example.dll print -c -e -x
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>dotnet example.dll print -c -e -x
 </pre></div>
+</td></tr></table>
 
 <p>OR</p>
-<div class="codehilite"><pre><span></span>dotnet example.dll print -ecx
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>dotnet example.dll print -ecx
 </pre></div>
+</td></tr></table>
 
 <h4 id="2-explicit">2. Explicit<a class="headerlink" href="#2-explicit" title="Permanent link">#</a></h4>
 <p>If you want users to explicitly enter true or false, you need to set the boolean mode explicit. You can do that, by using the <code class="codehilite"><span class="o">[</span><span class="n">Argument</span><span class="o">]</span><span class="w"></span></code> attribute as shown below:</p>
-<div class="codehilite"><pre><span></span><span class="k">public</span> <span class="k">void</span> <span class="nf">MyCommand</span><span class="p">([</span><span class="n">Argument</span><span class="p">(</span><span class="n">BooleanMode</span> <span class="p">=</span> <span class="n">BooleanMode</span><span class="p">.</span><span class="n">Explicit</span><span class="p">)]</span><span class="kt">bool</span> <span class="n">capturelogs</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">public</span> <span class="k">void</span> <span class="nf">MyCommand</span><span class="p">([</span><span class="n">Argument</span><span class="p">(</span><span class="n">BooleanMode</span> <span class="p">=</span> <span class="n">BooleanMode</span><span class="p">.</span><span class="n">Explicit</span><span class="p">)]</span><span class="kt">bool</span> <span class="n">capturelogs</span><span class="p">)</span>
 <span class="p">{</span>
 
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You can set <code class="codehilite"><span class="n">BooleanMode</span> <span class="o">=</span> <span class="n">BooleanMode</span><span class="p">.</span><span class="k">Implicit</span></code> or <code class="codehilite"><span class="n">BooleanMode</span> <span class="o">=</span> <span class="n">BooleanMode</span><span class="p">.</span><span class="n">Explicit</span></code> only for <code class="codehilite"><span class="n">bool</span></code> or <code class="codehilite"><span class="n">bool</span><span class="o">?</span></code> type options.</p>
+<p>You can set <code class="codehilite"><span class="err">BooleanMode = BooleanMode.Implicit</span></code> or <code class="codehilite"><span class="err">BooleanMode = BooleanMode.Explicit</span></code> only for <code class="codehilite"><span class="err">bool</span></code> or <code class="codehilite"><span class="err">bool?</span></code> type options.</p>
 </div>
 <p>When you use explicit boolean mode, these scenarios are valid:</p>
-<div class="codehilite"><pre><span></span>dotnet example.dll MyCommand
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>dotnet example.dll MyCommand
 dotnet example.dll MyCommand --capturelogs <span class="nb">false</span>
 dotnet example.dll MyCommand --capturelogs <span class="nb">true</span>
 </pre></div>
+</td></tr></table>
 
-<p>but <code class="codehilite"><span class="n">dotnet</span> <span class="n">example</span><span class="p">.</span><span class="n">dll</span> <span class="n">MyCommand</span> <span class="c1">--capturelogs</span></code> is not valid and will result into error. It will only work in Implicit boolean mode.</p>
-<p>When you check the help of a command, and you see <code class="codehilite"><span class="nb">Boolean</span></code> it means if you wan't to make it true, you need to pass an explicit value. If you don't pass one, it will default to <code class="codehilite"><span class="k">false</span></code> automatically. Implicit and explicit are just ways to pass the value, under the hood they are just boolean parameters.</p>
+<p>but <code class="codehilite"><span class="err">dotnet example.dll MyCommand --capturelogs</span></code> is not valid and will result into error. It will only work in Implicit boolean mode.</p>
+<p>When you check the help of a command, and you see <code class="codehilite"><span class="err">Boolean</span></code> it means if you wan't to make it true, you need to pass an explicit value. If you don't pass one, it will default to <code class="codehilite"><span class="err">false</span></code> automatically. Implicit and explicit are just ways to pass the value, under the hood they are just boolean parameters.</p>
                 
                   
+                
+                
+                  
+                  <hr>
+                  <div class="md-source-date">
+                    <small>
+                      
+                        Last update: July 11, 2019
+                      
+                    </small>
+                  </div>
                 
               
               
@@ -1199,7 +1327,7 @@ dotnet example.dll MyCommand --capturelogs <span class="nb">true</span>
       
     </div>
     
-      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      <script src="../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       

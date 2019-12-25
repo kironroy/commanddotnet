@@ -10,6 +10,8 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
+        <meta name="description" content="Model your command line application interface in a class">
+      
       
         <link rel="canonical" href="https://bilal-fazlani.github.io/commanddotnet/V3/v3-changes/">
       
@@ -33,16 +35,16 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+      <link rel="shortcut icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
-        <title>v3 Changes - CommandDotNet</title>
+        <title>Changes - CommandDotNet</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
       
         <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -53,21 +55,17 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
-    
-      <link rel="stylesheet" href="../../commanddotnet/superfences.css">
-    
-      <link rel="stylesheet" href="../../superfences.css">
     
     
       
@@ -127,7 +125,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href="https://bilal-fazlani.github.io/commanddotnet" title="CommandDotNet" class="md-header-nav__button md-logo">
           
-            <img src="../../img/logo.png" width="24" height="24">
+            <img src="../../img/small-logo.svg" width="24" height="24">
           
         </a>
       </div>
@@ -142,7 +140,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                v3 Changes
+                Changes
               
             </span>
           
@@ -208,6 +206,44 @@
         
       
       
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../.." class="md-tabs__link">
+          Current Version
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" class="md-tabs__link md-tabs__link--active">
+          Version 3 (Preview)
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
       <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
@@ -219,7 +255,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="https://bilal-fazlani.github.io/commanddotnet" title="CommandDotNet" class="md-nav__button md-logo">
       
-        <img src="../../img/logo.png" width="48" height="48">
+        <img src="../../img/small-logo.svg" width="48" height="48">
       
     </a>
     CommandDotNet
@@ -252,16 +288,35 @@
       
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      Current Version
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Current Version
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
     <a href="../.." title="Introduction" class="md-nav__link">
       Introduction
     </a>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item">
@@ -270,21 +325,21 @@
     </a>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3" type="checkbox" id="nav-1-3">
     
-    <label class="md-nav__link" for="nav-3">
+    <label class="md-nav__link" for="nav-1-3">
       Defining Commands
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-3">
         Defining Commands
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -426,21 +481,21 @@
     </nav>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4" type="checkbox" id="nav-1-4">
     
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-1-4">
       Extras
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-4">
         Extras
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -486,21 +541,21 @@
     </nav>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5">
     
-    <label class="md-nav__link" for="nav-5">
+    <label class="md-nav__link" for="nav-1-5">
       Extensibility
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-5">
         Extensibility
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -546,6 +601,11 @@
     </nav>
   </li>
 
+        
+      </ul>
+    </nav>
+  </li>
+
     
       
       
@@ -556,14 +616,14 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
-    <label class="md-nav__link" for="nav-6">
-      v3 RC
+    <label class="md-nav__link" for="nav-2">
+      Version 3 (Preview)
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
-        v3 RC
+      <label class="md-nav__title" for="nav-2">
+        Version 3 (Preview)
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -583,11 +643,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        v3 Changes
+        Changes
       </label>
     
-    <a href="./" title="v3 Changes" class="md-nav__link md-nav__link--active">
-      v3 Changes
+    <a href="./" title="Changes" class="md-nav__link md-nav__link--active">
+      Changes
     </a>
     
       
@@ -1058,7 +1118,7 @@ Anything beyond basic scenarios will encounter a breaking change.</p>
 <h2 id="summary-of-new-features">Summary of new features<a class="headerlink" href="#summary-of-new-features" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="../response-files/">Response file</a> support </li>
-<li><code class="codehilite"><span class="n">HelpTextProvider</span></code> can be overridden to make targetted changes to a section of help.</li>
+<li><code class="codehilite"><span class="err">HelpTextProvider</span></code> can be overridden to make targetted changes to a section of help.</li>
 <li><a href="../test-tools/">Test tools</a>, helpful for end-to-end test and testing framework extensions, like middleware components.</li>
 <li>List operands can be populated from <a href="../piped-arguments/">piped arguments</a>.</li>
 <li><a href="../parameter-resolvers/">Parameter resolvers</a>.</li>
@@ -1070,36 +1130,46 @@ Anything beyond basic scenarios will encounter a breaking change.</p>
 <li><a href="../piped-arguments/">Piped input</a> can be mapped to operand lists.</li>
 <li>SimpleInjector container support.</li>
 <li>IoC runInScope to enable isolated instances in each run.</li>
-<li><code class="codehilite"><span class="n">IArgumentModel</span></code> instances can be resolved from containers. Defaults can be populated from configs and those values will appear in help.</li>
+<li><code class="codehilite"><span class="err">IArgumentModel</span></code> instances can be resolved from containers. Defaults can be populated from configs and those values will appear in help.</li>
 <li><a href="../newer-release-alerts/">Newer Release Alerts</a> to alert users when running an older verion of your application.</li>
 <li>External dependencies Humanizr and FluentValidation have been extracted to nuget packages: CommandDotNet.NameCasing &amp; CommandDotNet.FluentValidation.</li>
 </ul>
 <p>Several bugs were fixed along the way.</p>
 <h2 id="breaking-changes">Breaking Changes<a class="headerlink" href="#breaking-changes" title="Permanent link">#</a></h2>
 <p>We initially tried to roll out this update in backward compatible phases. Due to the scope of changes, that proved more burdonsome that it was worth. We decided the benefits were worth the price of breaking changes. Hopefully you'll agree.</p>
-<p>In some cases, i.e. renamed attributes, the old method or class has been marked with <code class="codehilite"><span class="o">[</span><span class="n">Obsolete</span><span class="o">]</span><span class="w"></span></code> and warnings will suggest how to upgrade.  These will be removed in the next major release, <code class="codehilite"><span class="mi">4</span><span class="p">.</span><span class="n">x</span></code></p>
+<p>In some cases, i.e. renamed attributes, the old method or class has been marked with <code class="codehilite"><span class="o">[</span><span class="n">Obsolete</span><span class="o">]</span><span class="w"></span></code> and warnings will suggest how to upgrade.  These will be removed in the next major release, <code class="codehilite"><span class="err">4.x</span></code></p>
 <p>There are a set of changes your IDE should be able to help you with.  For example, namespaces were updated to reflect their functional purpose. Your IDE will likely suggest the fixes and then you can remove the old namespaces. </p>
 <h3 id="appsettings-configuration">AppSettings &amp; Configuration<a class="headerlink" href="#appsettings-configuration" title="Permanent link">#</a></h3>
 <p>The following have been disabled by default and moved to middelware configurations</p>
 <ul>
-<li>Version option: <code class="codehilite"><span class="n">appRunner</span><span class="p">.</span><span class="n">UseVersionMiddleware</span><span class="p">()</span></code></li>
-<li>Prompting for missing arguments: <code class="codehilite"><span class="n">appRunner</span><span class="p">.</span><span class="n">UsePrompting</span><span class="p">(...)</span></code></li>
-<li>Name casing: <code class="codehilite"><span class="n">appRunner</span><span class="p">.</span><span class="n">UseNameCasing</span><span class="p">(...)</span></code> via CommandDotNet.NameCasing</li>
-<li>Fluent validation: <code class="codehilite"><span class="n">appRunner</span><span class="p">.</span><span class="n">UseFluentValidation</span><span class="p">()</span></code> via CommandDotNet.FluentValidation nuget</li>
+<li>Version option: <code class="codehilite"><span class="err">appRunner.UseVersionMiddleware()</span></code></li>
+<li>Prompting for missing arguments: <code class="codehilite"><span class="err">appRunner.UsePrompting(...)</span></code></li>
+<li>Name casing: <code class="codehilite"><span class="err">appRunner.UseNameCasing(...)</span></code> via CommandDotNet.NameCasing</li>
+<li>Fluent validation: <code class="codehilite"><span class="err">appRunner.UseFluentValidation()</span></code> via CommandDotNet.FluentValidation nuget</li>
 </ul>
 <h3 id="interceptor-methods">Interceptor Methods<a class="headerlink" href="#interceptor-methods" title="Permanent link">#</a></h3>
 <h4 id="interceptor-methods-replace-constructor-options">Interceptor Methods replace Constructor Options<a class="headerlink" href="#interceptor-methods-replace-constructor-options" title="Permanent link">#</a></h4>
 <p>Constructor-based dependency injection was not possible because constructors were used to define options that can be used for all subcommands defined in that class prevented.</p>
 <p>Those constructors will need to be replaced with interceptor methods.  There are two signatures for interceptor methods.</p>
-<p><code class="codehilite"><span class="nv">Task</span><span class="o">&lt;</span><span class="nv">int</span><span class="o">&gt;</span> <span class="nv">Inteceptor</span><span class="ss">(</span><span class="nv">CommandContext</span> <span class="nv">ctx</span>, <span class="nv">ExecutionDelegate</span> <span class="k">next</span>, ...<span class="ss">)</span></code></p>
+<p><code class="codehilite"><span class="err">Task&lt;int&gt; Inteceptor(CommandContext ctx, ExecutionDelegate next, ...)</span></code></p>
 <p>and</p>
-<p><code class="codehilite"><span class="nv">Task</span><span class="o">&lt;</span><span class="nv">int</span><span class="o">&gt;</span> <span class="nv">Inteceptor</span><span class="ss">(</span><span class="nv">InterceptorExecutionDelegate</span> <span class="k">next</span>, ...<span class="ss">)</span></code></p>
-<p>The method name does not matter.  What does matter is the <code class="codehilite"><span class="n">Task</span><span class="o">&lt;</span><span class="nb">int</span><span class="o">&gt;</span></code> return type and use of either <code class="codehilite"><span class="n">ExecutionDelegate</span></code> or <code class="codehilite"><span class="n">InterceptorExecutionDelegate</span></code>.  The former requires a <code class="codehilite"><span class="n">CommandContext</span></code>. Options can be defined in these methods but are not required.</p>
+<p><code class="codehilite"><span class="err">Task&lt;int&gt; Inteceptor(InterceptorExecutionDelegate next, ...)</span></code></p>
+<p>The method name does not matter.  What does matter is the <code class="codehilite"><span class="err">Task&lt;int&gt;</span></code> return type and use of either <code class="codehilite"><span class="err">ExecutionDelegate</span></code> or <code class="codehilite"><span class="err">InterceptorExecutionDelegate</span></code>.  The former requires a <code class="codehilite"><span class="err">CommandContext</span></code>. Options can be defined in these methods but are not required.</p>
 <h4 id="interceptor-methods-scope-includes-all-ancestor-commands">Interceptor Methods scope includes all ancestor commands<a class="headerlink" href="#interceptor-methods-scope-includes-all-ancestor-commands" title="Permanent link">#</a></h4>
 <p>Constructor options were only avialable for subcommands defined within the same class as the constructor.
 This lead to non-obvious behavior with multi-level subcommands where users could supply options that were never used.</p>
-<p>Example, let's say we have a console app <code class="codehilite"><span class="n">api</span><span class="p">.</span><span class="n">exe</span></code> for an api and the app mimics the RESTful design of the api. </p>
-<div class="codehilite"><pre><span></span><span class="k">public</span> <span class="k">class</span> <span class="nc">Api</span>
+<p>Example, let's say we have a console app <code class="codehilite"><span class="err">api.exe</span></code> for an api and the app mimics the RESTful design of the api. </p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">public</span> <span class="k">class</span> <span class="nc">Api</span>
 <span class="p">{</span>
     <span class="k">public</span> <span class="nf">Api</span><span class="p">(</span><span class="kt">string</span> <span class="n">url</span><span class="p">){</span> <span class="p">...</span> <span class="p">}</span>
 
@@ -1111,20 +1181,28 @@ This lead to non-obvious behavior with multi-level subcommands where users could
     <span class="k">public</span> <span class="k">void</span> <span class="nf">List</span><span class="p">()</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <p>The commands are:</p>
 <ul>
-<li><code class="codehilite"><span class="n">ApiApp</span></code> - the root app, with a constructor defining the option <code class="codehilite"><span class="c1">--url</span></code></li>
-<li><code class="codehilite"><span class="n">Users</span></code> - command from a nested class<ul>
-<li><code class="codehilite"><span class="n">List</span></code> - a method to list the users</li>
+<li><code class="codehilite"><span class="err">ApiApp</span></code> - the root app, with a constructor defining the option <code class="codehilite"><span class="err">--url</span></code></li>
+<li><code class="codehilite"><span class="err">Users</span></code> - command from a nested class<ul>
+<li><code class="codehilite"><span class="err">List</span></code> - a method to list the users</li>
 </ul>
 </li>
 </ul>
-<p>Usage: <code class="codehilite"><span class="n">api</span> <span class="c1">--url {api-url} users list</span></code></p>
+<p>Usage: <code class="codehilite"><span class="err">api --url {api-url} users list</span></code></p>
 <p>In v2 the Api class would not be instantiated and the --url option would be dropped.  </p>
 <p>v3 fixes this by keeping a pipeline of all interceptors.</p>
 <p>If you need the old behavior, use the following code to keep only the interceptor in the same class as the target command. </p>
-<div class="codehilite"><pre><span></span><span class="n">appRunner</span><span class="p">.</span><span class="n">Configure</span><span class="p">(</span><span class="n">c</span> <span class="p">=&gt;</span> <span class="n">c</span><span class="p">.</span><span class="n">UseMiddleware</span><span class="p">((</span><span class="n">ctx</span><span class="p">,</span> <span class="n">next</span><span class="p">)</span> <span class="p">=&gt;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">appRunner</span><span class="p">.</span><span class="n">Configure</span><span class="p">(</span><span class="n">c</span> <span class="p">=&gt;</span> <span class="n">c</span><span class="p">.</span><span class="n">UseMiddleware</span><span class="p">((</span><span class="n">ctx</span><span class="p">,</span> <span class="n">next</span><span class="p">)</span> <span class="p">=&gt;</span>
 <span class="p">{</span>
     <span class="kt">var</span> <span class="n">pipeline</span> <span class="p">=</span> <span class="n">ctx</span><span class="p">.</span><span class="n">InvocationPipeline</span><span class="p">;</span>
     <span class="n">pipeline</span><span class="p">.</span><span class="n">AncestorInterceptors</span> <span class="p">=</span> <span class="n">pipeline</span><span class="p">.</span><span class="n">All</span>
@@ -1133,15 +1211,27 @@ This lead to non-obvious behavior with multi-level subcommands where users could
     <span class="k">return</span> <span class="nf">next</span><span class="p">(</span><span class="n">ctx</span><span class="p">);</span>
 <span class="p">},</span> <span class="n">MiddlewareStages</span><span class="p">.</span><span class="n">PostParseInputPreBindValues</span><span class="p">));</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">#</a></h3>
-<p>Use <code class="codehilite"><span class="n">AppRunner</span><span class="p">.</span><span class="n">Configure</span></code> for any configuration not located in AppSettings. This includes setting a custom help text provider, dependency resolver, etc.</p>
+<p>Use <code class="codehilite"><span class="err">AppRunner.Configure</span></code> for any configuration not located in AppSettings. This includes setting a custom help text provider, dependency resolver, etc.</p>
 <h3 id="commandinvoker-removed">CommandInvoker removed<a class="headerlink" href="#commandinvoker-removed" title="Permanent link">#</a></h3>
-<p>The middleware pipeline architecture obsoleted the CommandInvoker. Look at the <code class="codehilite"><span class="n">CommandInvokerTests</span></code> in the repo to see how the feature can be implemented using middleware. Where the CommandInvoker only worked for the command method, the new architecture allows interogating all of the interceptor methods.</p>
+<p>The middleware pipeline architecture obsoleted the CommandInvoker. Look at the <code class="codehilite"><span class="err">CommandInvokerTests</span></code> in the repo to see how the feature can be implemented using middleware. Where the CommandInvoker only worked for the command method, the new architecture allows interogating all of the interceptor methods.</p>
 <h3 id="prompt-for-list-values">Prompt for list values<a class="headerlink" href="#prompt-for-list-values" title="Permanent link">#</a></h3>
 <p>Delimited by line instead of by comma. Enter an empty line to submit the list.</p>
                 
                   
+                
+                
+                  
+                  <hr>
+                  <div class="md-source-date">
+                    <small>
+                      
+                        Last update: November 14, 2019
+                      
+                    </small>
+                  </div>
                 
               
               
@@ -1236,7 +1326,7 @@ This lead to non-obvious behavior with multi-level subcommands where users could
       
     </div>
     
-      <script src="../../assets/javascripts/application.ac79c3b0.js"></script>
+      <script src="../../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       

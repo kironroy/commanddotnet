@@ -10,6 +10,8 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
+        <meta name="description" content="Model your command line application interface in a class">
+      
       
         <link rel="canonical" href="https://bilal-fazlani.github.io/commanddotnet/parameter-types/">
       
@@ -33,8 +35,8 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+      <link rel="shortcut icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -42,7 +44,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.1b62728e.css">
       
         <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -53,21 +55,17 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../assets/javascripts/modernizr.268332fc.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../assets/fonts/material-icons.css">
     
-    
-      <link rel="stylesheet" href="../commanddotnet/superfences.css">
-    
-      <link rel="stylesheet" href="../superfences.css">
     
     
       
@@ -127,7 +125,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href="https://bilal-fazlani.github.io/commanddotnet" title="CommandDotNet" class="md-header-nav__button md-logo">
           
-            <img src="../img/logo.png" width="24" height="24">
+            <img src="../img/small-logo.svg" width="24" height="24">
           
         </a>
       </div>
@@ -208,6 +206,44 @@
         
       
       
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href=".." class="md-tabs__link md-tabs__link--active">
+          Current Version
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../V3/v3-changes/" class="md-tabs__link">
+          Version 3 (Preview)
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
       <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
@@ -219,7 +255,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="https://bilal-fazlani.github.io/commanddotnet" title="CommandDotNet" class="md-nav__button md-logo">
       
-        <img src="../img/logo.png" width="48" height="48">
+        <img src="../img/small-logo.svg" width="48" height="48">
       
     </a>
     CommandDotNet
@@ -251,6 +287,27 @@
       
       
 
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Current Version
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Current Version
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
 
   <li class="md-nav__item">
     <a href=".." title="Introduction" class="md-nav__link">
@@ -258,10 +315,10 @@
     </a>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item">
@@ -270,21 +327,21 @@
     </a>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3" type="checkbox" id="nav-1-3">
     
-    <label class="md-nav__link" for="nav-3">
+    <label class="md-nav__link" for="nav-1-3">
       Defining Commands
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-3">
         Defining Commands
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -426,21 +483,21 @@
     </nav>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4" type="checkbox" id="nav-1-4">
     
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-1-4">
       Extras
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-4">
         Extras
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -486,23 +543,23 @@
     </nav>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
   
 
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5" checked>
     
-    <label class="md-nav__link" for="nav-5">
+    <label class="md-nav__link" for="nav-1-5">
       Extensibility
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-5">
         Extensibility
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -588,6 +645,11 @@
     </nav>
   </li>
 
+        
+      </ul>
+    </nav>
+  </li>
+
     
       
       
@@ -596,14 +658,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
-    <label class="md-nav__link" for="nav-6">
-      v3 RC
+    <label class="md-nav__link" for="nav-2">
+      Version 3 (Preview)
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
-        v3 RC
+      <label class="md-nav__title" for="nav-2">
+        Version 3 (Preview)
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -614,8 +676,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../V3/v3-changes/" title="v3 Changes" class="md-nav__link">
-      v3 Changes
+    <a href="../V3/v3-changes/" title="Changes" class="md-nav__link">
+      Changes
     </a>
   </li>
 
@@ -835,25 +897,25 @@
                 
                 <p>Supports all types with a string constructor or where a TypeConverter is defined that can convert from a string.  Includes, but not limited to:</p>
 <ul>
-<li><code class="codehilite"><span class="n">string</span></code></li>
-<li><code class="codehilite"><span class="nb">char</span></code></li>
-<li><code class="codehilite"><span class="n">bool</span></code></li>
-<li><code class="codehilite"><span class="k">enum</span></code></li>
-<li><code class="codehilite"><span class="n">short</span></code></li>
-<li><code class="codehilite"><span class="nb">int</span></code></li>
-<li><code class="codehilite"><span class="n">long</span></code></li>
-<li><code class="codehilite"><span class="nb">decimal</span></code></li>
-<li><code class="codehilite"><span class="n">double</span></code></li>
-<li><code class="codehilite"><span class="n">Guid</span></code></li>
-<li><code class="codehilite"><span class="n">Uri</span></code></li>
-<li><code class="codehilite"><span class="n">FileInfo</span></code></li>
-<li><code class="codehilite"><span class="n">DirectoryInfo</span></code></li>
+<li><code class="codehilite"><span class="err">string</span></code></li>
+<li><code class="codehilite"><span class="err">char</span></code></li>
+<li><code class="codehilite"><span class="err">bool</span></code></li>
+<li><code class="codehilite"><span class="err">enum</span></code></li>
+<li><code class="codehilite"><span class="err">short</span></code></li>
+<li><code class="codehilite"><span class="err">int</span></code></li>
+<li><code class="codehilite"><span class="err">long</span></code></li>
+<li><code class="codehilite"><span class="err">decimal</span></code></li>
+<li><code class="codehilite"><span class="err">double</span></code></li>
+<li><code class="codehilite"><span class="err">Guid</span></code></li>
+<li><code class="codehilite"><span class="err">Uri</span></code></li>
+<li><code class="codehilite"><span class="err">FileInfo</span></code></li>
+<li><code class="codehilite"><span class="err">DirectoryInfo</span></code></li>
 </ul>
-<p>Also supports <code class="codehilite"><span class="n">List</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span></code>, <code class="codehilite"><span class="n">IEnumerable</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span></code> and <code class="codehilite"><span class="k">Nullable</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span></code> where T can be converted from string.  Note: <code class="codehilite"><span class="n">T</span><span class="p">[]</span></code> is not currently supported.</p>
+<p>Also supports <code class="codehilite"><span class="err">List&lt;T&gt;</span></code>, <code class="codehilite"><span class="err">IEnumerable&lt;T&gt;</span></code> and <code class="codehilite"><span class="err">Nullable&lt;T&gt;</span></code> where T can be converted from string.  Note: <code class="codehilite"><span class="err">T[]</span></code> is not currently supported.</p>
 <p>These are applicable for both - Options and Arguments</p>
 <p>Note for arguments: 
-- There can be only one <code class="codehilite"><span class="n">List</span></code> argument in the method. It can be used with other non <code class="codehilite"><span class="n">List</span></code> type arguments or <code class="codehilite"><span class="n">List</span></code> type options.
-- If the method has a <code class="codehilite"><span class="n">List</span></code> type argument, it should be defined last in the order.</p>
+- There can be only one <code class="codehilite"><span class="err">List</span></code> argument in the method. It can be used with other non <code class="codehilite"><span class="err">List</span></code> type arguments or <code class="codehilite"><span class="err">List</span></code> type options.
+- If the method has a <code class="codehilite"><span class="err">List</span></code> type argument, it should be defined last in the order.</p>
 <h3 id="adding-support-for-new-types">Adding support for new types<a class="headerlink" href="#adding-support-for-new-types" title="Permanent link">#</a></h3>
 <p>In most cases, create a <a href="https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.typeconverter?view=netframework-4.8">TypeConverter</a> for your type</p>
 <p>If you need </p>
@@ -862,9 +924,20 @@
 <li>conditional logic based on argument metadata (custom attributes, etc)</li>
 <li>the converter only for parsing parameters and not the business logic of your application</li>
 </ul>
-<p>Implement <code class="codehilite"><span class="n">ITypedArgumentTypeDescriptor</span></code> or <code class="codehilite"><span class="n">IGenericArgumentTypeDescriptor</span></code> and register with <code class="codehilite"><span class="n">AppSettings</span><span class="p">.</span><span class="n">ArgumentTypeDescriptors</span><span class="p">.</span><span class="n">Register</span><span class="p">(...)</span></code>.</p>
+<p>Implement <code class="codehilite"><span class="err">ITypedArgumentTypeDescriptor</span></code> or <code class="codehilite"><span class="err">IGenericArgumentTypeDescriptor</span></code> and register with <code class="codehilite"><span class="err">AppSettings.ArgumentTypeDescriptors.Register(...)</span></code>.</p>
                 
                   
+                
+                
+                  
+                  <hr>
+                  <div class="md-source-date">
+                    <small>
+                      
+                        Last update: September 21, 2019
+                      
+                    </small>
+                  </div>
                 
               
               
@@ -959,7 +1032,7 @@
       
     </div>
     
-      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      <script src="../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       

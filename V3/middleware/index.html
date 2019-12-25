@@ -10,6 +10,8 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
+        <meta name="description" content="Model your command line application interface in a class">
+      
       
         <link rel="canonical" href="https://bilal-fazlani.github.io/commanddotnet/V3/middleware/">
       
@@ -33,8 +35,8 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+      <link rel="shortcut icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -42,7 +44,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
       
         <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -53,21 +55,17 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
-    
-      <link rel="stylesheet" href="../../commanddotnet/superfences.css">
-    
-      <link rel="stylesheet" href="../../superfences.css">
     
     
       
@@ -127,7 +125,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href="https://bilal-fazlani.github.io/commanddotnet" title="CommandDotNet" class="md-header-nav__button md-logo">
           
-            <img src="../../img/logo.png" width="24" height="24">
+            <img src="../../img/small-logo.svg" width="24" height="24">
           
         </a>
       </div>
@@ -208,6 +206,44 @@
         
       
       
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../.." class="md-tabs__link">
+          Current Version
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../v3-changes/" class="md-tabs__link md-tabs__link--active">
+          Version 3 (Preview)
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
       <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
@@ -219,7 +255,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="https://bilal-fazlani.github.io/commanddotnet" title="CommandDotNet" class="md-nav__button md-logo">
       
-        <img src="../../img/logo.png" width="48" height="48">
+        <img src="../../img/small-logo.svg" width="48" height="48">
       
     </a>
     CommandDotNet
@@ -252,16 +288,35 @@
       
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      Current Version
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Current Version
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
     <a href="../.." title="Introduction" class="md-nav__link">
       Introduction
     </a>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item">
@@ -270,21 +325,21 @@
     </a>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3" type="checkbox" id="nav-1-3">
     
-    <label class="md-nav__link" for="nav-3">
+    <label class="md-nav__link" for="nav-1-3">
       Defining Commands
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-3">
         Defining Commands
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -426,21 +481,21 @@
     </nav>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4" type="checkbox" id="nav-1-4">
     
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-1-4">
       Extras
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-4">
         Extras
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -486,21 +541,21 @@
     </nav>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5">
     
-    <label class="md-nav__link" for="nav-5">
+    <label class="md-nav__link" for="nav-1-5">
       Extensibility
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-5">
         Extensibility
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -546,6 +601,11 @@
     </nav>
   </li>
 
+        
+      </ul>
+    </nav>
+  </li>
+
     
       
       
@@ -556,14 +616,14 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
-    <label class="md-nav__link" for="nav-6">
-      v3 RC
+    <label class="md-nav__link" for="nav-2">
+      Version 3 (Preview)
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
-        v3 RC
+      <label class="md-nav__title" for="nav-2">
+        Version 3 (Preview)
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -574,8 +634,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../v3-changes/" title="v3 Changes" class="md-nav__link">
-      v3 Changes
+    <a href="../v3-changes/" title="Changes" class="md-nav__link">
+      Changes
     </a>
   </li>
 
@@ -868,8 +928,8 @@
                 <h1 id="middleware-pipeline">Middleware Pipeline<a class="headerlink" href="#middleware-pipeline" title="Permanent link">#</a></h1>
 <p>The architecture uses a middleware pipeline, similar to <a href="https://thomaslevesque.com/2018/03/27/understanding-the-asp-net-core-middleware-pipeline/">ASP.NET Core</a> and <a href="https://github.com/dotnet/command-line-api/wiki/How-To#middleware-pipeline">System.CommandLine</a>.</p>
 <p>The middleware pipeline is a type of <a href="https://en.wikipedia.org/wiki/Chain-of-responsibility_pattern">chain of responsibilty pattern</a>.<br />
-Middleware are components that register a delegate as a step in the pipeline.  The delegate is called by the previous delegate and in turn calls the next delegate.  With this pattern, a middleware can perform work before and after the call to the next delegate or skip the next delegate if appropriate.  Take the Help middleware for example. When <code class="codehilite"><span class="o">-</span><span class="n">h</span></code>, <code class="codehilite"><span class="c1">--help</span></code> or <code class="codehilite"><span class="o">-?</span></code> been specified, the help middleware prints help for the target command and does not call the next middleware.</p>
-<p>As the middleware executes, it enhances the <code class="codehilite"><span class="n">CommandContext</span></code>.  The <code class="codehilite"><span class="n">CommandContext</span></code> contains the context relevate to the current command. For example... the tokenizer middleware populates the <code class="codehilite"><span class="n">CommandContext</span><span class="p">.</span><span class="n">Tokens</span></code> property.  The parser middleware populates the <code class="codehilite"><span class="n">CommandContext</span><span class="p">.</span><span class="n">ParseResults</span></code> property.  The <code class="codehilite"><span class="n">CommandContext</span></code> is part of the delegate signature and is therefore available for all middleware.</p>
+Middleware are components that register a delegate as a step in the pipeline.  The delegate is called by the previous delegate and in turn calls the next delegate.  With this pattern, a middleware can perform work before and after the call to the next delegate or skip the next delegate if appropriate.  Take the Help middleware for example. When <code class="codehilite"><span class="err">-h</span></code>, <code class="codehilite"><span class="err">--help</span></code> or <code class="codehilite"><span class="err">-?</span></code> been specified, the help middleware prints help for the target command and does not call the next middleware.</p>
+<p>As the middleware executes, it enhances the <code class="codehilite"><span class="err">CommandContext</span></code>.  The <code class="codehilite"><span class="err">CommandContext</span></code> contains the context relevate to the current command. For example... the tokenizer middleware populates the <code class="codehilite"><span class="err">CommandContext.Tokens</span></code> property.  The parser middleware populates the <code class="codehilite"><span class="err">CommandContext.ParseResults</span></code> property.  The <code class="codehilite"><span class="err">CommandContext</span></code> is part of the delegate signature and is therefore available for all middleware.</p>
 <h3 id="why-we-use-the-middleware-pattern">Why we use the middleware pattern<a class="headerlink" href="#why-we-use-the-middleware-pattern" title="Permanent link">#</a></h3>
 <ul>
 <li>Ease of adding new features without touching existing code. Observing <a href="https://en.wikipedia.org/wiki/Single_responsibility_principle">Single Resposibility</a> &amp;  <a href="https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle">Open-Closed</a> principals.</li>
@@ -879,13 +939,24 @@ Middleware are components that register a delegate as a step in the pipeline.  T
 <p><img alt="Middleware" src="../../diagrams/MiddlewarePipeline.png" style="float: right;" /></p>
 <h3 id="middleware-stages">Middleware Stages<a class="headerlink" href="#middleware-stages" title="Permanent link">#</a></h3>
 <p>The core functionality of the framework and optional features have been implemented using middleware. 
-One of the classic challenges of using the middleware pattern is understanding the order middleware components should be registered. To address this challenge, the pipeline has been split into eight distinct changes, as seen in the diagram below, four core stages (in green) and four extensibility stages (in yellow). The four core stages contain the core functionality of the framework. After each core stage is complete, the framework guarantees specific parts of the <code class="codehilite"><span class="n">CommandContext</span></code> are populated.</p>
-<p>The other four stages are where other middleware will typically be registered, based on <code class="codehilite"><span class="n">CommandContext</span></code> properties the middleware requires to operate. For example, <code class="codehilite"><span class="n">PromptForMissingOperands</span></code> is registered in the <code class="codehilite"><span class="n">PostParseInputPreBindValues</span></code> stage because it depends on the <code class="codehilite"><span class="n">ParseResults</span><span class="p">.</span><span class="n">ArgumentValues</span></code> property being populated in the <code class="codehilite"><span class="n">ParseInput</span></code> stage. <code class="codehilite"><span class="n">FluentValidation</span></code> is registerd in the <code class="codehilite"><span class="n">PostBindValuesPreInvoke</span></code> stage because it relies on the <code class="codehilite"><span class="n">IInvocation</span><span class="p">.</span><span class="n">ParameterValues</span></code> being populated in the <code class="codehilite"><span class="n">BindValues</span></code> stage.  Read more in the intellisense of <code class="codehilite"><span class="n">MiddlewareStages</span></code> and the properties of the <code class="codehilite"><span class="n">CommandContext</span></code> classes.</p>
-<p>Note: <code class="codehilite"><span class="n">DisplayVersion</span></code> is the only optional middleware in a core stage. Any middleware can be registered in a core stage if needed. In the case of <code class="codehilite"><span class="n">DisplayVersion</span></code>, the middleware must run before <code class="codehilite"><span class="n">DisplayHelp</span></code> otherwise help would trigger for the root command when it is not executable.</p>
+One of the classic challenges of using the middleware pattern is understanding the order middleware components should be registered. To address this challenge, the pipeline has been split into eight distinct changes, as seen in the diagram below, four core stages (in green) and four extensibility stages (in yellow). The four core stages contain the core functionality of the framework. After each core stage is complete, the framework guarantees specific parts of the <code class="codehilite"><span class="err">CommandContext</span></code> are populated.</p>
+<p>The other four stages are where other middleware will typically be registered, based on <code class="codehilite"><span class="err">CommandContext</span></code> properties the middleware requires to operate. For example, <code class="codehilite"><span class="err">PromptForMissingOperands</span></code> is registered in the <code class="codehilite"><span class="err">PostParseInputPreBindValues</span></code> stage because it depends on the <code class="codehilite"><span class="err">ParseResults.ArgumentValues</span></code> property being populated in the <code class="codehilite"><span class="err">ParseInput</span></code> stage. <code class="codehilite"><span class="err">FluentValidation</span></code> is registerd in the <code class="codehilite"><span class="err">PostBindValuesPreInvoke</span></code> stage because it relies on the <code class="codehilite"><span class="err">IInvocation.ParameterValues</span></code> being populated in the <code class="codehilite"><span class="err">BindValues</span></code> stage.  Read more in the intellisense of <code class="codehilite"><span class="err">MiddlewareStages</span></code> and the properties of the <code class="codehilite"><span class="err">CommandContext</span></code> classes.</p>
+<p>Note: <code class="codehilite"><span class="err">DisplayVersion</span></code> is the only optional middleware in a core stage. Any middleware can be registered in a core stage if needed. In the case of <code class="codehilite"><span class="err">DisplayVersion</span></code>, the middleware must run before <code class="codehilite"><span class="err">DisplayHelp</span></code> otherwise help would trigger for the root command when it is not executable.</p>
 <h3 id="invocation-pipeline">Invocation Pipeline<a class="headerlink" href="#invocation-pipeline" title="Permanent link">#</a></h3>
-<p>The invocation pipeline is assembled during the <code class="codehilite"><span class="n">ParseInput</span></code> stage, captured in <code class="codehilite"><span class="n">CommandContext</span><span class="p">.</span><span class="n">InvocationPipeline</span></code> property and run during the <code class="codehilite"><span class="n">InvokeInvocationPipeline</span></code> stage. The pipeline consists of <a href="../interceptors/">interceptor methods</a> and the target command method.</p>
+<p>The invocation pipeline is assembled during the <code class="codehilite"><span class="err">ParseInput</span></code> stage, captured in <code class="codehilite"><span class="err">CommandContext.InvocationPipeline</span></code> property and run during the <code class="codehilite"><span class="err">InvokeInvocationPipeline</span></code> stage. The pipeline consists of <a href="../interceptors/">interceptor methods</a> and the target command method.</p>
                 
                   
+                
+                
+                  
+                  <hr>
+                  <div class="md-source-date">
+                    <small>
+                      
+                        Last update: November 13, 2019
+                      
+                    </small>
+                  </div>
                 
               
               
@@ -980,7 +1051,7 @@ One of the classic challenges of using the middleware pattern is understanding t
       
     </div>
     
-      <script src="../../assets/javascripts/application.ac79c3b0.js"></script>
+      <script src="../../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       

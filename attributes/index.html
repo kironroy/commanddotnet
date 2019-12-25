@@ -10,6 +10,8 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
+        <meta name="description" content="Model your command line application interface in a class">
+      
       
         <link rel="canonical" href="https://bilal-fazlani.github.io/commanddotnet/attributes/">
       
@@ -33,8 +35,8 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+      <link rel="shortcut icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -42,7 +44,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.1b62728e.css">
       
         <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -53,21 +55,17 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../assets/javascripts/modernizr.268332fc.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../assets/fonts/material-icons.css">
     
-    
-      <link rel="stylesheet" href="../commanddotnet/superfences.css">
-    
-      <link rel="stylesheet" href="../superfences.css">
     
     
       
@@ -127,7 +125,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href="https://bilal-fazlani.github.io/commanddotnet" title="CommandDotNet" class="md-header-nav__button md-logo">
           
-            <img src="../img/logo.png" width="24" height="24">
+            <img src="../img/small-logo.svg" width="24" height="24">
           
         </a>
       </div>
@@ -208,6 +206,44 @@
         
       
       
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href=".." class="md-tabs__link md-tabs__link--active">
+          Current Version
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../V3/v3-changes/" class="md-tabs__link">
+          Version 3 (Preview)
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
       <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
@@ -219,7 +255,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="https://bilal-fazlani.github.io/commanddotnet" title="CommandDotNet" class="md-nav__button md-logo">
       
-        <img src="../img/logo.png" width="48" height="48">
+        <img src="../img/small-logo.svg" width="48" height="48">
       
     </a>
     CommandDotNet
@@ -251,6 +287,27 @@
       
       
 
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Current Version
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Current Version
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
 
   <li class="md-nav__item">
     <a href=".." title="Introduction" class="md-nav__link">
@@ -258,10 +315,10 @@
     </a>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item">
@@ -270,23 +327,23 @@
     </a>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
   
 
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3" type="checkbox" id="nav-1-3" checked>
     
-    <label class="md-nav__link" for="nav-3">
+    <label class="md-nav__link" for="nav-1-3">
       Defining Commands
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-3">
         Defining Commands
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -489,21 +546,21 @@
     </nav>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4" type="checkbox" id="nav-1-4">
     
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-1-4">
       Extras
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-4">
         Extras
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -549,21 +606,21 @@
     </nav>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5">
     
-    <label class="md-nav__link" for="nav-5">
+    <label class="md-nav__link" for="nav-1-5">
       Extensibility
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-5">
         Extensibility
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -609,6 +666,11 @@
     </nav>
   </li>
 
+        
+      </ul>
+    </nav>
+  </li>
+
     
       
       
@@ -617,14 +679,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
-    <label class="md-nav__link" for="nav-6">
-      v3 RC
+    <label class="md-nav__link" for="nav-2">
+      Version 3 (Preview)
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
-        v3 RC
+      <label class="md-nav__title" for="nav-2">
+        Version 3 (Preview)
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -635,8 +697,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../V3/v3-changes/" title="v3 Changes" class="md-nav__link">
-      v3 Changes
+    <a href="../V3/v3-changes/" title="Changes" class="md-nav__link">
+      Changes
     </a>
   </li>
 
@@ -876,22 +938,32 @@
                   <h1>Attributes</h1>
                 
                 <h3 id="applicationmetadata">ApplicationMetadata<a class="headerlink" href="#applicationmetadata" title="Permanent link">#</a></h3>
-<p>You can use the <code class="codehilite"><span class="o">[</span><span class="n">ApplicationMetadata</span><span class="o">]</span><span class="w"></span></code> attribute on the class level like this to provide details when application is called with <code class="codehilite"><span class="n">help</span></code> switch.</p>
+<p>You can use the <code class="codehilite"><span class="o">[</span><span class="n">ApplicationMetadata</span><span class="o">]</span><span class="w"></span></code> attribute on the class level like this to provide details when application is called with <code class="codehilite"><span class="err">help</span></code> switch.</p>
 <p>Example: </p>
-<div class="codehilite"><pre><span></span><span class="na">[ApplicationMetadata(Description = &quot;This is a crappy calculator&quot;, ExtendedHelpText = &quot;Some more help text that appears at the bottom&quot;)]</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="na">[ApplicationMetadata(Description = &quot;This is a crappy calculator&quot;, ExtendedHelpText = &quot;Some more help text that appears at the bottom&quot;)]</span>
 <span class="k">public</span> <span class="k">class</span> <span class="nc">Calculator</span>
 <span class="p">{</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <p>This attribute can also be used on a Method as shown below.</p>
-<div class="codehilite"><pre><span></span><span class="na">[ApplicationMetadata(Description = &quot;Subtracts value2 from value1 and prints output&quot;, </span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="na">[ApplicationMetadata(Description = &quot;Subtracts value2 from value1 and prints output&quot;, </span>
 <span class="na">    ExtendedHelpText = &quot;Again, some more detailed help text which has no meaning I still have to write to demostrate this feature&quot;,</span>
 <span class="na">    Name = &quot;subtractValues&quot;)]</span>
 <span class="k">public</span> <span class="k">void</span> <span class="nf">Subtract</span><span class="p">(</span><span class="kt">int</span> <span class="n">value1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">value2</span><span class="p">)</span>
 <span class="p">{</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -904,12 +976,21 @@
 <p>Every parameter in the method is argument by default. So this this Attribute is optional and should be used only when you need to assign a different name to parameter, or add description to it.</p>
 <p>By default, the parameter names declared in method are the argument names that appear in help. However you can change that.</p>
 <p>Let's see an example-</p>
-<p><div class="codehilite"><pre><span></span><span class="k">public</span> <span class="k">void</span> <span class="nf">LaunchRocket</span><span class="p">([</span><span class="n">Argument</span><span class="p">(</span>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">public</span> <span class="k">void</span> <span class="nf">LaunchRocket</span><span class="p">([</span><span class="n">Argument</span><span class="p">(</span>
     <span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;planet&quot;</span><span class="p">,</span>
     <span class="n">Description</span> <span class="p">=</span> <span class="s">&quot;Name of the planet you wish the rocket to go)] string planetName)</span>
 </pre></div>
+</td></tr></table>
 This is what help looks like-</p>
-<div class="codehilite"><pre><span></span>Usage: dotnet example.dll LaunchRocket <span class="o">[</span>arguments<span class="o">]</span> <span class="o">[</span>options<span class="o">]</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Usage: dotnet example.dll LaunchRocket <span class="o">[</span>arguments<span class="o">]</span> <span class="o">[</span>options<span class="o">]</span>
 
 Arguments:
   planetName  String                                            Name of the planet you wish the rocket to go
@@ -917,26 +998,36 @@ Arguments:
 Options:
   -h <span class="p">|</span> -? <span class="p">|</span> --help  Show <span class="nb">help</span> information
 </pre></div>
+</td></tr></table>
 
 <h3 id="option">Option<a class="headerlink" href="#option" title="Permanent link">#</a></h3>
 <p>Every parameter in the method is argument by default. So if you wan't to turn a parameter into option instead of argument, use this attribute. See more info about parameters <a href="#parameters">here</a></p>
 <p>By default, the parameter names declared in method are the option names that appear in help. However you can change that. By convention, an option can have a short name and/or a long name.</p>
 <p>Let's see an example-</p>
-<div class="codehilite"><pre><span></span><span class="k">public</span> <span class="k">void</span> <span class="nf">LaunchRocket</span><span class="p">([</span><span class="n">Option</span><span class="p">(</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">public</span> <span class="k">void</span> <span class="nf">LaunchRocket</span><span class="p">([</span><span class="n">Option</span><span class="p">(</span>
     <span class="n">LongName</span> <span class="p">=</span> <span class="s">&quot;planet&quot;</span><span class="p">,</span> 
     <span class="n">ShortName</span> <span class="p">=</span> <span class="s">&quot;p&quot;</span><span class="p">,</span> 
     <span class="n">Description</span> <span class="p">=</span> <span class="s">&quot;Name of the planet you wish the rocket to go&quot;</span><span class="p">)]</span> <span class="kt">string</span> <span class="n">planetName</span><span class="p">)</span>
 </pre></div>
+</td></tr></table>
 
 <p>This is what help looks like-</p>
-<div class="codehilite"><pre><span></span>Usage: dotnet example.dll LaunchRocket <span class="o">[</span>options<span class="o">]</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Usage: dotnet example.dll LaunchRocket <span class="o">[</span>options<span class="o">]</span>
 
 Options:
   -h <span class="p">|</span> -? <span class="p">|</span> --help  Show <span class="nb">help</span> information
   --planet <span class="p">|</span> -p     String                         Name of the planet you wish the rocket to go
 </pre></div>
+</td></tr></table>
 
-<p>So planet name can now be passed either with <code class="codehilite"><span class="c1">--planet</span></code> or <code class="codehilite"><span class="o">-</span><span class="n">p</span></code>. 
+<p>So planet name can now be passed either with <code class="codehilite"><span class="err">--planet</span></code> or <code class="codehilite"><span class="err">-p</span></code>. 
 LongName, ShortName and Description are optional. </p>
 <p>When you don't specify a long name and a short name for an option, it uses the method parameter name by default as long name. In case the method parameter name is just one letter, it will be treated as short name.</p>
 <p>Here's table of examples:</p>
@@ -954,36 +1045,47 @@ LongName, ShortName and Description are optional. </p>
 <td>planet</td>
 <td></td>
 <td></td>
-<td><code class="codehilite"><span class="c1">--planet</span></code></td>
+<td><code class="codehilite"><span class="err">--planet</span></code></td>
 </tr>
 <tr>
 <td>planet</td>
 <td>planet</td>
 <td></td>
-<td><code class="codehilite"><span class="c1">--planet</span></code></td>
+<td><code class="codehilite"><span class="err">--planet</span></code></td>
 </tr>
 <tr>
 <td>planet</td>
 <td></td>
 <td>p</td>
-<td><code class="codehilite"><span class="o">-</span><span class="n">p</span></code></td>
+<td><code class="codehilite"><span class="err">-p</span></code></td>
 </tr>
 <tr>
 <td>planet</td>
 <td>planet</td>
 <td>p</td>
-<td><code class="codehilite"><span class="o">-</span><span class="n">p</span> <span class="o">|</span> <span class="c1">--planet</span></code></td>
+<td><code class="codehilite"><span class="err">-p | --planet</span></code></td>
 </tr>
 <tr>
 <td>p</td>
 <td></td>
 <td></td>
-<td><code class="codehilite"><span class="o">-</span><span class="n">p</span></code></td>
+<td><code class="codehilite"><span class="err">-p</span></code></td>
 </tr>
 </tbody>
 </table>
                 
                   
+                
+                
+                  
+                  <hr>
+                  <div class="md-source-date">
+                    <small>
+                      
+                        Last update: July 11, 2019
+                      
+                    </small>
+                  </div>
                 
               
               
@@ -1078,7 +1180,7 @@ LongName, ShortName and Description are optional. </p>
       
     </div>
     
-      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      <script src="../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       

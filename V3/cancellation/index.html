@@ -10,6 +10,8 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
+        <meta name="description" content="Model your command line application interface in a class">
+      
       
         <link rel="canonical" href="https://bilal-fazlani.github.io/commanddotnet/V3/cancellation/">
       
@@ -33,8 +35,8 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+      <link rel="shortcut icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -42,7 +44,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
       
         <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -53,21 +55,17 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
-    
-      <link rel="stylesheet" href="../../commanddotnet/superfences.css">
-    
-      <link rel="stylesheet" href="../../superfences.css">
     
     
       
@@ -127,7 +125,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href="https://bilal-fazlani.github.io/commanddotnet" title="CommandDotNet" class="md-header-nav__button md-logo">
           
-            <img src="../../img/logo.png" width="24" height="24">
+            <img src="../../img/small-logo.svg" width="24" height="24">
           
         </a>
       </div>
@@ -208,6 +206,44 @@
         
       
       
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../.." class="md-tabs__link">
+          Current Version
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../v3-changes/" class="md-tabs__link md-tabs__link--active">
+          Version 3 (Preview)
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
       <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
@@ -219,7 +255,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="https://bilal-fazlani.github.io/commanddotnet" title="CommandDotNet" class="md-nav__button md-logo">
       
-        <img src="../../img/logo.png" width="48" height="48">
+        <img src="../../img/small-logo.svg" width="48" height="48">
       
     </a>
     CommandDotNet
@@ -252,16 +288,35 @@
       
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      Current Version
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Current Version
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
     <a href="../.." title="Introduction" class="md-nav__link">
       Introduction
     </a>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item">
@@ -270,21 +325,21 @@
     </a>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3" type="checkbox" id="nav-1-3">
     
-    <label class="md-nav__link" for="nav-3">
+    <label class="md-nav__link" for="nav-1-3">
       Defining Commands
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-3">
         Defining Commands
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -426,21 +481,21 @@
     </nav>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4" type="checkbox" id="nav-1-4">
     
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-1-4">
       Extras
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-4">
         Extras
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -486,21 +541,21 @@
     </nav>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5">
     
-    <label class="md-nav__link" for="nav-5">
+    <label class="md-nav__link" for="nav-1-5">
       Extensibility
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-5">
         Extensibility
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -546,6 +601,11 @@
     </nav>
   </li>
 
+        
+      </ul>
+    </nav>
+  </li>
+
     
       
       
@@ -556,14 +616,14 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
-    <label class="md-nav__link" for="nav-6">
-      v3 RC
+    <label class="md-nav__link" for="nav-2">
+      Version 3 (Preview)
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
-        v3 RC
+      <label class="md-nav__title" for="nav-2">
+        Version 3 (Preview)
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -574,8 +634,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../v3-changes/" title="v3 Changes" class="md-nav__link">
-      v3 Changes
+    <a href="../v3-changes/" title="Changes" class="md-nav__link">
+      Changes
     </a>
   </li>
 
@@ -852,29 +912,35 @@
                 
                 
                 <h1 id="ctrlc-and-cancellationtoken">Ctrl+C and CancellationToken<a class="headerlink" href="#ctrlc-and-cancellationtoken" title="Permanent link">#</a></h1>
-<p>Console applications should stop gracefully when the user enters <code class="codehilite"><span class="n">Ctrl</span><span class="o">+</span><span class="k">C</span></code> or <code class="codehilite"><span class="nv">Ctrl</span><span class="o">+</span><span class="k">Break</span></code>. 
+<p>Console applications should stop gracefully when the user enters <code class="codehilite"><span class="err">Ctrl+C</span></code> or <code class="codehilite"><span class="err">Ctrl+Break</span></code>. 
 If your app is consuming the main thread the app will not exit right away.</p>
 <p>Traditionally, this is solved with a following steps:</p>
 <ol>
-<li>Create a <code class="codehilite"><span class="n">CancellationTokenSource</span></code> and make the <code class="codehilite"><span class="n">cancellationTokenSource</span><span class="p">.</span><span class="n">Token</span></code> available for the rest of the app to reference.</li>
-<li>Subscribe to <code class="codehilite"><span class="n">Console</span><span class="p">.</span><span class="n">CancelKeyPress</span></code> and call <code class="codehilite"><span class="n">cancellationTokenSource</span><span class="p">.</span><span class="n">Cancel</span><span class="p">()</span></code> when triggered.  <code class="codehilite"><span class="n">cancellationToken</span><span class="p">.</span><span class="n">IsCancellationRequested</span></code> will then return true.</li>
-<li>Check <code class="codehilite"><span class="n">cancellationToken</span><span class="p">.</span><span class="n">IsCancellationRequested</span></code> in any looping code and pass the token to any libraries that check it. Instead of <code class="codehilite"><span class="n">Thread</span><span class="p">.</span><span class="n">Sleep</span><span class="p">(...)</span></code>, use <code class="codehilite"><span class="n">cancellationToken</span><span class="p">.</span><span class="n">WaitHandle</span><span class="p">.</span><span class="n">WaitOne</span><span class="p">(...)</span></code> or <code class="codehilite"><span class="n">Task</span><span class="p">.</span><span class="n">Delay</span><span class="p">(...,</span> <span class="n">cancellationToken</span><span class="p">)</span></code></li>
+<li>Create a <code class="codehilite"><span class="err">CancellationTokenSource</span></code> and make the <code class="codehilite"><span class="err">cancellationTokenSource.Token</span></code> available for the rest of the app to reference.</li>
+<li>Subscribe to <code class="codehilite"><span class="err">Console.CancelKeyPress</span></code> and call <code class="codehilite"><span class="err">cancellationTokenSource.Cancel()</span></code> when triggered.  <code class="codehilite"><span class="err">cancellationToken.IsCancellationRequested</span></code> will then return true.</li>
+<li>Check <code class="codehilite"><span class="err">cancellationToken.IsCancellationRequested</span></code> in any looping code and pass the token to any libraries that check it. Instead of <code class="codehilite"><span class="err">Thread.Sleep(...)</span></code>, use <code class="codehilite"><span class="err">cancellationToken.WaitHandle.WaitOne(...)</span></code> or <code class="codehilite"><span class="err">Task.Delay(..., cancellationToken)</span></code></li>
 </ol>
 <h2 id="cancellation-middleware">Cancellation middleware<a class="headerlink" href="#cancellation-middleware" title="Permanent link">#</a></h2>
-<p>CommandDotNet has middleware to simplify this. Configure with <code class="codehilite"><span class="n">appRunner</span><span class="p">.</span><span class="n">UseCancellationHandlers</span><span class="p">();</span></code>. </p>
+<p>CommandDotNet has middleware to simplify this. Configure with <code class="codehilite"><span class="err">appRunner.UseCancellationHandlers();</span></code>. </p>
 <p>The framework will:</p>
 <ul>
-<li>set the <code class="codehilite"><span class="n">CommandContext</span><span class="p">.</span><span class="n">AppConfig</span><span class="p">.</span><span class="n">CancellationToken</span></code> with a new token.</li>
+<li>set the <code class="codehilite"><span class="err">CommandContext.AppConfig.CancellationToken</span></code> with a new token.</li>
 <li>the token will be cancelled on</li>
-<li><code class="codehilite"><span class="n">Console</span><span class="p">.</span><span class="n">CancelKepPress</span></code></li>
-<li><code class="codehilite"><span class="n">AppDomain</span><span class="p">.</span><span class="n">CurrentDomain</span><span class="p">.</span><span class="n">ProcessExit</span></code></li>
-<li><code class="codehilite"><span class="n">AppDomain</span><span class="p">.</span><span class="n">CurrentDomain</span><span class="p">.</span><span class="n">UnhandledException</span></code> when <code class="codehilite"><span class="n">UnhandledExceptionEventArgs</span><span class="p">.</span><span class="n">IsTerminating</span></code> == true</li>
+<li><code class="codehilite"><span class="err">Console.CancelKepPress</span></code></li>
+<li><code class="codehilite"><span class="err">AppDomain.CurrentDomain.ProcessExit</span></code></li>
+<li><code class="codehilite"><span class="err">AppDomain.CurrentDomain.UnhandledException</span></code> when <code class="codehilite"><span class="err">UnhandledExceptionEventArgs.IsTerminating</span></code> == true</li>
 </ul>
 <p>The framework checks the cancellation token before every step in the pipeline.</p>
 <h2 id="using-the-cancellationtoken">Using the CancellationToken<a class="headerlink" href="#using-the-cancellationtoken" title="Permanent link">#</a></h2>
 <p>The CancellationToken is easy to access in your commands thanks to <a href="../parameter-resolvers/">parameter resolvers</a>. 
 Simply add a parameter to your command or interceptor method.</p>
-<div class="codehilite"><pre><span></span><span class="k">public</span> <span class="k">void</span> <span class="nf">MigrateRecords</span><span class="p">(</span><span class="n">CancellationToken</span> <span class="n">cancellationToken</span><span class="p">,</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">ids</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">public</span> <span class="k">void</span> <span class="nf">MigrateRecords</span><span class="p">(</span><span class="n">CancellationToken</span> <span class="n">cancellationToken</span><span class="p">,</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">ids</span><span class="p">)</span>
 <span class="p">{</span>    
     <span class="k">foreach</span><span class="p">(</span><span class="kt">int</span> <span class="n">id</span> <span class="k">in</span> <span class="n">ids</span><span class="p">.</span><span class="n">TakeWhile</span><span class="p">(!</span><span class="n">cancellationToken</span><span class="p">.</span><span class="n">IsCancellationRequested</span><span class="p">))</span>
     <span class="p">{</span>
@@ -882,6 +948,7 @@ Simply add a parameter to your command or interceptor method.</p>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -889,6 +956,17 @@ Simply add a parameter to your command or interceptor method.</p>
 </div>
                 
                   
+                
+                
+                  
+                  <hr>
+                  <div class="md-source-date">
+                    <small>
+                      
+                        Last update: November 13, 2019
+                      
+                    </small>
+                  </div>
                 
               
               
@@ -983,7 +1061,7 @@ Simply add a parameter to your command or interceptor method.</p>
       
     </div>
     
-      <script src="../../assets/javascripts/application.ac79c3b0.js"></script>
+      <script src="../../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       

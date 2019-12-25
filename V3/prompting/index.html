@@ -10,6 +10,8 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
+        <meta name="description" content="Model your command line application interface in a class">
+      
       
         <link rel="canonical" href="https://bilal-fazlani.github.io/commanddotnet/V3/prompting/">
       
@@ -33,8 +35,8 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+      <link rel="shortcut icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -42,7 +44,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
       
         <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -53,21 +55,17 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
-    
-      <link rel="stylesheet" href="../../commanddotnet/superfences.css">
-    
-      <link rel="stylesheet" href="../../superfences.css">
     
     
       
@@ -127,7 +125,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href="https://bilal-fazlani.github.io/commanddotnet" title="CommandDotNet" class="md-header-nav__button md-logo">
           
-            <img src="../../img/logo.png" width="24" height="24">
+            <img src="../../img/small-logo.svg" width="24" height="24">
           
         </a>
       </div>
@@ -208,6 +206,44 @@
         
       
       
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../.." class="md-tabs__link">
+          Current Version
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../v3-changes/" class="md-tabs__link md-tabs__link--active">
+          Version 3 (Preview)
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
       <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
@@ -219,7 +255,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="https://bilal-fazlani.github.io/commanddotnet" title="CommandDotNet" class="md-nav__button md-logo">
       
-        <img src="../../img/logo.png" width="48" height="48">
+        <img src="../../img/small-logo.svg" width="48" height="48">
       
     </a>
     CommandDotNet
@@ -252,16 +288,35 @@
       
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      Current Version
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Current Version
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
     <a href="../.." title="Introduction" class="md-nav__link">
       Introduction
     </a>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item">
@@ -270,21 +325,21 @@
     </a>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3" type="checkbox" id="nav-1-3">
     
-    <label class="md-nav__link" for="nav-3">
+    <label class="md-nav__link" for="nav-1-3">
       Defining Commands
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-3">
         Defining Commands
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -426,21 +481,21 @@
     </nav>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4" type="checkbox" id="nav-1-4">
     
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-1-4">
       Extras
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-4">
         Extras
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -486,21 +541,21 @@
     </nav>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5">
     
-    <label class="md-nav__link" for="nav-5">
+    <label class="md-nav__link" for="nav-1-5">
       Extensibility
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-5">
         Extensibility
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -546,6 +601,11 @@
     </nav>
   </li>
 
+        
+      </ul>
+    </nav>
+  </li>
+
     
       
       
@@ -556,14 +616,14 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
-    <label class="md-nav__link" for="nav-6">
-      v3 RC
+    <label class="md-nav__link" for="nav-2">
+      Version 3 (Preview)
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
-        v3 RC
+      <label class="md-nav__title" for="nav-2">
+        Version 3 (Preview)
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -574,8 +634,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../v3-changes/" title="v3 Changes" class="md-nav__link">
-      v3 Changes
+    <a href="../v3-changes/" title="Changes" class="md-nav__link">
+      Changes
     </a>
   </li>
 
@@ -852,32 +912,45 @@
                 
                 
                 <h1 id="prompting-middleware">Prompting Middleware<a class="headerlink" href="#prompting-middleware" title="Permanent link">#</a></h1>
-<p>Enable prompting middleware with: <code class="codehilite"><span class="n">appRunner</span><span class="p">.</span><span class="n">UsePrompting</span><span class="p">(...)</span></code></p>
+<p>Enable prompting middleware with: <code class="codehilite"><span class="err">appRunner.UsePrompting(...)</span></code></p>
 <p>Examples can be found in the <a href="https://github.com/bilal-fazlani/commanddotnet/blob/beta-v3/master/CommandDotNet.Example/Commands/Prompts.cs">prompts</a> 
 commands in the example app.</p>
 <h2 id="iprompter">IPrompter<a class="headerlink" href="#iprompter" title="Permanent link">#</a></h2>
-<p>This will register a <a href="../parameter-resolvers/">parameter resolver</a> for <code class="codehilite"><span class="n">IPrompter</span></code>.
+<p>This will register a <a href="../parameter-resolvers/">parameter resolver</a> for <code class="codehilite"><span class="err">IPrompter</span></code>.
 The IPrompter can prompt for a single value or a list of values. </p>
 <p>When prompting for a list of values, each entry is on a new line. Entering two empty lines will stop prompting for that value.</p>
-<p>Use Ctrl+C to exit prompting, setting the out parameter <code class="codehilite"><span class="n">isCancellationRequested</span></code> to true.</p>
-<p>Set the <code class="codehilite"><span class="k">isPassword</span></code> parameter to true to hide the input value.</p>
-<p>Override the default IPrompter with the <code class="codehilite"><span class="n">prompterOverride</span></code> paramter </p>
+<p>Use Ctrl+C to exit prompting, setting the out parameter <code class="codehilite"><span class="err">isCancellationRequested</span></code> to true.</p>
+<p>Set the <code class="codehilite"><span class="err">isPassword</span></code> parameter to true to hide the input value.</p>
+<p>Override the default IPrompter with the <code class="codehilite"><span class="err">prompterOverride</span></code> paramter </p>
 <p><code class="codehilite"><span class="n">prompterOverride</span><span class="o">:</span> <span class="n">context</span> <span class="o">=&gt;</span> <span class="k">new</span> <span class="kt">MyPrompter</span><span class="o">(</span><span class="n">context</span><span class="o">)</span></code></p>
 <h2 id="argument-prompting">Argument Prompting<a class="headerlink" href="#argument-prompting" title="Permanent link">#</a></h2>
-<p><code class="codehilite"><span class="n">UsePrompting</span></code> enables argument prompting by default.  Use <code class="codehilite"><span class="n">promptForMissingArguments</span><span class="o">:</span><span class="kc">false</span></code> to disable.</p>
-<p>Prompt text can be overridden using the <code class="codehilite"><span class="n">argumentPromptTextOverride</span></code> parameter.  </p>
-<div class="codehilite"><pre><span></span><span class="n">argumentPromptTextOverride</span><span class="p">:</span> <span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">argument</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="err">$</span><span class="ss">&quot;{argument.CustomAttributes.Get&lt;MyPromptTextAttribute&gt;().PromptText}&quot;</span>
+<p><code class="codehilite"><span class="err">UsePrompting</span></code> enables argument prompting by default.  Use <code class="codehilite"><span class="n">promptForMissingArguments</span><span class="o">:</span><span class="kc">false</span></code> to disable.</p>
+<p>Prompt text can be overridden using the <code class="codehilite"><span class="err">argumentPromptTextOverride</span></code> parameter.  </p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c">argumentPromptTextOverride: (context, argument) =&gt; $&quot;{argument.CustomAttributes.Get&lt;MyPromptTextAttribute&gt;().PromptText}&quot;</span>
 </pre></div>
+</td></tr></table>
 
-<p>By default, the arguments that will be prompted are those where <code class="codehilite"><span class="n">argument</span><span class="p">.</span><span class="n">Arity</span><span class="p">.</span><span class="n">RequiresAtLeastOne</span><span class="p">()</span></code> and no value was provided. 
+<p>By default, the arguments that will be prompted are those where <code class="codehilite"><span class="err">argument.Arity.RequiresAtLeastOne()</span></code> and no value was provided. 
 Arguments defined with nullable types or optional parameters will not be prompted.
-This behavior can be changed using the <code class="codehilite"><span class="n">argumentFilter</span></code> parameter.</p>
-<div class="codehilite"><pre><span></span><span class="n">argumentFilter</span><span class="o">:</span> <span class="n">argument</span> <span class="o">=&gt;</span> <span class="n">argument</span><span class="o">.</span><span class="na">CustomAttributes</span><span class="o">.</span><span class="na">Get</span><span class="o">&lt;</span><span class="n">MyPromptTextAttribute</span><span class="o">&gt;()?.</span><span class="n">Prompt</span> <span class="o">??</span> <span class="kc">false</span>
+This behavior can be changed using the <code class="codehilite"><span class="err">argumentFilter</span></code> parameter.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">argumentFilter</span><span class="o">:</span> <span class="n">argument</span> <span class="o">=&gt;</span> <span class="n">argument</span><span class="o">.</span><span class="na">CustomAttributes</span><span class="o">.</span><span class="na">Get</span><span class="o">&lt;</span><span class="n">MyPromptTextAttribute</span><span class="o">&gt;()?.</span><span class="n">Prompt</span> <span class="o">??</span> <span class="kc">false</span>
 </pre></div>
+</td></tr></table>
 
 <p>Use the <a href="../passwords/">Password</a> type hide the input.</p>
                 
                   
+                
+                
+                  
+                  <hr>
+                  <div class="md-source-date">
+                    <small>
+                      
+                        Last update: November 13, 2019
+                      
+                    </small>
+                  </div>
                 
               
               
@@ -972,7 +1045,7 @@ This behavior can be changed using the <code class="codehilite"><span class="n">
       
     </div>
     
-      <script src="../../assets/javascripts/application.ac79c3b0.js"></script>
+      <script src="../../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
