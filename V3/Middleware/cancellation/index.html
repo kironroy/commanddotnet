@@ -13,7 +13,7 @@
         <meta name="description" content="Model your command line application interface in a class">
       
       
-        <link rel="canonical" href="https://bilal-fazlani.github.io/commanddotnet/V3/middleware/">
+        <link rel="canonical" href="https://bilal-fazlani.github.io/commanddotnet/V3/Middleware/cancellation/">
       
       
       
@@ -35,18 +35,18 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="../../img/favicon.ico">
+      <link rel="shortcut icon" href="../../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
-        <title>Middleware Pipeline - CommandDotNet</title>
+        <title>Ctrl+C and CancellationToken - CommandDotNet</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.1b62728e.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.a8b3c06d.css">
       
       
         
@@ -55,7 +55,7 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
+      <script src="../../../assets/javascripts/modernizr.268332fc.js"></script>
     
     
       
@@ -64,7 +64,7 @@
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
     
     
     
@@ -114,7 +114,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#middleware-pipeline" tabindex="1" class="md-skip">
+      <a href="#ctrlc-and-cancellationtoken" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -125,7 +125,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href="https://bilal-fazlani.github.io/commanddotnet" title="CommandDotNet" class="md-header-nav__button md-logo">
           
-            <img src="../../img/small-logo.svg" width="24" height="24">
+            <img src="../../../img/small-logo.svg" width="24" height="24">
           
         </a>
       </div>
@@ -140,7 +140,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Middleware Pipeline
+                Ctrl+C and CancellationToken
               
             </span>
           
@@ -219,7 +219,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../.." class="md-tabs__link">
+        <a href="../../.." class="md-tabs__link">
           Current Version
         </a>
       
@@ -232,7 +232,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../v3-changes/" class="md-tabs__link md-tabs__link--active">
+        <a href="../../" class="md-tabs__link md-tabs__link--active">
           Version 3 (Preview)
         </a>
       
@@ -255,7 +255,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="https://bilal-fazlani.github.io/commanddotnet" title="CommandDotNet" class="md-nav__button md-logo">
       
-        <img src="../../img/small-logo.svg" width="48" height="48">
+        <img src="../../../img/small-logo.svg" width="48" height="48">
       
     </a>
     CommandDotNet
@@ -308,7 +308,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="Introduction" class="md-nav__link">
+    <a href="../../.." title="Introduction" class="md-nav__link">
       Introduction
     </a>
   </li>
@@ -320,7 +320,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../quick-start/" title="Quick Start" class="md-nav__link">
+    <a href="../../../quick-start/" title="Quick Start" class="md-nav__link">
       Quick Start
     </a>
   </li>
@@ -351,7 +351,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../parameters/" title="Parameters" class="md-nav__link">
+    <a href="../../../parameters/" title="Parameters" class="md-nav__link">
       Parameters
     </a>
   </li>
@@ -363,7 +363,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../attributes/" title="Attributes" class="md-nav__link">
+    <a href="../../../attributes/" title="Attributes" class="md-nav__link">
       Attributes
     </a>
   </li>
@@ -375,7 +375,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../constructors/" title="Constructors" class="md-nav__link">
+    <a href="../../../constructors/" title="Constructors" class="md-nav__link">
       Constructors
     </a>
   </li>
@@ -387,7 +387,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../default-method/" title="Default method" class="md-nav__link">
+    <a href="../../../default-method/" title="Default method" class="md-nav__link">
       Default method
     </a>
   </li>
@@ -399,7 +399,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../default-values/" title="Default values" class="md-nav__link">
+    <a href="../../../default-values/" title="Default values" class="md-nav__link">
       Default values
     </a>
   </li>
@@ -411,7 +411,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../collections/" title="Collections" class="md-nav__link">
+    <a href="../../../collections/" title="Collections" class="md-nav__link">
       Collections
     </a>
   </li>
@@ -423,7 +423,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../argument-models/" title="Argument Models" class="md-nav__link">
+    <a href="../../../argument-models/" title="Argument Models" class="md-nav__link">
       Argument Models
     </a>
   </li>
@@ -435,7 +435,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../async-methods/" title="Async methods" class="md-nav__link">
+    <a href="../../../async-methods/" title="Async methods" class="md-nav__link">
       Async methods
     </a>
   </li>
@@ -447,7 +447,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../custom-return-codes/" title="Custom return codes" class="md-nav__link">
+    <a href="../../../custom-return-codes/" title="Custom return codes" class="md-nav__link">
       Custom return codes
     </a>
   </li>
@@ -459,7 +459,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../nesting-commands/" title="Nesting commands" class="md-nav__link">
+    <a href="../../../nesting-commands/" title="Nesting commands" class="md-nav__link">
       Nesting commands
     </a>
   </li>
@@ -471,7 +471,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../exceptions/" title="Exceptions" class="md-nav__link">
+    <a href="../../../exceptions/" title="Exceptions" class="md-nav__link">
       Exceptions
     </a>
   </li>
@@ -507,7 +507,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../directives/" title="Directives" class="md-nav__link">
+    <a href="../../../directives/" title="Directives" class="md-nav__link">
       Directives
     </a>
   </li>
@@ -519,7 +519,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../fluent-validation-for-argument-models/" title="Fluent validation for parameters" class="md-nav__link">
+    <a href="../../../fluent-validation-for-argument-models/" title="Fluent validation for parameters" class="md-nav__link">
       Fluent validation for parameters
     </a>
   </li>
@@ -531,7 +531,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../settings/" title="Settings" class="md-nav__link">
+    <a href="../../../settings/" title="Settings" class="md-nav__link">
       Settings
     </a>
   </li>
@@ -567,7 +567,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dependency-injection/" title="Dependency Injection" class="md-nav__link">
+    <a href="../../../dependency-injection/" title="Dependency Injection" class="md-nav__link">
       Dependency Injection
     </a>
   </li>
@@ -579,7 +579,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../parameter-types/" title="Parameter types" class="md-nav__link">
+    <a href="../../../parameter-types/" title="Parameter types" class="md-nav__link">
       Parameter types
     </a>
   </li>
@@ -591,7 +591,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../custom-interceptors/" title="Custom interceptors" class="md-nav__link">
+    <a href="../../../custom-interceptors/" title="Custom interceptors" class="md-nav__link">
       Custom interceptors
     </a>
   </li>
@@ -634,8 +634,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../v3-changes/" title="Changes" class="md-nav__link">
-      Changes
+    <a href="../../" title="Introduction" class="md-nav__link">
+      Introduction
     </a>
   </li>
 
@@ -646,7 +646,38 @@
 
 
   <li class="md-nav__item">
-    <a href="../argument-terminology/" title="Argument Terminology" class="md-nav__link">
+    <a href="../../v3-changes/" title="Changes" class="md-nav__link">
+      Changes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
+    
+    <label class="md-nav__link" for="nav-2-3">
+      Defining Commands
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        Defining Commands
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DefiningCommands/argument-terminology/" title="Argument Terminology" class="md-nav__link">
       Argument Terminology
     </a>
   </li>
@@ -658,7 +689,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../argument-arity/" title="Argument Arity" class="md-nav__link">
+    <a href="../../DefiningCommands/argument-arity/" title="Argument Arity" class="md-nav__link">
       Argument Arity
     </a>
   </li>
@@ -670,8 +701,142 @@
 
 
   <li class="md-nav__item">
-    <a href="../option-or-operand/" title="Option vs Operand" class="md-nav__link">
+    <a href="../../DefiningCommands/argument-models/" title="Argument Models" class="md-nav__link">
+      Argument Models
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DefiningCommands/option-or-operand/" title="Option vs Operand" class="md-nav__link">
       Option vs Operand
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DefiningCommands/passwords/" title="Passwords" class="md-nav__link">
+      Passwords
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4">
+    
+    <label class="md-nav__link" for="nav-2-4">
+      Extensibility
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-4">
+        Extensibility
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Extensibility/parameter-types/" title="Parameter Types" class="md-nav__link">
+      Parameter Types
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Extensibility/parameter-resolvers/" title="Parameter Resolvers" class="md-nav__link">
+      Parameter Resolvers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Extensibility/middleware/" title="Middleware Pipeline" class="md-nav__link">
+      Middleware Pipeline
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Extensibility/interceptors/" title="Interceptor methods" class="md-nav__link">
+      Interceptor methods
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5" checked>
+    
+    <label class="md-nav__link" for="nav-2-5">
+      Middleware
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-5">
+        Middleware
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../default-middleware/" title="Default middleware" class="md-nav__link">
+      Default middleware
     </a>
   </li>
 
@@ -691,11 +856,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Middleware Pipeline
+        Ctrl+C and CancellationToken
       </label>
     
-    <a href="./" title="Middleware Pipeline" class="md-nav__link md-nav__link--active">
-      Middleware Pipeline
+    <a href="./" title="Ctrl+C and CancellationToken" class="md-nav__link md-nav__link--active">
+      Ctrl+C and CancellationToken
     </a>
     
       
@@ -709,22 +874,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why-we-use-the-middleware-pattern" class="md-nav__link">
-    Why we use the middleware pattern
+  <a href="#cancellation-middleware" class="md-nav__link">
+    Cancellation middleware
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#middleware-stages" class="md-nav__link">
-    Middleware Stages
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#invocation-pipeline" class="md-nav__link">
-    Invocation Pipeline
+  <a href="#using-the-cancellationtoken" class="md-nav__link">
+    Using the CancellationToken
   </a>
   
 </li>
@@ -752,8 +910,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../cancellation/" title="Ctrl+C and CancellationToken" class="md-nav__link">
-      Ctrl+C and CancellationToken
+    <a href="../fluent-validation-for-argument-models/" title="FluentValidation" class="md-nav__link">
+      FluentValidation
     </a>
   </li>
 
@@ -764,44 +922,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../interceptors/" title="Interceptor methods" class="md-nav__link">
-      Interceptor methods
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../passwords/" title="Passwords" class="md-nav__link">
-      Passwords
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../parameter-resolvers/" title="Parameter Resolvers" class="md-nav__link">
-      Parameter Resolvers
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../piped-arguments/" title="Piped Arguments" class="md-nav__link">
-      Piped Arguments
+    <a href="../piped-arguments/" title="Piped arguments" class="md-nav__link">
+      Piped arguments
     </a>
   </li>
 
@@ -836,9 +958,14 @@
 
 
   <li class="md-nav__item">
-    <a href="../test-tools/" title="Test Tools" class="md-nav__link">
-      Test Tools
+    <a href="../newer-release-alerts/" title="Newer release alerts" class="md-nav__link">
+      Newer release alerts
     </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -848,8 +975,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../newer-release-alerts/" title="Newer release alerts" class="md-nav__link">
-      Newer release alerts
+    <a href="../../test-tools/" title="Test Tools" class="md-nav__link">
+      Test Tools
     </a>
   </li>
 
@@ -880,22 +1007,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why-we-use-the-middleware-pattern" class="md-nav__link">
-    Why we use the middleware pattern
+  <a href="#cancellation-middleware" class="md-nav__link">
+    Cancellation middleware
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#middleware-stages" class="md-nav__link">
-    Middleware Stages
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#invocation-pipeline" class="md-nav__link">
-    Invocation Pipeline
+  <a href="#using-the-cancellationtoken" class="md-nav__link">
+    Using the CancellationToken
   </a>
   
 </li>
@@ -922,41 +1042,55 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/bilal-fazlani/commanddotnet/edit/master/docs/V3/middleware.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/bilal-fazlani/commanddotnet/edit/master/docs/V3/Middleware/cancellation.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="middleware-pipeline">Middleware Pipeline<a class="headerlink" href="#middleware-pipeline" title="Permanent link">#</a></h1>
-<p>The architecture uses a middleware pipeline, similar to <a href="https://thomaslevesque.com/2018/03/27/understanding-the-asp-net-core-middleware-pipeline/">ASP.NET Core</a> and <a href="https://github.com/dotnet/command-line-api/wiki/How-To#middleware-pipeline">System.CommandLine</a>.</p>
-<p>The middleware pipeline is a type of <a href="https://en.wikipedia.org/wiki/Chain-of-responsibility_pattern">chain of responsibilty pattern</a>.<br />
-Middleware are components that register a delegate as a step in the pipeline.  The delegate is called by the previous delegate and in turn calls the next delegate.  With this pattern, a middleware can perform work before and after the call to the next delegate or skip the next delegate if appropriate.  Take the Help middleware for example. When <code class="codehilite"><span class="err">-h</span></code>, <code class="codehilite"><span class="err">--help</span></code> or <code class="codehilite"><span class="err">-?</span></code> been specified, the help middleware prints help for the target command and does not call the next middleware.</p>
-<p>As the middleware executes, it enhances the <code class="codehilite"><span class="err">CommandContext</span></code>.  The <code class="codehilite"><span class="err">CommandContext</span></code> contains the context relevate to the current command. For example... the tokenizer middleware populates the <code class="codehilite"><span class="err">CommandContext.Tokens</span></code> property.  The parser middleware populates the <code class="codehilite"><span class="err">CommandContext.ParseResults</span></code> property.  The <code class="codehilite"><span class="err">CommandContext</span></code> is part of the delegate signature and is therefore available for all middleware.</p>
-<h3 id="why-we-use-the-middleware-pattern">Why we use the middleware pattern<a class="headerlink" href="#why-we-use-the-middleware-pattern" title="Permanent link">#</a></h3>
+                <h1 id="ctrlc-and-cancellationtoken">Ctrl+C and CancellationToken<a class="headerlink" href="#ctrlc-and-cancellationtoken" title="Permanent link">#</a></h1>
+<p>Console applications should stop gracefully when the user enters <code class="codehilite"><span class="err">Ctrl+C</span></code> or <code class="codehilite"><span class="err">Ctrl+Break</span></code>. 
+If your app is consuming the main thread the app will not exit right away.</p>
+<p>Traditionally, this is solved with a following steps:</p>
+<ol>
+<li>Create a <code class="codehilite"><span class="err">CancellationTokenSource</span></code> and make the <code class="codehilite"><span class="err">cancellationTokenSource.Token</span></code> available for the rest of the app to reference.</li>
+<li>Subscribe to <code class="codehilite"><span class="err">Console.CancelKeyPress</span></code> and call <code class="codehilite"><span class="err">cancellationTokenSource.Cancel()</span></code> when triggered.  <code class="codehilite"><span class="err">cancellationToken.IsCancellationRequested</span></code> will then return true.</li>
+<li>Check <code class="codehilite"><span class="err">cancellationToken.IsCancellationRequested</span></code> in any looping code and pass the token to any libraries that check it. Instead of <code class="codehilite"><span class="err">Thread.Sleep(...)</span></code>, use <code class="codehilite"><span class="err">cancellationToken.WaitHandle.WaitOne(...)</span></code> or <code class="codehilite"><span class="err">Task.Delay(..., cancellationToken)</span></code></li>
+</ol>
+<h2 id="cancellation-middleware">Cancellation middleware<a class="headerlink" href="#cancellation-middleware" title="Permanent link">#</a></h2>
+<p>CommandDotNet has middleware to simplify this. Configure with <code class="codehilite"><span class="err">appRunner.UseCancellationHandlers();</span></code>. </p>
+<p>The framework will:</p>
 <ul>
-<li>Ease of adding new features without touching existing code. Observing <a href="https://en.wikipedia.org/wiki/Single_responsibility_principle">Single Resposibility</a> &amp;  <a href="https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle">Open-Closed</a> principals.</li>
-<li>Ease of extending the framework using external packages. Supports community enhancements while reducing the bloat of the framework code base.</li>
-<li>Feature tests can exclude middleware that's not relevant to the tests.</li>
+<li>set the <code class="codehilite"><span class="err">CommandContext.AppConfig.CancellationToken</span></code> with a new token.</li>
+<li>the token will be cancelled on</li>
+<li><code class="codehilite"><span class="err">Console.CancelKepPress</span></code></li>
+<li><code class="codehilite"><span class="err">AppDomain.CurrentDomain.ProcessExit</span></code></li>
+<li><code class="codehilite"><span class="err">AppDomain.CurrentDomain.UnhandledException</span></code> when <code class="codehilite"><span class="err">UnhandledExceptionEventArgs.IsTerminating</span></code> == true</li>
 </ul>
-<p><img alt="Middleware" src="../../diagrams/MiddlewarePipeline.png" style="float: right;" /></p>
-<h3 id="middleware-stages">Middleware Stages<a class="headerlink" href="#middleware-stages" title="Permanent link">#</a></h3>
-<p>The core functionality of the framework and optional features have been implemented using middleware. 
-One of the classic challenges of using the middleware pattern is understanding the order middleware components should be registered. To address this challenge, the pipeline has been split into eight distinct changes, as seen in the diagram below, four core stages (in green) and four extensibility stages (in yellow). The four core stages contain the core functionality of the framework. After each core stage is complete, the framework guarantees specific parts of the <code class="codehilite"><span class="err">CommandContext</span></code> are populated.</p>
-<p>The other four stages are where other middleware will typically be registered, based on <code class="codehilite"><span class="err">CommandContext</span></code> properties the middleware requires to operate. For example, <code class="codehilite"><span class="err">PromptForMissingOperands</span></code> is registered in the <code class="codehilite"><span class="err">PostParseInputPreBindValues</span></code> stage because it depends on the <code class="codehilite"><span class="err">ParseResults.ArgumentValues</span></code> property being populated in the <code class="codehilite"><span class="err">ParseInput</span></code> stage. <code class="codehilite"><span class="err">FluentValidation</span></code> is registerd in the <code class="codehilite"><span class="err">PostBindValuesPreInvoke</span></code> stage because it relies on the <code class="codehilite"><span class="err">IInvocation.ParameterValues</span></code> being populated in the <code class="codehilite"><span class="err">BindValues</span></code> stage.  Read more in the intellisense of <code class="codehilite"><span class="err">MiddlewareStages</span></code> and the properties of the <code class="codehilite"><span class="err">CommandContext</span></code> classes.</p>
-<p>Note: <code class="codehilite"><span class="err">DisplayVersion</span></code> is the only optional middleware in a core stage. Any middleware can be registered in a core stage if needed. In the case of <code class="codehilite"><span class="err">DisplayVersion</span></code>, the middleware must run before <code class="codehilite"><span class="err">DisplayHelp</span></code> otherwise help would trigger for the root command when it is not executable.</p>
-<h3 id="invocation-pipeline">Invocation Pipeline<a class="headerlink" href="#invocation-pipeline" title="Permanent link">#</a></h3>
-<p>The invocation pipeline is assembled during the <code class="codehilite"><span class="err">ParseInput</span></code> stage, captured in <code class="codehilite"><span class="err">CommandContext.InvocationPipeline</span></code> property and run during the <code class="codehilite"><span class="err">InvokeInvocationPipeline</span></code> stage. The pipeline consists of <a href="../interceptors/">interceptor methods</a> and the target command method.</p>
+<p>The framework checks the cancellation token before every step in the pipeline.</p>
+<h2 id="using-the-cancellationtoken">Using the CancellationToken<a class="headerlink" href="#using-the-cancellationtoken" title="Permanent link">#</a></h2>
+<p>The CancellationToken is easy to access in your commands thanks to <a href="../../Extensibility/parameter-resolvers/">parameter resolvers</a>. 
+Simply add a parameter to your command or interceptor method.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">public</span> <span class="k">void</span> <span class="nf">MigrateRecords</span><span class="p">(</span><span class="n">CancellationToken</span> <span class="n">cancellationToken</span><span class="p">,</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">ids</span><span class="p">)</span>
+<span class="p">{</span>    
+    <span class="k">foreach</span><span class="p">(</span><span class="kt">int</span> <span class="n">id</span> <span class="k">in</span> <span class="n">ids</span><span class="p">.</span><span class="n">TakeWhile</span><span class="p">(!</span><span class="n">cancellationToken</span><span class="p">.</span><span class="n">IsCancellationRequested</span><span class="p">))</span>
+    <span class="p">{</span>
+        <span class="n">MigrateRecord</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Remember to pass the CancellationToken to all database, web and service requests that take one.</p>
+</div>
                 
                   
                 
-                
-                  
-                  <hr>
-                  <div class="md-source-date">
-                    <small>
-                      
-                        Last update: November 13, 2019
-                      
-                    </small>
-                  </div>
                 
               
               
@@ -967,9 +1101,9 @@ One of the classic challenges of using the middleware pattern is understanding t
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = "https://bilal-fazlani.github.io/commanddotnet/V3/middleware/";
+      this.page.url = "https://bilal-fazlani.github.io/commanddotnet/V3/Middleware/cancellation/";
       this.page.identifier =
-        "/V3/middleware/";
+        "/V3/Middleware/cancellation/";
     };
     (function() {
       var d = document, s = d.createElement("script");
@@ -991,7 +1125,7 @@ One of the classic challenges of using the middleware pattern is understanding t
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../option-or-operand/" title="Option vs Operand" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../default-middleware/" title="Default middleware" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1000,19 +1134,19 @@ One of the classic challenges of using the middleware pattern is understanding t
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Option vs Operand
+                Default middleware
               </span>
             </div>
           </a>
         
         
-          <a href="../cancellation/" title="Ctrl+C and CancellationToken" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../fluent-validation-for-argument-models/" title="FluentValidation" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Ctrl+C and CancellationToken
+                FluentValidation
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -1035,7 +1169,7 @@ One of the classic challenges of using the middleware pattern is understanding t
       </div>
       
   <div class="md-footer-social">
-    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    <link rel="stylesheet" href="../../../assets/fonts/font-awesome.css">
     
       <a href="https://github.com/bilal-fazlani" class="md-footer-social__link fa fa-github"></a>
     
@@ -1051,9 +1185,9 @@ One of the classic challenges of using the middleware pattern is understanding t
       
     </div>
     
-      <script src="../../assets/javascripts/application.808e90bb.js"></script>
+      <script src="../../../assets/javascripts/application.808e90bb.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
       
     
   </body>
