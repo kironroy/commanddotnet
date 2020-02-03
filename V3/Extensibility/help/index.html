@@ -13,7 +13,7 @@
         <meta name="description" content="Model your command line application interface in a class">
       
       
-        <link rel="canonical" href="https://bilal-fazlani.github.io/commanddotnet/V3/Middleware/piped-arguments/">
+        <link rel="canonical" href="https://bilal-fazlani.github.io/commanddotnet/V3/Extensibility/help/">
       
       
       
@@ -40,7 +40,7 @@
     
     
       
-        <title>Piped arguments - CommandDotNet</title>
+        <title>Help - CommandDotNet</title>
       
     
     
@@ -114,7 +114,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#piped-arguments" tabindex="1" class="md-skip">
+      <a href="#help" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -140,7 +140,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Piped arguments
+                Help
               
             </span>
           
@@ -752,10 +752,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5" checked>
     
     <label class="md-nav__link" for="nav-2-5">
       Extensibility
@@ -766,128 +768,6 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Extensibility/help/" title="Help" class="md-nav__link">
-      Help
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Extensibility/parameter-types/" title="Parameter Types" class="md-nav__link">
-      Parameter Types
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Extensibility/parameter-resolvers/" title="Parameter Resolvers" class="md-nav__link">
-      Parameter Resolvers
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Extensibility/middleware/" title="Middleware Pipeline" class="md-nav__link">
-      Middleware Pipeline
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Extensibility/interceptors/" title="Interceptor methods" class="md-nav__link">
-      Interceptor methods
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-6" type="checkbox" id="nav-2-6" checked>
-    
-    <label class="md-nav__link" for="nav-2-6">
-      Middleware
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-6">
-        Middleware
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../default-middleware/" title="Default middleware" class="md-nav__link">
-      Default middleware
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../cancellation/" title="Ctrl+C and CancellationToken" class="md-nav__link">
-      Ctrl+C and CancellationToken
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../fluent-validation-for-argument-models/" title="FluentValidation" class="md-nav__link">
-      FluentValidation
-    </a>
-  </li>
-
         
           
           
@@ -904,11 +784,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Piped arguments
+        Help
       </label>
     
-    <a href="./" title="Piped arguments" class="md-nav__link md-nav__link--active">
-      Piped arguments
+    <a href="./" title="Help" class="md-nav__link md-nav__link--active">
+      Help
     </a>
     
       
@@ -922,29 +802,57 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-piping" class="md-nav__link">
-    What is piping?
+  <a href="#default-template" class="md-nav__link">
+    Default Template
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-the-middleware" class="md-nav__link">
-    Using the middleware
+  <a href="#modify-behavior-via-settings" class="md-nav__link">
+    Modify behavior via settings
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    Example
+  <a href="#printhelpoption" class="md-nav__link">
+    PrintHelpOption
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textstyle" class="md-nav__link">
+    TextStyle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usageappnamestyle" class="md-nav__link">
+    UsageAppNameStyle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usageappname" class="md-nav__link">
+    UsageAppName
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-help-provider" class="md-nav__link">
+    Custom Help Provider
+  </a>
   
 </li>
       
@@ -971,7 +879,127 @@
 
 
   <li class="md-nav__item">
-    <a href="../prompting/" title="Prompting" class="md-nav__link">
+    <a href="../parameter-types/" title="Parameter Types" class="md-nav__link">
+      Parameter Types
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parameter-resolvers/" title="Parameter Resolvers" class="md-nav__link">
+      Parameter Resolvers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../middleware/" title="Middleware Pipeline" class="md-nav__link">
+      Middleware Pipeline
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../interceptors/" title="Interceptor methods" class="md-nav__link">
+      Interceptor methods
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-6" type="checkbox" id="nav-2-6">
+    
+    <label class="md-nav__link" for="nav-2-6">
+      Middleware
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-6">
+        Middleware
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Middleware/default-middleware/" title="Default middleware" class="md-nav__link">
+      Default middleware
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Middleware/cancellation/" title="Ctrl+C and CancellationToken" class="md-nav__link">
+      Ctrl+C and CancellationToken
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Middleware/fluent-validation-for-argument-models/" title="FluentValidation" class="md-nav__link">
+      FluentValidation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Middleware/piped-arguments/" title="Piped arguments" class="md-nav__link">
+      Piped arguments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Middleware/prompting/" title="Prompting" class="md-nav__link">
       Prompting
     </a>
   </li>
@@ -983,7 +1011,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../response-files/" title="Response Files" class="md-nav__link">
+    <a href="../../Middleware/response-files/" title="Response Files" class="md-nav__link">
       Response Files
     </a>
   </li>
@@ -995,7 +1023,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../newer-release-alerts/" title="Newer release alerts" class="md-nav__link">
+    <a href="../../Middleware/newer-release-alerts/" title="Newer release alerts" class="md-nav__link">
       Newer release alerts
     </a>
   </li>
@@ -1044,29 +1072,57 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-piping" class="md-nav__link">
-    What is piping?
+  <a href="#default-template" class="md-nav__link">
+    Default Template
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-the-middleware" class="md-nav__link">
-    Using the middleware
+  <a href="#modify-behavior-via-settings" class="md-nav__link">
+    Modify behavior via settings
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    Example
+  <a href="#printhelpoption" class="md-nav__link">
+    PrintHelpOption
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textstyle" class="md-nav__link">
+    TextStyle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usageappnamestyle" class="md-nav__link">
+    UsageAppNameStyle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usageappname" class="md-nav__link">
+    UsageAppName
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-help-provider" class="md-nav__link">
+    Custom Help Provider
+  </a>
   
 </li>
       
@@ -1092,30 +1148,13 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/bilal-fazlani/commanddotnet/edit/master/docs/V3/Middleware/piped-arguments.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/bilal-fazlani/commanddotnet/edit/master/docs/V3/Extensibility/help.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="piped-arguments">Piped arguments<a class="headerlink" href="#piped-arguments" title="Permanent link">#</a></h1>
-<h2 id="what-is-piping">What is piping?<a class="headerlink" href="#what-is-piping" title="Permanent link">#</a></h2>
-<p>Piping is a way to pass the console output of a command to another command.</p>
-<p>A simple example is filtering your history of bash commands for git commands: <code class="codehilite"><span class="err">history | grep git</span></code>.</p>
-<p>The pipe <code class="codehilite"><span class="err">|</span></code> tells the shell you are running a new command and that the new command will take the output of the previous command.<br />
-In this case, <code class="codehilite"><span class="err">history</span></code> will output the last N bash commands and <code class="codehilite"><span class="err">grep git</span></code> will filter the output to only the commands containing "git"</p>
-<p>Piping is a great way to decompose commands into smaller, single-responsibility commands.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>When you find commands repeating the same options to determine what items to operate on, consider extracting the options into search command that returns ids and then update the other commands take the list of ids. </p>
-<p><code class="codehilite"><span class="err">app.exe get-customer-ids --only-active | app.exe migrate-customers</span></code></p>
-</div>
-<p>In .net console apps, you can check piped input using <code class="codehilite"><span class="err">Console.IsInputRedirected</span></code> and <code class="codehilite"><span class="err">Console.In.Read___()</span></code>. </p>
-<p>Or... use the <code class="codehilite"><span class="err">AppendPipedInputToOperandList</span></code> middleware</p>
-<h2 id="using-the-middleware">Using the middleware<a class="headerlink" href="#using-the-middleware" title="Permanent link">#</a></h2>
-<p>Enable the feature with <code class="codehilite"><span class="err">appRunner.AppendPipedInputToOperandList()</span></code>.</p>
-<p>Every command is allowed a single operand list. If one is defined and if piped input is available, it will be appended to this list. If the user pipes input and also specifies values for the operand, the two sources will be concatenated with piped input at the end.</p>
-<h4 id="example">Example<a class="headerlink" href="#example" title="Permanent link">#</a></h4>
-<p>Given the commands defined below and this input in the shell: <code class="codehilite"><span class="err">Users Find -a | Users Disable</span></code></p>
-<p>The shell will start two processes, the first for Find and the second for Disable. As the first process writes ids to the output stream, the id is "piped" to the second process. The Disable command will process the ids as they are received. When Find completes, the first process will shutdown and the pipe will be closed. The Disable command will complete any remaining ids and then shutdown.</p>
-<p>If Disable used a type of <code class="codehilite"><span class="err">List&lt;string&gt;</span></code> or <code class="codehilite"><span class="err">string[]</span></code>, then Disable could not process the ids until the Find process completed. By using <code class="codehilite"><span class="err">IEnumerable&lt;string&gt;</span></code> results can be streamed.</p>
+                <h1 id="help">Help<a class="headerlink" href="#help" title="Permanent link">#</a></h1>
+<p>Help documentation is automatically generated for the application.</p>
+<h2 id="default-template">Default Template<a class="headerlink" href="#default-template" title="Permanent link">#</a></h2>
+<p>The default template is as follows</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -1136,35 +1175,91 @@ In this case, <code class="codehilite"><span class="err">history</span></code> w
 18
 19
 20
-21</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">public</span> <span class="k">class</span> <span class="nc">Users</span>
-<span class="p">{</span>
-    <span class="k">public</span> <span class="k">void</span> <span class="nf">Find</span><span class="p">(</span>
-        <span class="n">IConsole</span> <span class="n">console</span><span class="p">,</span>
-<span class="na">        [Option(ShortName=&quot;a&quot;)]</span> <span class="kt">bool</span> <span class="n">activeOnly</span><span class="p">,</span> 
-        <span class="kt">string</span> <span class="n">pattern</span> <span class="p">=</span> <span class="k">null</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="k">foreach</span><span class="p">(</span><span class="kt">var</span> <span class="n">user</span> <span class="k">in</span> <span class="n">userSvc</span><span class="p">.</span><span class="n">GetUsers</span><span class="p">(</span><span class="n">activeOnly</span><span class="p">,</span> <span class="n">pattern</span><span class="p">))</span>
-        <span class="p">{</span>
-            <span class="n">console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="n">Id</span><span class="p">)</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
+21
+22
+23
+24
+25
+26
+27
+28
+29</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">{</span>description<span class="o">}</span>
 
-    <span class="k">public</span> <span class="k">void</span> <span class="nf">Disable</span><span class="p">(</span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">ids</span><span class="p">)</span>
+Usage: <span class="o">{</span>application<span class="o">}</span> <span class="o">[</span>command<span class="o">]</span> <span class="o">[</span>arguments<span class="o">]</span> <span class="o">[</span>options<span class="o">]</span>
+
+Arguments:
+
+  <span class="o">{</span>name<span class="o">}</span>  <span class="o">(</span>Multiple<span class="o">)</span> &lt;TYPE&gt; <span class="o">[</span>default<span class="o">]</span> 
+  <span class="o">{</span>description<span class="o">}</span>
+  <span class="o">{</span>allowed-values<span class="o">}</span>
+
+Options:
+
+  -<span class="o">{</span>short<span class="o">}</span> <span class="p">|</span> --<span class="o">{</span>long<span class="o">}</span> <span class="o">(</span>Multiple<span class="o">)</span> &lt;TYPE&gt; <span class="o">[</span>default<span class="o">]</span> 
+  <span class="o">{</span>description<span class="o">}</span>
+  <span class="o">{</span>allowed-values<span class="o">}</span>
+
+Options also available <span class="k">for</span> subcommands:
+
+  -<span class="o">{</span>short<span class="o">}</span> <span class="p">|</span> --<span class="o">{</span>long<span class="o">}</span> <span class="o">(</span>Multiple<span class="o">)</span> &lt;TYPE&gt; <span class="o">[</span>default<span class="o">]</span> 
+  <span class="o">{</span>description<span class="o">}</span>
+  <span class="o">{</span>allowed-values<span class="o">}</span>
+
+Commands:
+
+  <span class="o">{</span>name<span class="o">}</span> <span class="o">{</span>description<span class="o">}</span>
+
+<span class="o">{</span>extended-help-text<span class="o">}</span>
+
+Use <span class="s2">&quot;{application} [command] --help&quot;</span> <span class="k">for</span> more information about a command.
+</pre></div>
+</td></tr></table>
+
+<p>Segments that do not apply for a command are not included.  </p>
+<p>For example, the last line are only included when a command has subcommands
+and "Options also available for subcommands:" is only included when options 
+defined in parent commands can be provided in subcommands.</p>
+<h2 id="modify-behavior-via-settings">Modify behavior via settings<a class="headerlink" href="#modify-behavior-via-settings" title="Permanent link">#</a></h2>
+<p>There are a few settings to alter the default behavior, accessed via <code class="codehilite"><span class="err">AppSettings.Help</span></code></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">new</span> <span class="n">AppSettings</span>
+<span class="p">{</span>
+    <span class="n">Help</span>
     <span class="p">{</span>
-        <span class="k">foreach</span><span class="p">(</span><span class="kt">string</span> <span class="n">id</span> <span class="k">in</span> <span class="n">ids</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">userSvc</span><span class="p">.</span><span class="n">Disable</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
-        <span class="p">}</span>    
+        <span class="n">PrintHelpOption</span> <span class="p">=</span> <span class="k">true</span><span class="p">,</span>
+        <span class="n">TextStyle</span> <span class="p">=</span> <span class="n">HelpTextStyle</span><span class="p">.</span><span class="n">Basic</span><span class="p">,</span>
+        <span class="n">UsageAppNameStyle</span> <span class="p">=</span> <span class="n">UsageAppNameStyle</span><span class="p">.</span><span class="n">Executable</span><span class="p">,</span>
+        <span class="n">UsageAppName</span> <span class="p">=</span> <span class="s">&quot;GlobalToolName&quot;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table>
 
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>All output to the console is piped to the next command. Be sure the command generating the piped output does not include additional logging information.</p>
-</div>
-<p>You can experiment with this using our <a href="https://github.com/bilal-fazlani/commanddotnet/blob/beta-v3/master/CommandDotNet.Example/Commands/Pipes.cs">pipes example command</a>.</p>
+<h3 id="printhelpoption">PrintHelpOption<a class="headerlink" href="#printhelpoption" title="Permanent link">#</a></h3>
+<p><code class="codehilite"><span class="err">PrintHelpOption</span></code> will include the help option in the list of options for every command.</p>
+<h3 id="textstyle">TextStyle<a class="headerlink" href="#textstyle" title="Permanent link">#</a></h3>
+<p>Default is <code class="codehilite"><span class="err">HelpTextStyle.Detailed</span></code>. <code class="codehilite"><span class="err">HelpTextStyle.Basic</span></code> changes the argument and option template to just <code class="codehilite"><span class="err">{name} {description}</span></code></p>
+<h3 id="usageappnamestyle">UsageAppNameStyle<a class="headerlink" href="#usageappnamestyle" title="Permanent link">#</a></h3>
+<p>This determines what is used for {application} in <code class="codehilite"><span class="c">Usage: {application}</span></code>. </p>
+<p>When <code class="codehilite"><span class="err">Executable</span></code>, the name will be <code class="codehilite"><span class="c">Usage: {filename}</span></code>.</p>
+<p>When <code class="codehilite"><span class="err">DotNet</span></code>, the name will be <code class="codehilite"><span class="n">Usage</span><span class="o">:</span> <span class="n">dotnet</span> <span class="o">{</span><span class="n">filename</span><span class="o">}</span></code></p>
+<p>When <code class="codehilite"><span class="err">Adaptive</span></code>, if the file name ends with ".exe", then uses <code class="codehilite"><span class="err">Executable</span></code> else <code class="codehilite"><span class="err">DotNet</span></code>.</p>
+<h3 id="usageappname">UsageAppName<a class="headerlink" href="#usageappname" title="Permanent link">#</a></h3>
+<p>When specified, this value will be used and <code class="codehilite"><span class="err">UsageAppNameStyle</span></code> will be ignored.</p>
+<h2 id="custom-help-provider">Custom Help Provider<a class="headerlink" href="#custom-help-provider" title="Permanent link">#</a></h2>
+<p>The template is driven by the <a href="https://github.com/bilal-fazlani/commanddotnet/blob/beta-v3/master/CommandDotNet/Help/HelpTextProvider.cs">HelpTextProvider</a> class.</p>
+<p>There are two options for overriding the behavior. </p>
+<p>The first and simplest option is to inherit from <code class="codehilite"><span class="err">HelpTextProvider</span></code> and override the method for the section to modify.</p>
+<p>The second option is to implement a new <a href="https://github.com/bilal-fazlani/commanddotnet/blob/beta-v3/master/CommandDotNet/Help/IHelpProvider.cs">IHelpProvider</a>.</p>
+<p>Configure the provider with: <code class="codehilite"><span class="err">appRunner.Configure(b =&gt; b.CustomHelpProvider = new MyHelpProvider());</span></code></p>
                 
                   
                 
@@ -1178,9 +1273,9 @@ In this case, <code class="codehilite"><span class="err">history</span></code> w
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = "https://bilal-fazlani.github.io/commanddotnet/V3/Middleware/piped-arguments/";
+      this.page.url = "https://bilal-fazlani.github.io/commanddotnet/V3/Extensibility/help/";
       this.page.identifier =
-        "/V3/Middleware/piped-arguments/";
+        "/V3/Extensibility/help/";
     };
     (function() {
       var d = document, s = d.createElement("script");
@@ -1202,7 +1297,7 @@ In this case, <code class="codehilite"><span class="err">history</span></code> w
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../fluent-validation-for-argument-models/" title="FluentValidation" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../DefiningCommands/passwords/" title="Passwords" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1211,19 +1306,19 @@ In this case, <code class="codehilite"><span class="err">history</span></code> w
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                FluentValidation
+                Passwords
               </span>
             </div>
           </a>
         
         
-          <a href="../prompting/" title="Prompting" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../parameter-types/" title="Parameter Types" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Prompting
+                Parameter Types
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
