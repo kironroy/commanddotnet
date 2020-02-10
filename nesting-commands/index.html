@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.2">
     
     
       
@@ -44,7 +44,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.1b62728e.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
       
         <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -55,7 +55,7 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.268332fc.js"></script>
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
     
     
       
@@ -119,9 +119,9 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://bilal-fazlani.github.io/commanddotnet" title="CommandDotNet" class="md-header-nav__button md-logo">
+        <a href="https://bilal-fazlani.github.io/commanddotnet" title="CommandDotNet" aria-label="CommandDotNet" class="md-header-nav__button md-logo">
           
-            <img src="../img/small-logo.svg" width="24" height="24">
+            <img alt="logo" src="../img/small-logo.svg" width="24" height="24">
           
         </a>
       </div>
@@ -150,7 +150,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
@@ -251,7 +251,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="https://bilal-fazlani.github.io/commanddotnet" title="CommandDotNet" class="md-nav__button md-logo">
       
-        <img src="../img/small-logo.svg" width="48" height="48">
+        <img alt="logo" src="../img/small-logo.svg" width="48" height="48">
       
     </a>
     CommandDotNet
@@ -706,6 +706,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../V3/DefiningCommands/commands/" title="Commands" class="md-nav__link">
+      Commands
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../V3/DefiningCommands/subcommands/" title="Subcommands" class="md-nav__link">
+      Subcommands
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../V3/DefiningCommands/option-or-operand/" title="Option vs Operand" class="md-nav__link">
       Option vs Operand
     </a>
@@ -1025,7 +1049,7 @@
 29
 30
 31
-32</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="na">[ApplicationMetadata(Description = &quot;Fake git application&quot;)]</span>
+32</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="na">[ApplicationMetadata(Description = &quot;Fake git application&quot;)]</span>
 <span class="k">public</span> <span class="k">class</span> <span class="nc">Git</span>
 <span class="p">{</span>
 <span class="na">    [ApplicationMetadata(Description = &quot;Commits all staged changes&quot;)]</span>
@@ -1057,7 +1081,7 @@
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <p>Here's how the help looks like now:</p>
@@ -1072,7 +1096,7 @@
  9
 10
 11
-12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Fake git application
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>Fake git application
 
 Usage: dotnet example.dll <span class="o">[</span>options<span class="o">]</span> <span class="o">[</span>command<span class="o">]</span>
 
@@ -1084,35 +1108,35 @@ Commands:
   Stash   Stashes all changes when executed without any arguments
 
 Use <span class="s2">&quot;dotnet example.dll [command] --help&quot;</span> <span class="k">for</span> more information about a command.
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <p>Here's  how the interaction looks like:</p>
 <p>INPUT</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>dotnet example.dll commit -m <span class="s2">&quot;some refactoring&quot;</span>
-</pre></div>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>dotnet example.dll commit -m <span class="s2">&quot;some refactoring&quot;</span>
+</code></pre></div>
 </td></tr></table>
 
 <p>OUTPUT</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Commit successful
-</pre></div>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>Commit successful
+</code></pre></div>
 </td></tr></table>
 
 <hr />
 <p>INPUT</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>dotnet example.dll stash
-</pre></div>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>dotnet example.dll stash
+</code></pre></div>
 </td></tr></table>
 
 <p>OUTPUT</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>changes stashed
-</pre></div>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>changes stashed
+</code></pre></div>
 </td></tr></table>
 
 <hr />
 <p>INPUT</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>dotnet example.dll stash --help
-</pre></div>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>dotnet example.dll stash --help
+</code></pre></div>
 </td></tr></table>
 
 <p>OUTPUT</p>
@@ -1127,7 +1151,7 @@ Use <span class="s2">&quot;dotnet example.dll [command] --help&quot;</span> <spa
  9
 10
 11
-12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Stashes all changes when executed without any arguments
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>Stashes all changes when executed without any arguments
 
 Usage: dotnet example.dll Stash <span class="o">[</span>options<span class="o">]</span> <span class="o">[</span>command<span class="o">]</span>
 
@@ -1139,18 +1163,18 @@ Commands:
   Pop   Applies last stashed changes
 
 Use <span class="s2">&quot;Stash [command] --help&quot;</span> <span class="k">for</span> more information about a command.
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <hr />
 <p>INPUT</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>dotnet example.dll stash pop
-</pre></div>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>dotnet example.dll stash pop
+</code></pre></div>
 </td></tr></table>
 
 <p>OUTPUT</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>stash popped
-</pre></div>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>stash popped
+</code></pre></div>
 </td></tr></table>
 
 <p><strong><em>Alternative</em></strong></p>
@@ -1163,7 +1187,7 @@ Use <span class="s2">&quot;Stash [command] --help&quot;</span> <span class="k">f
 6
 7
 8
-9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="na">[ApplicationMetadata(Description = &quot;Stashes all changes when executed without any arguments&quot;)]</span>
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="na">[ApplicationMetadata(Description = &quot;Stashes all changes when executed without any arguments&quot;)]</span>
 <span class="k">public</span> <span class="k">class</span> <span class="nc">Stash</span>
 <span class="p">{</span>
 <span class="na">    [ApplicationMetadata(Description = &quot;Applies last stashed changes&quot;)]</span>
@@ -1172,7 +1196,7 @@ Use <span class="s2">&quot;Stash [command] --help&quot;</span> <span class="k">f
         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="err">$</span><span class="s">&quot;stash popped&quot;</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
@@ -1186,7 +1210,7 @@ Use <span class="s2">&quot;Stash [command] --help&quot;</span> <span class="k">f
  9
 10
 11
-12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="na">[ApplicationMetadata(Description = &quot;Fake git application&quot;)]</span>
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="na">[ApplicationMetadata(Description = &quot;Fake git application&quot;)]</span>
 <span class="k">public</span> <span class="k">class</span> <span class="nc">Git</span>
 <span class="p">{</span>
 <span class="na">    [SubCommand]</span>
@@ -1198,7 +1222,7 @@ Use <span class="s2">&quot;Stash [command] --help&quot;</span> <span class="k">f
         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Commit successful&quot;</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
                 
                   
@@ -1274,20 +1298,20 @@ Use <span class="s2">&quot;Stash [command] --help&quot;</span> <span class="k">f
       <div class="md-footer-copyright">
         
         powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
         and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs</a>
       </div>
       
   <div class="md-footer-social">
     <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
     
-      <a href="https://github.com/bilal-fazlani" class="md-footer-social__link fa fa-github"></a>
+      <a href="https://github.com/bilal-fazlani" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
     
-      <a href="https://twitter.com/bilal_fazlani" class="md-footer-social__link fa fa-twitter"></a>
+      <a href="https://twitter.com/bilal_fazlani" target="_blank" rel="noopener" title="twitter" class="md-footer-social__link fa fa-twitter"></a>
     
-      <a href="https://www.linkedin.com/in/bilal-fazlani/" class="md-footer-social__link fa fa-linkedin"></a>
+      <a href="https://www.linkedin.com/in/bilal-fazlani/" target="_blank" rel="noopener" title="linkedin" class="md-footer-social__link fa fa-linkedin"></a>
     
   </div>
 
@@ -1297,7 +1321,7 @@ Use <span class="s2">&quot;Stash [command] --help&quot;</span> <span class="k">f
       
     </div>
     
-      <script src="../assets/javascripts/application.808e90bb.js"></script>
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
