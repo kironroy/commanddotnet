@@ -778,6 +778,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../arguments/" title="Arguments" class="md-nav__link">
+      Arguments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../option-or-operand/" title="Option vs Operand" class="md-nav__link">
       Option vs Operand
     </a>
@@ -1107,7 +1119,7 @@
                 
                 <h1 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">#</a></h1>
 <p>Commands are be defined by methods and classes.</p>
-<p>Let's take our calculator example</p>
+<p>Using our calculator example...</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -1150,15 +1162,15 @@
 </code></pre></div>
 </td></tr></table>
 
-<p><code class="codehilite"><span class="err">Calculator</span></code> is the root command and is not directly referenced in the terminal.</p>
-<p><code class="codehilite"><span class="err">Add</span></code> and <code class="codehilite"><span class="err">Subtract</span></code> are the commands. </p>
+<p><strong>Calculator</strong> is the root command and is not directly referenced in the terminal.</p>
+<p><strong>Add</strong> and <strong>Subtract</strong> are the commands. </p>
 <p>Command methods must:</p>
 <ul>
 <li>be <code class="codehilite"><span class="err">public</span></code></li>
 <li>return <code class="codehilite"><span class="err">void</span></code>, <code class="codehilite"><span class="err">int</span></code>, <code class="codehilite"><span class="err">Task</span></code> or <code class="codehilite"><span class="err">Task&lt;int&gt;</span></code></li>
 </ul>
-<p>Command methods can be async.</p>
-<p>When the return type is <code class="codehilite"><span class="err">int</span></code> the value is used as a the exit code.</p>
+<p>Command methods may be async.</p>
+<p>When the return type is <code class="codehilite"><span class="err">int</span></code> the value is used as the exit code.</p>
 <h2 id="command-attribute">Command Attribute<a class="headerlink" href="#command-attribute" title="Permanent link">#</a></h2>
 <p>Every public method will be interpreted as a command and the command name will be the method name.</p>
 <p>Use the <code class="codehilite"><span class="o">[</span><span class="n">Command</span><span class="o">]</span><span class="w"></span></code> attribute to change the command name and enhance help output.</p>

@@ -725,6 +725,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../DefiningCommands/arguments/" title="Arguments" class="md-nav__link">
+      Arguments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../DefiningCommands/option-or-operand/" title="Option vs Operand" class="md-nav__link">
       Option vs Operand
     </a>
@@ -1174,8 +1186,8 @@
                 
                 
                 <h1 id="interceptor-methods">Interceptor methods<a class="headerlink" href="#interceptor-methods" title="Permanent link">#</a></h1>
-<p>Interceptor methods will be executed for all commands and subcommands of a class.
-Interceptor methods can define options to be provided in the shell. Interceptors cannot define operands because they are positional and positional arguments are only applicable for the target command.</p>
+<p>Interceptor methods will be executed for all commands and subcommands of a class.</p>
+<p>They can define options but cannot define operands.  This is because operands are positional and positional arguments are only applicable for the target command.</p>
 <p>Example:</p>
 <p>Using the following commands, we can request the <a href="https://simple.m.wikipedia.org/wiki/Base_(mathematics)">mathematical base</a> to use for our calculations in one location and all subcommands will use the same base. </p>
 <p>In the shell: </p>
@@ -1217,7 +1229,7 @@ Interceptor methods can define options to be provided in the shell. Interceptors
     <span class="k">public</span> <span class="n">Task</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">Interceptor</span><span class="p">(</span>
         <span class="n">InterceptorExecutionDelegate</span> <span class="n">next</span><span class="p">,</span>
         <span class="n">IConsole</span> <span class="n">console</span><span class="p">,</span>
-        <span class="kt">int</span> <span class="n">radix</span><span class="p">,)</span>
+        <span class="kt">int</span> <span class="n">radix</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="n">_calculator</span> <span class="p">=</span> <span class="n">Factory</span><span class="p">.</span><span class="n">GetCalculatorFor</span><span class="p">(</span><span class="n">radix</span><span class="p">);</span>
         <span class="n">_console</span> <span class="p">=</span> <span class="n">console</span><span class="p">;</span>
@@ -1342,22 +1354,30 @@ Interceptor methods can define options to be provided in the shell. Interceptors
 13
 14
 15
-16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">public</span> <span class="n">Task</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">Interceptor</span><span class="p">(</span><span class="n">InterceptorExecutionDelegate</span> <span class="n">next</span><span class="p">)</span>
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">public</span> <span class="n">Task</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">Interceptor</span><span class="p">(</span><span class="n">InterceptorExecutionDelegate</span> <span class="n">next</span><span class="p">)</span>
     <span class="p">{</span>
-        <span class="n">prehook</span><span class="p">();</span>
+        <span class="n">beforeCommandRun</span><span class="p">();</span>
         <span class="k">try</span>
         <span class="p">{</span>
             <span class="k">return</span> <span class="nf">next</span><span class="p">();</span>
         <span class="p">}</span>
-        <span class="k">catch</span><span class="p">()</span>
+        <span class="k">catch</span><span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span>
         <span class="p">{</span>
-            <span class="n">errorhook</span><span class="p">();</span>
+            <span class="n">onError</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
         <span class="p">}</span>
         <span class="k">finally</span><span class="p">()</span>
         <span class="p">{</span>
-            <span class="n">posthook</span><span class="p">();</span>
+            <span class="n">afterCommandRun</span><span class="p">();</span>
         <span class="p">}</span>
     <span class="p">}</span>
+
+    <span class="k">private</span> <span class="k">void</span> <span class="nf">beforeCommandRun</span><span class="p">(){...}</span>
+    <span class="k">private</span> <span class="k">void</span> <span class="nf">onError</span><span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">){...}</span>
+    <span class="k">private</span> <span class="k">void</span> <span class="nf">afterCommandRun</span><span class="p">(){...}</span>
 </code></pre></div>
 </td></tr></table>
 
@@ -1388,28 +1408,46 @@ Interceptor methods can define options to be provided in the shell. Interceptors
 22
 23
 24
-25</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="k">public</span> <span class="k">static</span> <span class="k">class</span> <span class="nc">CommandHooksMiddlware</span>
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="k">public</span> <span class="k">static</span> <span class="k">class</span> <span class="nc">CommandHooksMiddlware</span>
 <span class="p">{</span>
-    <span class="k">public</span> <span class="k">static</span> <span class="n">AppRunner</span> <span class="nf">UseCommandHooks</span><span class="p">(</span><span class="k">this</span> <span class="n">AppRunner</span> <span class="n">appRunner</span><span class="p">)</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="n">AppRunner</span> <span class="nf">UseCommandHooks</span><span class="p">(</span>
+        <span class="k">this</span> <span class="n">AppRunner</span> <span class="n">appRunner</span><span class="p">,</span> 
+        <span class="n">Action</span> <span class="n">beforeCommandRun</span><span class="p">,</span> <span class="n">Action</span> <span class="n">afterCommandRun</span><span class="p">,</span> 
+        <span class="n">Action</span><span class="p">&lt;</span><span class="n">Exception</span><span class="p">&gt;</span> <span class="n">onError</span><span class="p">,</span> <span class="n">Action</span> <span class="n">onFinally</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="k">return</span> <span class="n">appRunner</span><span class="p">.</span><span class="n">Configure</span><span class="p">(</span><span class="n">c</span> <span class="p">=&gt;</span>
-            <span class="n">c</span><span class="p">.</span><span class="n">UseMiddleware</span><span class="p">(</span><span class="n">Middleware</span><span class="p">,</span> <span class="n">MiddlewareStages</span><span class="p">.</span><span class="n">PostBindValuesPreInvoke</span><span class="p">));</span>
+            <span class="n">c</span><span class="p">.</span><span class="n">UseMiddleware</span><span class="p">(</span>
+                <span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">next</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">Middleware</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">next</span><span class="p">,</span> <span class="n">beforeCommandRun</span><span class="p">,</span> <span class="n">afterCommandRun</span><span class="p">,</span> <span class="n">onError</span><span class="p">,</span> <span class="n">onFinally</span><span class="p">),</span> 
+                <span class="n">MiddlewareStages</span><span class="p">.</span><span class="n">PostBindValuesPreInvoke</span><span class="p">));</span>
     <span class="p">}</span>
 
-    <span class="k">private</span> <span class="k">static</span> <span class="n">Task</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">Middleware</span><span class="p">(</span><span class="n">CommandContext</span> <span class="n">commandContext</span><span class="p">,</span> <span class="n">ExecutionDelegate</span> <span class="n">next</span><span class="p">)</span>
+    <span class="k">private</span> <span class="k">static</span> <span class="n">Task</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">Middleware</span><span class="p">(</span>
+        <span class="n">CommandContext</span> <span class="n">commandContext</span><span class="p">,</span> <span class="n">ExecutionDelegate</span> <span class="n">next</span><span class="p">,</span> 
+        <span class="n">Action</span> <span class="n">beforeCommandRun</span><span class="p">,</span> <span class="n">Action</span> <span class="n">afterCommandRun</span><span class="p">,</span> <span class="n">Action</span><span class="p">&lt;</span><span class="n">Exception</span><span class="p">&gt;</span> <span class="n">onError</span><span class="p">,</span> <span class="n">Action</span> <span class="n">onFinally</span><span class="p">)</span>
     <span class="p">{</span>
-        <span class="n">prehook</span><span class="p">();</span>
+        <span class="n">beforeCommandRun</span><span class="p">?.</span><span class="n">Invoke</span><span class="p">();</span>
         <span class="k">try</span>
         <span class="p">{</span>
-            <span class="k">return</span> <span class="nf">next</span><span class="p">(</span><span class="n">commandContext</span><span class="p">);</span>
+            <span class="kt">var</span> <span class="n">result</span> <span class="p">=</span> <span class="n">next</span><span class="p">(</span><span class="n">commandContext</span><span class="p">);</span>
+            <span class="n">afterCommandRun</span><span class="p">?.</span><span class="n">Invoke</span><span class="p">();</span>
+            <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
         <span class="p">}</span>
-        <span class="k">catch</span><span class="p">()</span>
+        <span class="k">catch</span><span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span>
         <span class="p">{</span>
-            <span class="n">errorhook</span><span class="p">();</span>
+            <span class="n">onError</span><span class="p">?.</span><span class="n">Invoke</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
         <span class="p">}</span>
         <span class="k">finally</span><span class="p">()</span>
         <span class="p">{</span>
-            <span class="n">posthook</span><span class="p">();</span>
+            <span class="n">onFinally</span><span class="p">?.</span><span class="n">Invoke</span><span class="p">();</span>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -1429,7 +1467,7 @@ Interceptor methods can define options to be provided in the shell. Interceptors
     <span class="p">{</span>
         <span class="k">if</span><span class="p">(</span><span class="n">context</span><span class="p">.</span><span class="n">InvocationPipeline</span><span class="p">.</span><span class="n">TargetCommand</span><span class="p">.</span><span class="n">Instance</span> <span class="p">==</span> <span class="k">this</span><span class="p">)</span>
         <span class="p">{</span>
-            <span class="n">prehook</span><span class="p">();</span>
+            <span class="n">beforeCommandRun</span><span class="p">();</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="nf">next</span><span class="p">();</span>
     <span class="p">}</span>
