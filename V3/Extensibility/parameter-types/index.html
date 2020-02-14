@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.2">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.3">
     
     
       
@@ -737,8 +737,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../../DefiningCommands/option-or-operand/" title="Option vs Operand" class="md-nav__link">
-      Option vs Operand
+    <a href="../../DefiningCommands/argument-collections/" title="Argument Collections" class="md-nav__link">
+      Argument Collections
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DefiningCommands/argument-types/" title="Supported Argument Types" class="md-nav__link">
+      Supported Argument Types
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DefiningCommands/argument-models/" title="Argument Models" class="md-nav__link">
+      Argument Models
     </a>
   </li>
 
@@ -761,8 +785,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../DefiningCommands/argument-models/" title="Argument Models" class="md-nav__link">
-      Argument Models
+    <a href="../../DefiningCommands/option-or-operand/" title="Option vs Operand" class="md-nav__link">
+      Option vs Operand
     </a>
   </li>
 
@@ -821,6 +845,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../directives/" title="Directives" class="md-nav__link">
+      Directives
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -831,44 +867,9 @@
       
     
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Parameter Types
-      </label>
-    
     <a href="./" title="Parameter Types" class="md-nav__link md-nav__link--active">
       Parameter Types
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#adding-support-for-new-types" class="md-nav__link">
-    Adding support for new types
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-        <li class="md-nav__item">
-          <a href="#__comments" class="md-nav__link md-nav__link--active">
-            Comments
-          </a>
-        </li>
-      
-    </ul>
-  
-</nav>
     
   </li>
 
@@ -1068,28 +1069,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#adding-support-for-new-types" class="md-nav__link">
-    Adding support for new types
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-        <li class="md-nav__item">
-          <a href="#__comments" class="md-nav__link md-nav__link--active">
-            Comments
-          </a>
-        </li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1104,27 +1083,7 @@
                 
                 
                 <h1 id="parameter-types">Parameter Types<a class="headerlink" href="#parameter-types" title="Permanent link">#</a></h1>
-<p>Argumetns can be defined with all types with a string constructor or where a TypeConverter is defined that can convert from a string.  Includes, but not limited to:</p>
-<ul>
-<li><code class="codehilite"><span class="err">string</span></code>,<code class="codehilite"><span class="err">char</span></code>,<code class="codehilite"><span class="err">enum</span></code>,<code class="codehilite"><span class="err">bool</span></code></li>
-<li><code class="codehilite"><span class="err">short</span></code>,<code class="codehilite"><span class="err">int</span></code>,<code class="codehilite"><span class="err">long</span></code>,<code class="codehilite"><span class="err">decimal</span></code>,<code class="codehilite"><span class="err">double</span></code></li>
-<li><code class="codehilite"><span class="err">Guid</span></code>,<code class="codehilite"><span class="err">Uri</span></code>,<code class="codehilite"><span class="err">FileInfo</span></code>,<code class="codehilite"><span class="err">DirectoryInfo</span></code></li>
-</ul>
-<p>Also supports <code class="codehilite"><span class="err">Nullable&lt;T&gt;</span></code> and <code class="codehilite"><span class="err">IEnumerable&lt;T&gt;</span></code> (<code class="codehilite"><span class="err">T[]</span></code>, <code class="codehilite"><span class="err">List&lt;T&gt;</span></code>, etc.) where T can be converted from string.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>There can be only one <code class="codehilite"><span class="err">List</span></code> operand in the method, where <code class="codehilite"><span class="err">List</span></code> is any type of <code class="codehilite"><span class="err">IEnumerable</span></code>. 
-<code class="codehilite"><span class="err">List</span></code> operands must be the last operand defined for the method.</p>
-</div>
-<h3 id="adding-support-for-new-types">Adding support for new types<a class="headerlink" href="#adding-support-for-new-types" title="Permanent link">#</a></h3>
-<p>In most cases, create a <a href="https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.typeconverter?view=netframework-4.8">TypeConverter</a> for your type</p>
-<p>If you need </p>
-<ul>
-<li>to override an existing TypeConverter</li>
-<li>conditional logic based on argument metadata (custom attributes, etc)</li>
-<li>the converter only for parsing parameters and not the business logic of your application</li>
-</ul>
-<p>Implement <code class="codehilite"><span class="err">IArgumentTypeDescriptor</span></code> or instantiate a <code class="codehilite"><span class="err">DelegatedTypeDescriptor&lt;T&gt;</span></code> and register with <code class="codehilite"><span class="err">AppSettings.ArgumentTypeDescriptors.Register(...)</span></code>.</p>
+<p>See <a href="../../DefiningCommands/argument-types/#adding-support-for-new-types">Supported Argument Types &gt; Adding support for new types</a></p>
                 
                   
                 
@@ -1162,7 +1121,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../help/" title="Help" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../directives/" title="Directives" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1171,7 +1130,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Help
+                Directives
               </span>
             </div>
           </a>

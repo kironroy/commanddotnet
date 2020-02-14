@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.2">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.3">
     
     
       
@@ -737,8 +737,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../../DefiningCommands/option-or-operand/" title="Option vs Operand" class="md-nav__link">
-      Option vs Operand
+    <a href="../../DefiningCommands/argument-collections/" title="Argument Collections" class="md-nav__link">
+      Argument Collections
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DefiningCommands/argument-types/" title="Supported Argument Types" class="md-nav__link">
+      Supported Argument Types
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DefiningCommands/argument-models/" title="Argument Models" class="md-nav__link">
+      Argument Models
     </a>
   </li>
 
@@ -761,8 +785,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../DefiningCommands/argument-models/" title="Argument Models" class="md-nav__link">
-      Argument Models
+    <a href="../../DefiningCommands/option-or-operand/" title="Option vs Operand" class="md-nav__link">
+      Option vs Operand
     </a>
   </li>
 
@@ -811,6 +835,18 @@
   <li class="md-nav__item">
     <a href="../../Extensibility/help/" title="Help" class="md-nav__link">
       Help
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Extensibility/directives/" title="Directives" class="md-nav__link">
+      Directives
     </a>
   </li>
 
@@ -946,6 +982,20 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#tldr-how-to-enable" class="md-nav__link">
+    TLDR, How to enable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-problem-space" class="md-nav__link">
+    The problem space
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#cancellation-middleware" class="md-nav__link">
     Cancellation middleware
   </a>
@@ -1079,6 +1129,20 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#tldr-how-to-enable" class="md-nav__link">
+    TLDR, How to enable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-problem-space" class="md-nav__link">
+    The problem space
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#cancellation-middleware" class="md-nav__link">
     Cancellation middleware
   </a>
@@ -1118,6 +1182,9 @@
                 
                 
                 <h1 id="ctrlc-and-cancellationtoken">Ctrl+C and CancellationToken<a class="headerlink" href="#ctrlc-and-cancellationtoken" title="Permanent link">#</a></h1>
+<h2 id="tldr-how-to-enable">TLDR, How to enable<a class="headerlink" href="#tldr-how-to-enable" title="Permanent link">#</a></h2>
+<p>Enable the feature with <code class="codehilite"><span class="err">appRunner.UseCancellationHandlers()</span></code> or <code class="codehilite"><span class="err">appRunner.UseDefaultMiddleware()</span></code>.</p>
+<h2 id="the-problem-space">The problem space<a class="headerlink" href="#the-problem-space" title="Permanent link">#</a></h2>
 <p>Console applications should stop gracefully when the user enters <code class="codehilite"><span class="err">Ctrl+C</span></code> or <code class="codehilite"><span class="err">Ctrl+Break</span></code>. 
 If your app is consuming the main thread the app will not exit right away.</p>
 <p>Traditionally, this is solved with a following steps:</p>
@@ -1127,11 +1194,10 @@ If your app is consuming the main thread the app will not exit right away.</p>
 <li>Check <code class="codehilite"><span class="err">cancellationToken.IsCancellationRequested</span></code> in any looping code and pass the token to any libraries that check it. Instead of <code class="codehilite"><span class="err">Thread.Sleep(...)</span></code>, use <code class="codehilite"><span class="err">cancellationToken.WaitHandle.WaitOne(...)</span></code> or <code class="codehilite"><span class="err">Task.Delay(..., cancellationToken)</span></code></li>
 </ol>
 <h2 id="cancellation-middleware">Cancellation middleware<a class="headerlink" href="#cancellation-middleware" title="Permanent link">#</a></h2>
-<p>CommandDotNet has middleware to simplify this. Configure with <code class="codehilite"><span class="err">appRunner.UseCancellationHandlers();</span></code>. </p>
-<p>The framework will:</p>
+<p>When enabled, the framework will:</p>
 <ul>
 <li>set the <code class="codehilite"><span class="err">CommandContext.AppConfig.CancellationToken</span></code> with a new token.</li>
-<li>the token will be cancelled on</li>
+<li>cancel the token on</li>
 <li><code class="codehilite"><span class="err">Console.CancelKepPress</span></code></li>
 <li><code class="codehilite"><span class="err">AppDomain.CurrentDomain.ProcessExit</span></code></li>
 <li><code class="codehilite"><span class="err">AppDomain.CurrentDomain.UnhandledException</span></code> when <code class="codehilite"><span class="err">UnhandledExceptionEventArgs.IsTerminating</span></code> == true</li>

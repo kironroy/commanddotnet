@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.2">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.3">
     
     
       
@@ -737,8 +737,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../../DefiningCommands/option-or-operand/" title="Option vs Operand" class="md-nav__link">
-      Option vs Operand
+    <a href="../../DefiningCommands/argument-collections/" title="Argument Collections" class="md-nav__link">
+      Argument Collections
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DefiningCommands/argument-types/" title="Supported Argument Types" class="md-nav__link">
+      Supported Argument Types
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DefiningCommands/argument-models/" title="Argument Models" class="md-nav__link">
+      Argument Models
     </a>
   </li>
 
@@ -761,8 +785,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../DefiningCommands/argument-models/" title="Argument Models" class="md-nav__link">
-      Argument Models
+    <a href="../../DefiningCommands/option-or-operand/" title="Option vs Operand" class="md-nav__link">
+      Option vs Operand
     </a>
   </li>
 
@@ -811,6 +835,18 @@
   <li class="md-nav__item">
     <a href="../../Extensibility/help/" title="Help" class="md-nav__link">
       Help
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Extensibility/directives/" title="Directives" class="md-nav__link">
+      Directives
     </a>
   </li>
 
@@ -939,9 +975,51 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        FluentValidation
+      </label>
+    
     <a href="./" title="FluentValidation" class="md-nav__link md-nav__link--active">
       FluentValidation
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tldr-how-to-enable" class="md-nav__link">
+    TLDR, How to enable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -1033,6 +1111,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tldr-how-to-enable" class="md-nav__link">
+    TLDR, How to enable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1048,7 +1155,12 @@
                 
                 <h1 id="fluentvalidation">FluentValidation<a class="headerlink" href="#fluentvalidation" title="Permanent link">#</a></h1>
 <p>You can use <a href="https://github.com/JeremySkinner/FluentValidation">FluentValidation</a> with this library to validate <a href="../../DefiningCommands/argument-models/">argument models</a>.</p>
-<p>Here's an example,</p>
+<h2 id="tldr-how-to-enable">TLDR, How to enable<a class="headerlink" href="#tldr-how-to-enable" title="Permanent link">#</a></h2>
+<ol>
+<li>Add nuget package <a href="https://www.nuget.org/packages/CommandDotNet.FluentValidation">FluentValidation</a></li>
+<li>Enable the feature with <code class="codehilite"><span class="err">appRunner.UseFluentValidation()</span></code>.</li>
+</ol>
+<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">#</a></h2>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3

@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.2">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.3">
     
     
       
@@ -737,8 +737,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../../DefiningCommands/option-or-operand/" title="Option vs Operand" class="md-nav__link">
-      Option vs Operand
+    <a href="../../DefiningCommands/argument-collections/" title="Argument Collections" class="md-nav__link">
+      Argument Collections
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DefiningCommands/argument-types/" title="Supported Argument Types" class="md-nav__link">
+      Supported Argument Types
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DefiningCommands/argument-models/" title="Argument Models" class="md-nav__link">
+      Argument Models
     </a>
   </li>
 
@@ -761,8 +785,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../DefiningCommands/argument-models/" title="Argument Models" class="md-nav__link">
-      Argument Models
+    <a href="../../DefiningCommands/option-or-operand/" title="Option vs Operand" class="md-nav__link">
+      Option vs Operand
     </a>
   </li>
 
@@ -811,6 +835,18 @@
   <li class="md-nav__item">
     <a href="../../Extensibility/help/" title="Help" class="md-nav__link">
       Help
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Extensibility/directives/" title="Directives" class="md-nav__link">
+      Directives
     </a>
   </li>
 
@@ -982,6 +1018,20 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#tldr-how-to-enable" class="md-nav__link">
+    TLDR, How to enable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#prompting-from-within-the-command-method" class="md-nav__link">
     Prompting from within the command method
   </a>
@@ -1079,6 +1129,20 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#tldr-how-to-enable" class="md-nav__link">
+    TLDR, How to enable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#prompting-from-within-the-command-method" class="md-nav__link">
     Prompting from within the command method
   </a>
@@ -1118,12 +1182,14 @@
                 
                 
                 <h1 id="prompting-middleware">Prompting Middleware<a class="headerlink" href="#prompting-middleware" title="Permanent link">#</a></h1>
+<h2 id="tldr-how-to-enable">TLDR, How to enable<a class="headerlink" href="#tldr-how-to-enable" title="Permanent link">#</a></h2>
+<p>Enable the feature with <code class="codehilite"><span class="err">appRunner.UsePrompting()</span></code> or <code class="codehilite"><span class="err">appRunner.UseDefaultMiddleware()</span></code>.</p>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">#</a></h2>
 <p>Prompting is supported for two scenarios:</p>
 <ol>
 <li>Prompting for values from within the command method.</li>
 <li>Prompting for arguments where values were not provided. </li>
 </ol>
-<p>Enable prompting middleware with: <code class="codehilite"><span class="err">appRunner.UsePrompting(...)</span></code></p>
 <p>Examples can be found in the <a href="https://github.com/bilal-fazlani/commanddotnet/blob/beta-v3/master/CommandDotNet.Example/Commands/Prompts.cs">prompts</a> 
 commands in the example app.</p>
 <h2 id="prompting-from-within-the-command-method">Prompting from within the command method<a class="headerlink" href="#prompting-from-within-the-command-method" title="Permanent link">#</a></h2>

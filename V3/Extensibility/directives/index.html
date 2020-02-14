@@ -13,7 +13,7 @@
         <meta name="description" content="Model your command line application interface in a class">
       
       
-        <link rel="canonical" href="https://bilal-fazlani.github.io/commanddotnet/V3/DefiningCommands/argument-terminology/">
+        <link rel="canonical" href="https://bilal-fazlani.github.io/commanddotnet/V3/Extensibility/directives/">
       
       
       
@@ -40,7 +40,7 @@
     
     
       
-        <title>Terminology - CommandDotNet</title>
+        <title>Directives - CommandDotNet</title>
       
     
     
@@ -114,7 +114,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#terminology" tabindex="0" class="md-skip">
+      <a href="#directives" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -140,7 +140,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Terminology
+                Directives
               
             </span>
           
@@ -668,12 +668,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4">
     
     <label class="md-nav__link" for="nav-2-4">
       Defining Commands
@@ -684,6 +682,164 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DefiningCommands/argument-terminology/" title="Terminology" class="md-nav__link">
+      Terminology
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DefiningCommands/commands/" title="Commands" class="md-nav__link">
+      Commands
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DefiningCommands/subcommands/" title="Subcommands" class="md-nav__link">
+      Subcommands
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DefiningCommands/arguments/" title="Arguments" class="md-nav__link">
+      Arguments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DefiningCommands/argument-collections/" title="Argument Collections" class="md-nav__link">
+      Argument Collections
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DefiningCommands/argument-types/" title="Supported Argument Types" class="md-nav__link">
+      Supported Argument Types
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DefiningCommands/argument-models/" title="Argument Models" class="md-nav__link">
+      Argument Models
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DefiningCommands/argument-arity/" title="Argument Arity" class="md-nav__link">
+      Argument Arity
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DefiningCommands/option-or-operand/" title="Option vs Operand" class="md-nav__link">
+      Option vs Operand
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DefiningCommands/passwords/" title="Passwords" class="md-nav__link">
+      Passwords
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5" checked>
+    
+    <label class="md-nav__link" for="nav-2-5">
+      Extensibility
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-5">
+        Extensibility
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../help/" title="Help" class="md-nav__link">
+      Help
+    </a>
+  </li>
+
         
           
           
@@ -700,11 +856,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Terminology
+        Directives
       </label>
     
-    <a href="./" title="Terminology" class="md-nav__link md-nav__link--active">
-      Terminology
+    <a href="./" title="Directives" class="md-nav__link md-nav__link--active">
+      Directives
     </a>
     
       
@@ -718,29 +874,23 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#perspectives" class="md-nav__link">
-    Perspectives
+  <a href="#tldr-how-to-enable" class="md-nav__link">
+    TLDR, How to enable
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#commanddotnet-perspectives" class="md-nav__link">
-    CommandDotNet Perspectives
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#addressed-in-the-following-ways" class="md-nav__link">
-    Addressed in the following ways
+  <a href="#debug" class="md-nav__link">
+    Debug
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#parse" class="md-nav__link">
+    Parse
+  </a>
   
 </li>
       
@@ -767,163 +917,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../commands/" title="Commands" class="md-nav__link">
-      Commands
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../subcommands/" title="Subcommands" class="md-nav__link">
-      Subcommands
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../arguments/" title="Arguments" class="md-nav__link">
-      Arguments
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../argument-collections/" title="Argument Collections" class="md-nav__link">
-      Argument Collections
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../argument-types/" title="Supported Argument Types" class="md-nav__link">
-      Supported Argument Types
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../argument-models/" title="Argument Models" class="md-nav__link">
-      Argument Models
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../argument-arity/" title="Argument Arity" class="md-nav__link">
-      Argument Arity
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../option-or-operand/" title="Option vs Operand" class="md-nav__link">
-      Option vs Operand
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../passwords/" title="Passwords" class="md-nav__link">
-      Passwords
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5">
-    
-    <label class="md-nav__link" for="nav-2-5">
-      Extensibility
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-5">
-        Extensibility
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Extensibility/help/" title="Help" class="md-nav__link">
-      Help
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Extensibility/directives/" title="Directives" class="md-nav__link">
-      Directives
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Extensibility/parameter-types/" title="Parameter Types" class="md-nav__link">
+    <a href="../parameter-types/" title="Parameter Types" class="md-nav__link">
       Parameter Types
     </a>
   </li>
@@ -935,7 +929,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Extensibility/parameter-resolvers/" title="Parameter Resolvers" class="md-nav__link">
+    <a href="../parameter-resolvers/" title="Parameter Resolvers" class="md-nav__link">
       Parameter Resolvers
     </a>
   </li>
@@ -947,7 +941,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Extensibility/middleware/" title="Middleware Pipeline" class="md-nav__link">
+    <a href="../middleware/" title="Middleware Pipeline" class="md-nav__link">
       Middleware Pipeline
     </a>
   </li>
@@ -959,7 +953,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Extensibility/interceptors/" title="Interceptor methods" class="md-nav__link">
+    <a href="../interceptors/" title="Interceptor methods" class="md-nav__link">
       Interceptor methods
     </a>
   </li>
@@ -971,7 +965,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Extensibility/token-transformations/" title="Token Transformations" class="md-nav__link">
+    <a href="../token-transformations/" title="Token Transformations" class="md-nav__link">
       Token Transformations
     </a>
   </li>
@@ -1128,29 +1122,23 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#perspectives" class="md-nav__link">
-    Perspectives
+  <a href="#tldr-how-to-enable" class="md-nav__link">
+    TLDR, How to enable
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#commanddotnet-perspectives" class="md-nav__link">
-    CommandDotNet Perspectives
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#addressed-in-the-following-ways" class="md-nav__link">
-    Addressed in the following ways
+  <a href="#debug" class="md-nav__link">
+    Debug
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#parse" class="md-nav__link">
+    Parse
+  </a>
   
 </li>
       
@@ -1176,62 +1164,105 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/bilal-fazlani/commanddotnet/edit/master/docs/V3/DefiningCommands/argument-terminology.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/bilal-fazlani/commanddotnet/edit/master/docs/V3/Extensibility/directives.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="terminology">Terminology<a class="headerlink" href="#terminology" title="Permanent link">#</a></h1>
-<p>Terminology for arguments can be confusing. When should an argument be an option, switch, flag, argument or parameter. Should it be named or positional? Is an option always optional?</p>
-<p>Part of the confusion is the overloaded nature of of the term <code class="codehilite"><span class="err">argument</span></code>, as explained in <a href="http://www.informit.com/articles/article.aspx?p=175771">this article</a>. Context determines what is considered an argument. </p>
-<p>TLDR: The terminology of this framework.</p>
-<p><img alt="Argument Terminology Example" src="../../../diagrams/ArgTermsExample.png" /></p>
-<h2 id="perspectives">Perspectives<a class="headerlink" href="#perspectives" title="Permanent link">#</a></h2>
-<p><img alt="Argument Perspectives" src="../../../diagrams/ArgumentPerspectives.png" /></p>
-<p>Let's look at the <code class="codehilite"><span class="err">git stash store</span></code> command to see how different perspectives see it. 
-Git help describes the usage as <code class="codehilite"><span class="err">git stash store [-m|--message &lt;message&gt;] [-q|--quiet] &lt;commit&gt;</span></code>. </p>
-<p>Let's say we executed this command as follows: <code class="codehilite"><span class="err">git stash store -q -m &#39;my stash&#39; e7a8621</span></code></p>
-<p>For programmatic perspective of the...</p>
-<ul>
-<li>shell: every word is an argument. <code class="codehilite"><span class="err">git stash store -q -m &#39;my stash&#39; e7a8621</span></code> </li>
-<li>application: the arguments are <code class="codehilite"><span class="err">stash store -q -m &#39;my stash&#39; e7a8621</span></code>, as assigned to <code class="codehilite"><span class="err">Main(string[] args)</span></code></li>
-<li><code class="codehilite"><span class="err">stash</span></code> command: the arguments are <code class="codehilite"><span class="err">store</span></code>. Once a subcommand is specified, all remaining arguments are for the subcommand.</li>
-<li><code class="codehilite"><span class="err">store</span></code> command: the arguments are <code class="codehilite"><span class="err">-q -m &#39;my stash&#39; e7a8621</span></code>.</li>
-</ul>
-<p>From the human perspective of...</p>
-<ul>
-<li>developer: the arguments are <code class="codehilite"><span class="err">-q -m &#39;my stash&#39; e7a8621</span></code>.</li>
-<li>user: the arguments are <code class="codehilite"><span class="err">e7a8621</span></code>. <code class="codehilite"><span class="err">-q</span></code> and <code class="codehilite"><span class="err">-m</span></code> are options. Common conventions of help documentation distinguishes options from arguments.</li>
-</ul>
-<h2 id="commanddotnet-perspectives">CommandDotNet Perspectives<a class="headerlink" href="#commanddotnet-perspectives" title="Permanent link">#</a></h2>
-<ol>
-<li>The user of the console app: needs to understand usage, when arguments are named vs positional.</li>
-<li>The developer of the console app: needs to define arguments that are named vs positional.</li>
-<li>The developer of middleware components: often need to operate across all command arguments regardless of type.</li>
-</ol>
-<h3 id="addressed-in-the-following-ways">Addressed in the following ways<a class="headerlink" href="#addressed-in-the-following-ways" title="Permanent link">#</a></h3>
-<ul>
-<li>For users of the console app<ul>
-<li>help documentation is the interface. </li>
-<li>terminoloy: <code class="codehilite"><span class="err">command</span></code>, <code class="codehilite"><span class="err">option</span></code> and <code class="codehilite"><span class="err">argument</span></code>.</li>
-</ul>
-</li>
-<li>For developers<ul>
-<li>terminoloy: <code class="codehilite"><span class="err">command</span></code>, <code class="codehilite"><span class="err">argument</span></code>, <code class="codehilite"><span class="err">option</span></code> and <code class="codehilite"><span class="err">operand</span></code></li>
-<li>types: <code class="codehilite"><span class="err">Command</span></code>, <code class="codehilite"><span class="err">IArgument</span></code>, <code class="codehilite"><span class="err">Option</span></code> and <code class="codehilite"><span class="err">Operand</span></code>.</li>
-<li>Option and Operand are the two concrete types of IArgument<ul>
-<li>Option: named argument</li>
-<li>Operand: positional argument</li>
-</ul>
-</li>
-<li>Command contains collections of Option, Operand and Command (as subcommands)</li>
-<li>Arguments are defined using<ul>
-<li>parameters: of a command method</li>
-<li>properties: of an <code class="codehilite"><span class="err">IArgumentModel</span></code></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>Flags are defined as Options with BooleanMode = Implicit.  This is the default for Options of type bool and can be changed using <code class="codehilite"><span class="err">AppSettings.DefaultBooleanMode</span></code> or <code class="codehilite"><span class="err">OptionAttribute.BooleanMode</span></code>.</p>
+                <h1 id="directives">Directives<a class="headerlink" href="#directives" title="Permanent link">#</a></h1>
+<p>Directives are special arguments enabling cross cutting features.  We've loosely followed the pattern defined by  <a href="https://github.com/dotnet/command-line-api/wiki/Features-overview#debugging">System.CommandLine</a> to provide two directives: Debug &amp; Parse</p>
+<h2 id="tldr-how-to-enable">TLDR, How to enable<a class="headerlink" href="#tldr-how-to-enable" title="Permanent link">#</a></h2>
+<p>Enable the feature with <code class="codehilite"><span class="err">appRunner.UseDebugDirective()</span></code> and <code class="codehilite"><span class="err">appRunner.UseParseDirective()</span></code> or <code class="codehilite"><span class="err">appRunner.UseDefaultMiddleware()</span></code> for both.</p>
+<p>Directives must be the first arguments, surrounded by square brackets and will be removed from the arguments list during tokenization.</p>
+<p>To disable parsing directives, set <code class="codehilite"><span class="err">AppSettings.DisableDirectives = false</span></code></p>
+<h2 id="debug">Debug<a class="headerlink" href="#debug" title="Permanent link">#</a></h2>
+<p>Sometimes you just need to debug into a process and configuring the debug arguments in VS is too many extra steps.</p>
+<p>When you specify <code class="codehilite"><span class="o">[</span><span class="n">debug</span><span class="o">]</span><span class="w"></span></code>, the process id will output to the console and wait for you to attach a debugger.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ dotnet example.dll <span class="o">[</span>debug<span class="o">]</span> Add <span class="m">1</span> <span class="m">2</span>
+
+Attach your debugger to process <span class="m">24236</span> <span class="o">({</span>exe name<span class="o">})</span>.
+</code></pre></div>
+</td></tr></table>
+
+<h2 id="parse">Parse<a class="headerlink" href="#parse" title="Permanent link">#</a></h2>
+<p>Rules for including spaces in arguments and escaping special characters differ from shell to shell.  Sometimes it's not clear why arguments are not mapping correctly.</p>
+<p>When you specify <code class="codehilite"><span class="o">[</span><span class="n">parse</span><span class="o">]</span><span class="w"></span></code>, the process will exit immediately after printing each argument onto a new line.  This enables you to catch cases where the shell did not parse your arguments as expected.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ dotnet example.dll <span class="o">[</span>parse<span class="o">]</span> LaunchBigRocket mars -c aaron earth -c alex jupiter
+use <span class="o">[</span>parse:verbose<span class="o">]</span> to see results after each transformation
+&gt;&gt;&gt; from shell
+  Directive: <span class="o">[</span>parse<span class="o">]</span>
+  Value    : LaunchBigRocket
+  Value    : mars
+  Option   : -c
+  Value    : aaron
+  Value    : earth
+  Option   : -c
+  Value    : alex
+  Value    : jupiter
+&gt;&gt;&gt; transformed after: expand-response-files &gt; expand-clubbed-flags &gt; split-option-assignment
+  Directive: <span class="o">[</span>parse<span class="o">]</span>
+  Value    : LaunchBigRocket
+  Value    : mars
+  Option   : -c
+  Value    : aaron
+  Value    : earth
+  Option   : -c
+  Value    : alex
+  Value    : jupiter
+</code></pre></div>
+</td></tr></table>
+
+<p>Use <code class="codehilite"><span class="err">[parse:verbose]</span></code> to see changes after each <code class="codehilite"><span class="err">TokenTransformation</span></code>(expand-response-files, expand-clubbed-flags, split-option-assignments) to pinpoint which transformation resulted in unexpected changes.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ dotnet example.dll <span class="o">[</span>parse:verbose<span class="o">]</span> LaunchBigRocket mars -c aaron earth -c alex jupiter
+&gt;&gt;&gt; from shell
+  Directive: <span class="o">[</span>parse:verbose<span class="o">]</span>
+  Value    : LaunchBigRocket
+  Value    : mars
+  Option   : -c
+  Value    : aaron
+  Value    : earth
+  Option   : -c
+  Value    : alex
+  Value    : jupiter
+&gt;&gt;&gt; no changes after: expand-response-files
+&gt;&gt;&gt; no changes after: expand-clubbed-flags
+&gt;&gt;&gt; no changes after: split-option-assignments
+</code></pre></div>
+</td></tr></table>
                 
                   
                 
@@ -1245,9 +1276,9 @@ Git help describes the usage as <code class="codehilite"><span class="err">git s
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = "https://bilal-fazlani.github.io/commanddotnet/V3/DefiningCommands/argument-terminology/";
+      this.page.url = "https://bilal-fazlani.github.io/commanddotnet/V3/Extensibility/directives/";
       this.page.identifier =
-        "/V3/DefiningCommands/argument-terminology/";
+        "/V3/Extensibility/directives/";
     };
     (function() {
       var d = document, s = d.createElement("script");
@@ -1269,7 +1300,7 @@ Git help describes the usage as <code class="codehilite"><span class="err">git s
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../getting-started/" title="Getting Started" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../help/" title="Help" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1278,19 +1309,19 @@ Git help describes the usage as <code class="codehilite"><span class="err">git s
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Getting Started
+                Help
               </span>
             </div>
           </a>
         
         
-          <a href="../commands/" title="Commands" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../parameter-types/" title="Parameter Types" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Commands
+                Parameter Types
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

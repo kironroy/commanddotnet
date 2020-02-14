@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.2">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.3">
     
     
       
@@ -737,8 +737,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../../DefiningCommands/option-or-operand/" title="Option vs Operand" class="md-nav__link">
-      Option vs Operand
+    <a href="../../DefiningCommands/argument-collections/" title="Argument Collections" class="md-nav__link">
+      Argument Collections
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DefiningCommands/argument-types/" title="Supported Argument Types" class="md-nav__link">
+      Supported Argument Types
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DefiningCommands/argument-models/" title="Argument Models" class="md-nav__link">
+      Argument Models
     </a>
   </li>
 
@@ -761,8 +785,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../DefiningCommands/argument-models/" title="Argument Models" class="md-nav__link">
-      Argument Models
+    <a href="../../DefiningCommands/option-or-operand/" title="Option vs Operand" class="md-nav__link">
+      Option vs Operand
     </a>
   </li>
 
@@ -811,6 +835,18 @@
   <li class="md-nav__item">
     <a href="../../Extensibility/help/" title="Help" class="md-nav__link">
       Help
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Extensibility/directives/" title="Directives" class="md-nav__link">
+      Directives
     </a>
   </li>
 
@@ -994,6 +1030,20 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#tldr-how-to-enable" class="md-nav__link">
+    TLDR, How to enable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#recipes" class="md-nav__link">
     Recipes
   </a>
@@ -1113,6 +1163,20 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#tldr-how-to-enable" class="md-nav__link">
+    TLDR, How to enable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#recipes" class="md-nav__link">
     Recipes
   </a>
@@ -1188,7 +1252,9 @@
                 <h1 id="response-files">Response Files<a class="headerlink" href="#response-files" title="Permanent link">#</a></h1>
 <p>Response files are text files containing arguments that can be replaced by their contents in the command line.
 Micrsoft uses them in several applications including <a href="https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild-response-files?view=vs-2019">msbuild</a> and the <a href="https://docs.microsoft.com/en-us/windows/win32/midl/response-files">MIDL compiler</a>. </p>
-<p>Lets start with an example:</p>
+<h2 id="tldr-how-to-enable">TLDR, How to enable<a class="headerlink" href="#tldr-how-to-enable" title="Permanent link">#</a></h2>
+<p>Enable the feature with <code class="codehilite"><span class="err">appRunner.UseResponseFiles()</span></code> or <code class="codehilite"><span class="err">appRunner.UseDefaultMiddleware()</span></code>.</p>
+<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">#</a></h2>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -1246,7 +1312,8 @@ Micrsoft uses them in several applications including <a href="https://docs.micro
 <h2 id="recipes">Recipes<a class="headerlink" href="#recipes" title="Permanent link">#</a></h2>
 <p>There are a number of ways to use response files to improve usability and testiblity of your app.</p>
 <h3 id="inter-command-communication">Inter-command communication<a class="headerlink" href="#inter-command-communication" title="Permanent link">#</a></h3>
-<p>Similar to <a href="../piped-arguments/">piped arguments</a>, a command can write arguments to a response file for use in another command.  i.e. A list of ids to process.</p>
+<p>Similar to <a href="../piped-arguments/">piped arguments</a>, a command can write arguments to a response file and that response file can be used by other commands. 
+This can be used to "pipe" options to other commands.</p>
 <h3 id="fail-file">Fail File<a class="headerlink" href="#fail-file" title="Permanent link">#</a></h3>
 <p>An application can store ids of failed items in failed.txt file that can be used to rerun just the failed items.
 For example:</p>

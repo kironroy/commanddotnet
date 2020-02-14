@@ -13,7 +13,7 @@
         <meta name="description" content="Model your command line application interface in a class">
       
       
-        <link rel="canonical" href="https://bilal-fazlani.github.io/commanddotnet/V3/DefiningCommands/argument-terminology/">
+        <link rel="canonical" href="https://bilal-fazlani.github.io/commanddotnet/V3/DefiningCommands/argument-types/">
       
       
       
@@ -40,7 +40,7 @@
     
     
       
-        <title>Terminology - CommandDotNet</title>
+        <title>Supported Argument Types - CommandDotNet</title>
       
     
     
@@ -114,7 +114,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#terminology" tabindex="0" class="md-skip">
+      <a href="#supported-argument-types" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -140,7 +140,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Terminology
+                Supported Argument Types
               
             </span>
           
@@ -689,75 +689,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Terminology
-      </label>
-    
-    <a href="./" title="Terminology" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../argument-terminology/" title="Terminology" class="md-nav__link">
       Terminology
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#perspectives" class="md-nav__link">
-    Perspectives
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#commanddotnet-perspectives" class="md-nav__link">
-    CommandDotNet Perspectives
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#addressed-in-the-following-ways" class="md-nav__link">
-    Addressed in the following ways
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-        <li class="md-nav__item">
-          <a href="#__comments" class="md-nav__link md-nav__link--active">
-            Comments
-          </a>
-        </li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -813,11 +749,68 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../argument-types/" title="Supported Argument Types" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Supported Argument Types
+      </label>
+    
+    <a href="./" title="Supported Argument Types" class="md-nav__link md-nav__link--active">
       Supported Argument Types
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#adding-support-for-other-types" class="md-nav__link">
+    Adding support for other types
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type-descriptors" class="md-nav__link">
+    Type Descriptors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -1128,23 +1121,16 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#perspectives" class="md-nav__link">
-    Perspectives
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#commanddotnet-perspectives" class="md-nav__link">
-    CommandDotNet Perspectives
+  <a href="#adding-support-for-other-types" class="md-nav__link">
+    Adding support for other types
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#addressed-in-the-following-ways" class="md-nav__link">
-    Addressed in the following ways
+  <a href="#type-descriptors" class="md-nav__link">
+    Type Descriptors
   </a>
   
 </li>
@@ -1176,62 +1162,45 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/bilal-fazlani/commanddotnet/edit/master/docs/V3/DefiningCommands/argument-terminology.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/bilal-fazlani/commanddotnet/edit/master/docs/V3/DefiningCommands/argument-types.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="terminology">Terminology<a class="headerlink" href="#terminology" title="Permanent link">#</a></h1>
-<p>Terminology for arguments can be confusing. When should an argument be an option, switch, flag, argument or parameter. Should it be named or positional? Is an option always optional?</p>
-<p>Part of the confusion is the overloaded nature of of the term <code class="codehilite"><span class="err">argument</span></code>, as explained in <a href="http://www.informit.com/articles/article.aspx?p=175771">this article</a>. Context determines what is considered an argument. </p>
-<p>TLDR: The terminology of this framework.</p>
-<p><img alt="Argument Terminology Example" src="../../../diagrams/ArgTermsExample.png" /></p>
-<h2 id="perspectives">Perspectives<a class="headerlink" href="#perspectives" title="Permanent link">#</a></h2>
-<p><img alt="Argument Perspectives" src="../../../diagrams/ArgumentPerspectives.png" /></p>
-<p>Let's look at the <code class="codehilite"><span class="err">git stash store</span></code> command to see how different perspectives see it. 
-Git help describes the usage as <code class="codehilite"><span class="err">git stash store [-m|--message &lt;message&gt;] [-q|--quiet] &lt;commit&gt;</span></code>. </p>
-<p>Let's say we executed this command as follows: <code class="codehilite"><span class="err">git stash store -q -m &#39;my stash&#39; e7a8621</span></code></p>
-<p>For programmatic perspective of the...</p>
+                <h1 id="supported-argument-types">Supported Argument Types<a class="headerlink" href="#supported-argument-types" title="Permanent link">#</a></h1>
+<p>Arguments can be defined with any type that...</p>
 <ul>
-<li>shell: every word is an argument. <code class="codehilite"><span class="err">git stash store -q -m &#39;my stash&#39; e7a8621</span></code> </li>
-<li>application: the arguments are <code class="codehilite"><span class="err">stash store -q -m &#39;my stash&#39; e7a8621</span></code>, as assigned to <code class="codehilite"><span class="err">Main(string[] args)</span></code></li>
-<li><code class="codehilite"><span class="err">stash</span></code> command: the arguments are <code class="codehilite"><span class="err">store</span></code>. Once a subcommand is specified, all remaining arguments are for the subcommand.</li>
-<li><code class="codehilite"><span class="err">store</span></code> command: the arguments are <code class="codehilite"><span class="err">-q -m &#39;my stash&#39; e7a8621</span></code>.</li>
+<li>is a primitive type: </li>
+<li>contains a string constructor</li>
+<li>has a TypeConverter</li>
 </ul>
-<p>From the human perspective of...</p>
+<p>Includes, but not limited to:</p>
 <ul>
-<li>developer: the arguments are <code class="codehilite"><span class="err">-q -m &#39;my stash&#39; e7a8621</span></code>.</li>
-<li>user: the arguments are <code class="codehilite"><span class="err">e7a8621</span></code>. <code class="codehilite"><span class="err">-q</span></code> and <code class="codehilite"><span class="err">-m</span></code> are options. Common conventions of help documentation distinguishes options from arguments.</li>
+<li><code class="codehilite"><span class="err">string</span></code>,<code class="codehilite"><span class="err">char</span></code>,<code class="codehilite"><span class="err">enum</span></code>,<code class="codehilite"><span class="err">bool</span></code></li>
+<li><code class="codehilite"><span class="err">short</span></code>,<code class="codehilite"><span class="err">int</span></code>,<code class="codehilite"><span class="err">long</span></code>,<code class="codehilite"><span class="err">decimal</span></code>,<code class="codehilite"><span class="err">double</span></code></li>
+<li><code class="codehilite"><span class="err">Guid</span></code>,<code class="codehilite"><span class="err">Uri</span></code>,<code class="codehilite"><span class="err">FileInfo</span></code>,<code class="codehilite"><span class="err">DirectoryInfo</span></code></li>
 </ul>
-<h2 id="commanddotnet-perspectives">CommandDotNet Perspectives<a class="headerlink" href="#commanddotnet-perspectives" title="Permanent link">#</a></h2>
-<ol>
-<li>The user of the console app: needs to understand usage, when arguments are named vs positional.</li>
-<li>The developer of the console app: needs to define arguments that are named vs positional.</li>
-<li>The developer of middleware components: often need to operate across all command arguments regardless of type.</li>
-</ol>
-<h3 id="addressed-in-the-following-ways">Addressed in the following ways<a class="headerlink" href="#addressed-in-the-following-ways" title="Permanent link">#</a></h3>
+<p>Also supports <code class="codehilite"><span class="err">Nullable&lt;T&gt;</span></code> and <code class="codehilite"><span class="err">IEnumerable&lt;T&gt;</span></code> (<code class="codehilite"><span class="err">T[]</span></code>, <code class="codehilite"><span class="err">List&lt;T&gt;</span></code>, etc.) where T can be converted from string.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There can be only one <code class="codehilite"><span class="err">List</span></code> operand in the method, where <code class="codehilite"><span class="err">List</span></code> is any type of <code class="codehilite"><span class="err">IEnumerable</span></code>. 
+<code class="codehilite"><span class="err">List</span></code> operands must be the last operand defined for the method.</p>
+</div>
+<h2 id="adding-support-for-other-types">Adding support for other types<a class="headerlink" href="#adding-support-for-other-types" title="Permanent link">#</a></h2>
+<p>Options for supporting other types</p>
 <ul>
-<li>For users of the console app<ul>
-<li>help documentation is the interface. </li>
-<li>terminoloy: <code class="codehilite"><span class="err">command</span></code>, <code class="codehilite"><span class="err">option</span></code> and <code class="codehilite"><span class="err">argument</span></code>.</li>
+<li>If you control the type, consider adding a constructor with a single string parameter.</li>
+<li>Create a <a href="https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.typeconverter?view=netframework-4.8">TypeConverter</a> for your type</li>
+<li>Create a <a href="#type-descriptors">type descriptor</a></li>
 </ul>
-</li>
-<li>For developers<ul>
-<li>terminoloy: <code class="codehilite"><span class="err">command</span></code>, <code class="codehilite"><span class="err">argument</span></code>, <code class="codehilite"><span class="err">option</span></code> and <code class="codehilite"><span class="err">operand</span></code></li>
-<li>types: <code class="codehilite"><span class="err">Command</span></code>, <code class="codehilite"><span class="err">IArgument</span></code>, <code class="codehilite"><span class="err">Option</span></code> and <code class="codehilite"><span class="err">Operand</span></code>.</li>
-<li>Option and Operand are the two concrete types of IArgument<ul>
-<li>Option: named argument</li>
-<li>Operand: positional argument</li>
+<h3 id="type-descriptors">Type Descriptors<a class="headerlink" href="#type-descriptors" title="Permanent link">#</a></h3>
+<p>Type descriptors are your best choice when you need </p>
+<ul>
+<li>to override an existing TypeConverter</li>
+<li>conditional logic based on argument metadata (custom attributes, etc)</li>
+<li>the converter only for parsing parameters and not the business logic of your application</li>
 </ul>
-</li>
-<li>Command contains collections of Option, Operand and Command (as subcommands)</li>
-<li>Arguments are defined using<ul>
-<li>parameters: of a command method</li>
-<li>properties: of an <code class="codehilite"><span class="err">IArgumentModel</span></code></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>Flags are defined as Options with BooleanMode = Implicit.  This is the default for Options of type bool and can be changed using <code class="codehilite"><span class="err">AppSettings.DefaultBooleanMode</span></code> or <code class="codehilite"><span class="err">OptionAttribute.BooleanMode</span></code>.</p>
+<p>Implement <a href="https://github.com/bilal-fazlani/commanddotnet/blob/beta-v3/master/CommandDotNet/TypeDescriptors/IArgumentTypeDescriptor.cs">IArgumentTypeDescriptor</a> or instantiate a <a href="https://github.com/bilal-fazlani/commanddotnet/blob/beta-v3/master/CommandDotNet/TypeDescriptors/DelegatedTypeDescriptor.cs">DelegatedTypeDescriptor<T></a> and register with <code class="codehilite"><span class="err">AppSettings.ArgumentTypeDescriptors.Register(...)</span></code>.</p>
+<p>See <a href="https://github.com/bilal-fazlani/commanddotnet/blob/beta-v3/master/CommandDotNet/TypeDescriptors/StringCtorTypeDescriptor.cs">StringCtorTypeDescriptor</a> and <a href="https://github.com/bilal-fazlani/commanddotnet/blob/beta-v3/master/CommandDotNet/TypeDescriptors/ComponentModelTypeDescriptor.cs">ComponentModelTypeDescriptor</a> for examples.</p>
+<p>If the type has a limited range of acceptable values, the descriptor should also implement <a href="https://github.com/bilal-fazlani/commanddotnet/blob/beta-v3/master/CommandDotNet/TypeDescriptors/IAllowedValuesTypeDescriptor.cs">IAllowedValuesTypeDescriptor</a>.  See <a href="https://github.com/bilal-fazlani/commanddotnet/blob/beta-v3/master/CommandDotNet/TypeDescriptors/EnumTypeDescriptor.cs">EnumTypeDescriptor</a> for an example.</p>
                 
                   
                 
@@ -1245,9 +1214,9 @@ Git help describes the usage as <code class="codehilite"><span class="err">git s
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = "https://bilal-fazlani.github.io/commanddotnet/V3/DefiningCommands/argument-terminology/";
+      this.page.url = "https://bilal-fazlani.github.io/commanddotnet/V3/DefiningCommands/argument-types/";
       this.page.identifier =
-        "/V3/DefiningCommands/argument-terminology/";
+        "/V3/DefiningCommands/argument-types/";
     };
     (function() {
       var d = document, s = d.createElement("script");
@@ -1269,7 +1238,7 @@ Git help describes the usage as <code class="codehilite"><span class="err">git s
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../getting-started/" title="Getting Started" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../argument-collections/" title="Argument Collections" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1278,19 +1247,19 @@ Git help describes the usage as <code class="codehilite"><span class="err">git s
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Getting Started
+                Argument Collections
               </span>
             </div>
           </a>
         
         
-          <a href="../commands/" title="Commands" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../argument-models/" title="Argument Models" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Commands
+                Argument Models
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

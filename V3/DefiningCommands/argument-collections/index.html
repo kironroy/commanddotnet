@@ -13,7 +13,7 @@
         <meta name="description" content="Model your command line application interface in a class">
       
       
-        <link rel="canonical" href="https://bilal-fazlani.github.io/commanddotnet/V3/DefiningCommands/argument-terminology/">
+        <link rel="canonical" href="https://bilal-fazlani.github.io/commanddotnet/V3/DefiningCommands/argument-collections/">
       
       
       
@@ -40,7 +40,7 @@
     
     
       
-        <title>Terminology - CommandDotNet</title>
+        <title>Argument Collections - CommandDotNet</title>
       
     
     
@@ -114,7 +114,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#terminology" tabindex="0" class="md-skip">
+      <a href="#argument-collections" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -140,7 +140,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Terminology
+                Argument Collections
               
             </span>
           
@@ -689,75 +689,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Terminology
-      </label>
-    
-    <a href="./" title="Terminology" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../argument-terminology/" title="Terminology" class="md-nav__link">
       Terminology
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#perspectives" class="md-nav__link">
-    Perspectives
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#commanddotnet-perspectives" class="md-nav__link">
-    CommandDotNet Perspectives
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#addressed-in-the-following-ways" class="md-nav__link">
-    Addressed in the following ways
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-        <li class="md-nav__item">
-          <a href="#__comments" class="md-nav__link md-nav__link--active">
-            Comments
-          </a>
-        </li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -801,11 +737,55 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../argument-collections/" title="Argument Collections" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Argument Collections
+      </label>
+    
+    <a href="./" title="Argument Collections" class="md-nav__link md-nav__link--active">
       Argument Collections
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#piping" class="md-nav__link">
+    Piping
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -1128,29 +1108,9 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#perspectives" class="md-nav__link">
-    Perspectives
+  <a href="#piping" class="md-nav__link">
+    Piping
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#commanddotnet-perspectives" class="md-nav__link">
-    CommandDotNet Perspectives
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#addressed-in-the-following-ways" class="md-nav__link">
-    Addressed in the following ways
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1176,62 +1136,69 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/bilal-fazlani/commanddotnet/edit/master/docs/V3/DefiningCommands/argument-terminology.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/bilal-fazlani/commanddotnet/edit/master/docs/V3/DefiningCommands/argument-collections.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="terminology">Terminology<a class="headerlink" href="#terminology" title="Permanent link">#</a></h1>
-<p>Terminology for arguments can be confusing. When should an argument be an option, switch, flag, argument or parameter. Should it be named or positional? Is an option always optional?</p>
-<p>Part of the confusion is the overloaded nature of of the term <code class="codehilite"><span class="err">argument</span></code>, as explained in <a href="http://www.informit.com/articles/article.aspx?p=175771">this article</a>. Context determines what is considered an argument. </p>
-<p>TLDR: The terminology of this framework.</p>
-<p><img alt="Argument Terminology Example" src="../../../diagrams/ArgTermsExample.png" /></p>
-<h2 id="perspectives">Perspectives<a class="headerlink" href="#perspectives" title="Permanent link">#</a></h2>
-<p><img alt="Argument Perspectives" src="../../../diagrams/ArgumentPerspectives.png" /></p>
-<p>Let's look at the <code class="codehilite"><span class="err">git stash store</span></code> command to see how different perspectives see it. 
-Git help describes the usage as <code class="codehilite"><span class="err">git stash store [-m|--message &lt;message&gt;] [-q|--quiet] &lt;commit&gt;</span></code>. </p>
-<p>Let's say we executed this command as follows: <code class="codehilite"><span class="err">git stash store -q -m &#39;my stash&#39; e7a8621</span></code></p>
-<p>For programmatic perspective of the...</p>
-<ul>
-<li>shell: every word is an argument. <code class="codehilite"><span class="err">git stash store -q -m &#39;my stash&#39; e7a8621</span></code> </li>
-<li>application: the arguments are <code class="codehilite"><span class="err">stash store -q -m &#39;my stash&#39; e7a8621</span></code>, as assigned to <code class="codehilite"><span class="err">Main(string[] args)</span></code></li>
-<li><code class="codehilite"><span class="err">stash</span></code> command: the arguments are <code class="codehilite"><span class="err">store</span></code>. Once a subcommand is specified, all remaining arguments are for the subcommand.</li>
-<li><code class="codehilite"><span class="err">store</span></code> command: the arguments are <code class="codehilite"><span class="err">-q -m &#39;my stash&#39; e7a8621</span></code>.</li>
-</ul>
-<p>From the human perspective of...</p>
-<ul>
-<li>developer: the arguments are <code class="codehilite"><span class="err">-q -m &#39;my stash&#39; e7a8621</span></code>.</li>
-<li>user: the arguments are <code class="codehilite"><span class="err">e7a8621</span></code>. <code class="codehilite"><span class="err">-q</span></code> and <code class="codehilite"><span class="err">-m</span></code> are options. Common conventions of help documentation distinguishes options from arguments.</li>
-</ul>
-<h2 id="commanddotnet-perspectives">CommandDotNet Perspectives<a class="headerlink" href="#commanddotnet-perspectives" title="Permanent link">#</a></h2>
-<ol>
-<li>The user of the console app: needs to understand usage, when arguments are named vs positional.</li>
-<li>The developer of the console app: needs to define arguments that are named vs positional.</li>
-<li>The developer of middleware components: often need to operate across all command arguments regardless of type.</li>
-</ol>
-<h3 id="addressed-in-the-following-ways">Addressed in the following ways<a class="headerlink" href="#addressed-in-the-following-ways" title="Permanent link">#</a></h3>
-<ul>
-<li>For users of the console app<ul>
-<li>help documentation is the interface. </li>
-<li>terminoloy: <code class="codehilite"><span class="err">command</span></code>, <code class="codehilite"><span class="err">option</span></code> and <code class="codehilite"><span class="err">argument</span></code>.</li>
-</ul>
-</li>
-<li>For developers<ul>
-<li>terminoloy: <code class="codehilite"><span class="err">command</span></code>, <code class="codehilite"><span class="err">argument</span></code>, <code class="codehilite"><span class="err">option</span></code> and <code class="codehilite"><span class="err">operand</span></code></li>
-<li>types: <code class="codehilite"><span class="err">Command</span></code>, <code class="codehilite"><span class="err">IArgument</span></code>, <code class="codehilite"><span class="err">Option</span></code> and <code class="codehilite"><span class="err">Operand</span></code>.</li>
-<li>Option and Operand are the two concrete types of IArgument<ul>
-<li>Option: named argument</li>
-<li>Operand: positional argument</li>
-</ul>
-</li>
-<li>Command contains collections of Option, Operand and Command (as subcommands)</li>
-<li>Arguments are defined using<ul>
-<li>parameters: of a command method</li>
-<li>properties: of an <code class="codehilite"><span class="err">IArgumentModel</span></code></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>Flags are defined as Options with BooleanMode = Implicit.  This is the default for Options of type bool and can be changed using <code class="codehilite"><span class="err">AppSettings.DefaultBooleanMode</span></code> or <code class="codehilite"><span class="err">OptionAttribute.BooleanMode</span></code>.</p>
+                <h1 id="argument-collections">Argument Collections<a class="headerlink" href="#argument-collections" title="Permanent link">#</a></h1>
+<p>Let's enhance our rocket launcher to support multiple planets.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="k">public</span> <span class="k">void</span> <span class="nf">LaunchRocket</span><span class="p">(</span>
+    <span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">planets</span><span class="p">,</span> 
+<span class="na">    [Option(ShortName = &quot;c&quot;, LongName = &quot;crew&quot;)]</span> <span class="kt">string</span><span class="p">[]</span> <span class="n">crew</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+
+<p>This is what help information looks like</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>~
+$ dotnet example.dll LaunchRocket -h
+Usage: dotnet example.dll LaunchRocket <span class="o">[</span>arguments<span class="o">]</span> <span class="o">[</span>options<span class="o">]</span>
+
+Arguments:
+
+  planets <span class="o">(</span>Multiple<span class="o">)</span>  &lt;TEXT&gt;
+
+Options:
+
+  -c <span class="o">(</span>Multiple<span class="o">)</span>  &lt;TEXT&gt;
+</code></pre></div>
+</td></tr></table>
+
+<p>And this is how you call it</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>dotnet example.dll LaunchRocket mars earth jupiter -c aaron -c alex
+</code></pre></div>
+</td></tr></table>
+
+<p>and since options are not positional, they can be intermixed with arguments.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>dotnet example.dll LaunchRocket mars -c aaron earth -c alex jupiter
+
+launching rocket
+planets: mars,earch,jupiter
+crew: aaron,alex
+</code></pre></div>
+</td></tr></table>
+
+<div class="admonition caveat">
+<p class="admonition-title">Caveat</p>
+<p>There can be only 1 operand list per command, but you can have many option lists.</p>
+</div>
+<h2 id="piping">Piping<a class="headerlink" href="#piping" title="Permanent link">#</a></h2>
+<p>CommandDotNet provides middleware <a href="../../Middleware/piped-arguments/">to pipe input to operand collections</a>.</p>
+<p>If your parameter type is <code class="codehilite"><span class="err">IEnumerable&lt;T&gt;</span></code>, the operands will be streamed into the command.</p>
                 
                   
                 
@@ -1245,9 +1212,9 @@ Git help describes the usage as <code class="codehilite"><span class="err">git s
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = "https://bilal-fazlani.github.io/commanddotnet/V3/DefiningCommands/argument-terminology/";
+      this.page.url = "https://bilal-fazlani.github.io/commanddotnet/V3/DefiningCommands/argument-collections/";
       this.page.identifier =
-        "/V3/DefiningCommands/argument-terminology/";
+        "/V3/DefiningCommands/argument-collections/";
     };
     (function() {
       var d = document, s = d.createElement("script");
@@ -1269,7 +1236,7 @@ Git help describes the usage as <code class="codehilite"><span class="err">git s
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../getting-started/" title="Getting Started" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../arguments/" title="Arguments" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1278,19 +1245,19 @@ Git help describes the usage as <code class="codehilite"><span class="err">git s
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Getting Started
+                Arguments
               </span>
             </div>
           </a>
         
         
-          <a href="../commands/" title="Commands" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../argument-types/" title="Supported Argument Types" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Commands
+                Supported Argument Types
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
