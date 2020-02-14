@@ -166,11 +166,6 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://bilal-fazlani.github.io/commanddotnet/V3/Extensibility/directives/</loc>
-     <lastmod>2020-02-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
      <loc>https://bilal-fazlani.github.io/commanddotnet/V3/Extensibility/parameter-types/</loc>
      <lastmod>2020-02-14</lastmod>
      <changefreq>daily</changefreq>
@@ -227,6 +222,11 @@
     </url>
     <url>
      <loc>https://bilal-fazlani.github.io/commanddotnet/V3/Middleware/newer-release-alerts/</loc>
+     <lastmod>2020-02-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://bilal-fazlani.github.io/commanddotnet/V3/Extras/directives/</loc>
      <lastmod>2020-02-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
